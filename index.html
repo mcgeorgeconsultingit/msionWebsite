@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSION | Find jobs that suits your interest & skills</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <!-- <link rel="stylesheet" href="/styles/home.css" /> -->
+  </head>
+  <body>
+    <header class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="/" class="">MSION</a></h1>
+      <nav class="d-none d-lg-block">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-3">
+            <a href="#" class="text-black fw-bold">Home</a>
+            <a href="#" class="text-black">Job Search</a>
+            <a href="#" class="text-black">Resources</a>
+            <a href="#" class="text-black">About us</a>
+            <a href="#" class="text-black">Contact</a>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <a href="/login.html" class="text-primary text-body">Login</a>
+            <a href=""
+              ><button class="btn-primary px-4 py-3 rounded-4">
+                Get Started
+              </button></a
+            >
+          </div>
+        </div>
+      </nav>
+      <div class="d-lg-none">
+        <div class="burger" id="burgerMenu">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero py-5 bg-base">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-7">
+            <div class="hero-wrapper-cta">
+              <h1>Where talents meet opportunities.</h1>
+              <p>
+                Find jobs that suit your interest & skills, find remote jobs you
+                love, research the fastest-growing remote companies. Looking for
+                a career change? We got you covered.
+              </p>
+              <div class="hero-cta-buttons">
+                <a href="#"
+                  ><button class="btn btn-primary me-2 border-0">Find a job</button></a
+                >
+                <a href="#"
+                  ><button class="btn btn-secondary text-dark border-0" style="background-color: var(--clr-neutral-200);">Hire talents</button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <img
+              src="/assets/hero-image.png"
+              alt="Hero Image"
+              class="hero-img img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners py-5">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <h2 class="partners__title">
+              World's class companies hiring talents on MSION
+            </h2>
+          </div>
+          <div class="col-12">
+            <div
+              class="d-flex align-items-center justify-content-center flex-wrap gap-3vw partners__logos"
+            >
+              <img src="/assets/amazon.png" alt="Amazon" class="img-fluid" />
+              <img src="/assets/google.png" alt="Google" class="img-fluid" />
+              <img src="/assets/meta.png" alt="Meta" class="img-fluid" />
+              <img src="/assets/ms.png" alt="Microsoft" class="img-fluid" />
+              <img
+                src="/assets/sachs.png"
+                alt="Goldman Sachs"
+                class="img-fluid"
+              />
+              <img src="/assets/spotify.png" alt="Spotify" class="img-fluid" />
+              <img src="/assets/stripe.png" alt="Stripe" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search py-5 bg-base">
+      <div class="wrapper search__wrapper container-md">
+        <h2 class="search__title fw-bold">Explore thousands of job opportunities</h2>
+        <p class="search__description">
+          Filter job listings based on location, industry, job type, and more. With
+          our advanced search filters, you can narrow down your search to exactly
+          what you're looking for.
+        </p>
+        <form class="search__search-bar d-flex flex-column-reverse flex-xl-row align-items-xl-center align-items-start mb-4 justify-content-between gap-3" >
+          <div class="search__fields d-flex align-items-center bg-white p-2 rounded-4" style="box-shadow: 0px 0px 0px 3px #D8F3FF, 0 4px 6px 5px rgba(0, 0, 0, 0.041);">
+            <div class="search__field d-flex align-items-center  mb-lg-0">
+              <img src="./styles/home/assets/search.png" alt="" class="me-2">
+              <input
+                placeholder="Jobs title/keyword"
+                type="text"
+                class="border-0"
+                name="job"
+                id="job"
+                style="padding: 0; font-size: 14px;"
+              />
+            </div>
+            <div class="search__field d-sm-flex align-items-center border-start ps-3 d-none">
+              <img src="./styles/home/assets/Location.png" alt="" class="me-2">
+              <input
+                placeholder="Location"
+                type="text"
+                class="border-0"
+                name="location"
+                id="location"
+                style="padding: 0; font-size: 14px;"
+              />
+            </div>
+          <button class="btn btn-primary rounded-3" style="border: none; font-size: 14px; padding-inline: 2rem; padding-block: 0.55rem;">Find job</button>
+          </div>
+          <div class="search__stats d-flex justify-content-center gap-2 mb-xs-3">
+            <div class="search__stat d-flex align-items-center bg-white rounded-4 p-2 shadow-sm">
+              <img src="assets/jobs-suitcase.png" alt="jobs" class="me-2">
+              <div class="stat__text text-sm fw-bold fs">
+                104,742
+                <span class="fw-normal d-block" style="font-size: 14px;">Jobs posted</span>
+              </div>
+            </div>
+            <div class="search__stat d-flex align-items-center bg-white rounded-4 p-2 shadow-sm">
+              <img src="assets/companies.png" alt="companies" class="me-2">
+              <div class=" text-sm fw-bold fs">
+                12,907
+                <span class="fw-normal d-block" style="font-size: 14px;">Companies</span>
+              </div>
+            </div>
+            <div class="search__stat d-flex align-items-center bg-white rounded-4 p-2 shadow-sm">
+              <img src="assets/user.png" alt="users" class="me-2">
+              <div class="stat__text text-sm fw-bold fs">
+                104,742
+                <span class="fw-normal d-block" style="font-size: 14px;">Users</span>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="search__showcase d-flex flex-wrap gap-3 justify-content-start">
+          <div class="showcase__item bg-white border rounded-3 p-3 d-flex flex-column gap-3">
+            <div class="showcase__item__preview d-flex">
+              <img src="/assets/slack__logo.png" alt="" class="me-2">
+              <img src="/assets/twitch__logo.png" alt="" class="me-2">
+            </div>
+            <h5 class="showcase__item__category" style="font-size: 1.125rem; font-weight:600; max-width: 145px;">Financial Management</h5>
+            <p class="showcase__item__description text-greyed" style="font-size: 14px;">10,347 Open roles</p>
+          </div>
+          <div class="showcase__item bg-white border rounded-3 p-3 d-flex flex-column gap-3">
+            <div class="showcase__item__preview d-flex">
+              <img src="/assets/slack__logo.png" alt="" class="me-2">
+              <img src="/assets/twitch__logo.png" alt="" class="me-2">
+            </div>
+            <h5 class="showcase__item__category" style="font-size: 1.125rem; font-weight:600; max-width: 145px;">Software development</h5>
+            <p class="showcase__item__description text-greyed" style="font-size: 14px;">10,347 Open roles</p>
+          </div>
+          <div class="showcase__item bg-white border rounded-3 p-3 d-flex flex-column gap-3">
+            <div class="showcase__item__preview d-flex">
+              <img src="/assets/slack__logo.png" alt="" class="me-2">
+              <img src="/assets/twitch__logo.png" alt="" class="me-2">
+            </div>
+            <h5 class="showcase__item__category" style="font-size: 1.125rem; font-weight:600; max-width: 145px;">Management analysis</h5>
+            <p class="showcase__item__description text-greyed" style="font-size: 14px;">10,347 Open roles</p>
+          </div>
+          <div class="showcase__item bg-white border rounded-3 p-3 d-flex flex-column gap-3">
+            <div class="showcase__item__preview d-flex">
+              <img src="/assets/slack__logo.png" alt="" class="me-2">
+              <img src="/assets/twitch__logo.png" alt="" class="me-2">
+            </div>
+            <h5 class="showcase__item__category" style="font-size: 1.125rem; font-weight:600; max-width: 145px;">Management analysis</h5>
+            <p class="showcase__item__description text-greyed" style="font-size: 14px;">10,347 Open roles</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+  
+    <section class="process py-5 mb-5">
+        <div class="wrapper process__wrapper container">
+          <h1 class="process__title">How MSION Works</h1>
+          <p class="process__description">
+            Step-by-step guide on how job seekers and recruiters can use MSION
+          </p>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+            <div class="col">
+              <div class="process__item bg-white border rounded-3 p-4 h-100">
+                <div class="process__item__preview">
+                  <img src="/assets/tick.png" alt="" />
+                </div>
+                <h5 class="process__item__step fw-semibold" style="font-size: 18px;">Create an account</h5>
+                <p class="process__item__description text-greyed" style="font-size: 14px;">
+                  Start your journey by signing up with MSION.
+                </p>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="process__item bg-white border rounded-3 p-4 h-100">
+                <div class="process__item__preview">
+                  <img src="/assets/tick.png" alt="" />
+                </div>
+                <h5 class="process__item__step fw-semibold" style="font-size: 18px;">Update your profile and upload your CV</h5>
+                <p class="process__item__description text-greyed" style="font-size: 14px;">
+                  This profile will be your professional identity on the platform.
+                </p>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="process__item bg-white border rounded-3 p-4 h-100">
+                <div class="process__item__preview">
+                  <img src="/assets/tick.png" alt="" />
+                </div>
+                <h5 class="process__item__step fw-semibold" style="font-size: 18px;">Explore job listings or candidates</h5>
+                <p class="process__item__description text-greyed" style="font-size: 14px;">
+                  For job seekers, dive into a vast array of job listings tailored to your preferences.
+                </p>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="process__item bg-white border rounded-3 p-4 h-100">
+                <div class="process__item__preview">
+                  <img src="/assets/tick.png" alt="" />
+                </div>
+                <h5 class="process__item__step fw-semibold" style="font-size: 18px;">Access Courses and Career Resources</h5>
+                <p class="process__item__description text-greyed" style="font-size: 14px;">
+                  Take advantage of MSION's extensive library of courses, webinars, and expert insights.
+                </p>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="process__item bg-white border rounded-3 p-4 h-100">
+                <div class="process__item__preview">
+                  <img src="/assets/tick.png" alt="" />
+                </div>
+                <h5 class="process__item__step fw-semibold" style="font-size: 18px;">Streamline Recruitment Processes</h5>
+                <p class="process__item__description text-greyed" style="font-size: 14px;">
+                  Recruiters, use MSION's advanced tools to streamline the recruitment journey.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <section class="resume bg-base">
+      <div class="wrapper resume__wrapper container-md d-flex flex-column flex-md-row align-items-center justify-content-sm-between">
+        <div class="resume__text fs flex-grow-1">
+          <div class="resume__supertext">How MSION helps with</div>
+          <h2 class="resume__title fw-bold text-dark">Resume Buliding</h2>
+          <p class="text-greyed">
+            Craft an impressive resume that highlights your skills and
+            experiences with our built-in resume builder. With MSION, you'll
+            have access to easy-to-use templates and tools to create a
+            professional resume that stands out to potential employers.
+          </p>
+        </div>
+        <img src="./assets/resume.png" alt="" style="max-width: 60%; margin-right: -10%;" />
+      </div>
+    </section>
+
+    <section class="hire py-5">
+      <div class="wrapper hire__wrapper container-md d-flex align-items-start justify-content-between flex-column flex-md-row mb-3">
+        <div class="hire__text mb-4" style="max-width: 563px;">
+          <h2 class="hire__title fw-bold mb-4" style="font-size: 40px;">Hire talented job seekers</h2>
+          <p class="hire__description text-greyed" style="max-width: 514px;">
+            MSION has a suite of tools to help you hire the best talent all over
+            the world. Find talent, post jobs, and promote your brand to
+            thousands of motivated job seekers. It only takes a few minutes to
+            create your company profile.
+          </p>
+        </div>
+        <button class="btn-primary p-3 rounded-4"style="font-size: 16px;">
+          <img src="./assets/Plus.png" alt="" />
+          Create company profile
+        </button>
+      </div>
+      <div class="container wrapper hire__options__wrapper d-flex flex-column flex-md-row gap-3">
+        <div class="hire__option d-flex flex-column p-3 rounded-4" style="border: 2px solid #CCCBCB;">
+          <h5 class="option__name text-dark" style="font-size: 18px;">Create a free company profile</h5>
+          <p class="option__description text-greyed" style="font-size: 14px;">
+            MSION has a suite of tools to help you hire the best talent all over
+            the world. Find talent, post jobs, and promote your brand to
+            thousands of motivated job seekers. It only
+          </p>
+          <button class="mb-0 py-3 rounded-4 btn-primary text-white">Create company profile</button>
+        </div>
+        <div class="hire__option d-flex flex-column p-3 rounded-4" style="border: 2px solid #CCCBCB;">
+          <h5 class="option__name text-dark" style="font-size: 18px;">Job listings</h5>
+          <p class="option__description text-greyed" style="font-size: 14px;">
+            MSION has a suite of tools to help you hire the best  talent all over the world. Find talent, post jobs, and promote your brand to thousands of motivated job seekers. It only 
+          </p>
+          <button class="mb-0 py-3 rounded-4 btn-primary text-white">Post a job</button>
+        </div>
+        <div class="hire__option d-flex flex-column p-3 rounded-4" style="border: 2px solid #CCCBCB;">
+          <h5 class="option__name text-dark" style="font-size: 18px;">Brand anatomy</h5>
+          <p class="option__description text-greyed" style="font-size: 14px;">
+            MSION has a suite of tools to help you hire the best  talent all over the world. Find talent, post jobs, and promote your brand to thousands of motivated job seekers. It only 
+          </p>
+          <button class="mb-0 py-3 rounded-4 btn-primary text-white">Showcase brand</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="dream-job">
+      <div class="wrapper dream-job__wrapper container-md bg-base rounded-4">
+        <div class="row__1 d-flex flex-column flex-md-row justify-content-between align-items-center mb-5">
+          <div class="dream-job__text p-5">
+            <h4 class="dream-job__subtitle fs-5">Find your dream job</h4>
+            <ul style="list-style: disc;">
+              <li>Advanced Search Filters</li>
+              <li>Personalized Job Alerts</li>
+              <li>Resume Management</li>
+              <li>Interview Scheduling</li>
+            </ul>
+          </div>
+          <img src="/styles/home/assets/dream.png" alt=""  style="margin-right: -1%;"/>
+        </div>
+        <div class="row__2 d-flex flex-column flex-md-row-reverse justify-content-between align-items-center">
+          <div class="dream-job__text p-5">
+            <h4 class="dream-job__subtitle fs-5">
+              Streamlining <br/> Recruitment for <br/> Success
+            </h4>
+            <ul style="list-style: disc;">
+              <li>Job Posting and Management</li>
+              <li>AI-Powered Candidate Search</li>
+              <li>Application Tracking System</li>
+              <li>Analytics and Reporting</li>
+            </ul>
+          </div>
+          <img src="/styles/home/assets/streamline.png" alt="" style="margin-left: -1%;" />
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="testimonial__wrapper wrapper">
+        <div class="testimonial">
+          <p class="text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+          <div class="avatar">
+            <img src="" alt="" />
+            <div class="avatar__name">John Simth</div>
+            <p class="avatar__role">Founder of Awesomeux Technology</p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+          <div class="avatar">
+            <img src="" alt="" />
+            <div class="avatar__name">John Simth</div>
+            <p class="avatar__role">Founder of Awesomeux Technology</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      header {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 1.2rem 0;
+      }
+
+      .nav__wrapper__links__link {
+        color: black;
+      }
+
+      .nav__wrapper__links__link.active {
+        font-weight: 700;
+      }
+
+      .burger {
+        height: 40px;
+        width: 40px;
+        position: relative;
+      }
+
+      .burger span {
+        height: 2px;
+        width: 40px;
+        background-color: black;
+        display: block;
+        border-radius: 20px;
+        position: absolute;
+        right: 0;
+      }
+
+      .burger span:nth-of-type(1) {
+        top: 30%;
+      }
+
+      .burger span:nth-of-type(2) {
+        width: 70%;
+        bottom: 40%;
+      }
+
+      @media screen and (max-width: 1024px) {
+        header {
+          width: 90%;
+        }
+
+        nav {
+          display: none;
+        }
+      }
+
+      @media screen and (min-width: 735px) {
+        header {
+          padding: 24px 0;
+        }
+
+        nav {
+          flex: 1;
+          margin-left: 15vw;
+        }
+      }
+
+      section.hero {
+        background: var(--clr-base-white);
+      }
+
+      .hero-wrapper-cta h1 {
+        font-size: 56px;
+        color: var(--clr-neutral-900);
+      }
+
+      .hero-wrapper-cta p {
+        color: var(--clr-neutral-800);
+      }
+
+      .hero-cta-buttons .btn {
+        padding: 1.2rem 2.5rem;
+        border-radius: 24px;
+      }
+
+      @media (max-width: 768px) {
+        .hero-wrapper-cta h1 {
+          font-size: 32px;
+          margin-bottom: 1rem;
+        }
+
+        .hero-wrapper-cta p {
+          margin-bottom: 1rem;
+          line-height: 24px;
+        }
+
+        .hero-cta-buttons .btn {
+          margin-bottom: 2rem;
+        }
+      }
+
+      .partners__title {
+        font-size: 28px !important;
+        max-width: 500px;
+        margin: 0 auto;
+        color: var(--clr-neutral-900);
+      }
+
+      @media (max-width: 536px) {
+        .partners__logos {
+          flex-wrap: nowrap !important;
+          max-width: none !important;
+          width: fit-content!important;
+          justify-content: flex-start;
+          animation: pan 10s linear alternate infinite 1s;
+        }
+
+        @keyframes pan {
+          from {
+            transform: translate(0);
+          }
+          to {
+            transform: translate(-80%);
+          }
+        }
+      }
+    </style>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

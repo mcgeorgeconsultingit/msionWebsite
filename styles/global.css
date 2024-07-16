@@ -1,0 +1,105 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('./_variables.css');
+/* @import url('./components/header.css'); */
+/* @import url('./components/button.css'); */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'montserrat';
+    box-sizing: border-box;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+button{
+    border: none;
+}
+
+a{
+    text-decoration: inherit;
+    color: inherit;
+} 
+
+img{
+    max-width: 100%;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+input:focus, input:focus-visible, input:focus-within{
+    outline: none;
+    border: none !important;
+}
+
+.btn-primary {
+    background-color: var(--clr-primary);
+    border-color: var(--clr-primary);
+    color: var(--clr-base-white);
+    transition: background-color .3s ease;
+}
+button{
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--clr-primary-200);
+    border-color: var(--clr-primary-600);
+}
+
+/* Override Bootstrap background colors */
+.bg-primary {
+    background-color: var(--clr-primary) !important;
+}
+
+.bg-base {
+    background-color: var(--clr-base-white) !important;
+}
+.bg-secondary {
+    background-color: var(--clr-neutral-200) !important;
+}
+
+.bg-light {
+    background-color: var(--clr-neutral-100) !important;
+}
+
+.bg-dark {
+    background-color: var(--clr-neutral-900) !important;
+}
+
+/* Override Bootstrap text colors */
+.text-primary {
+    color: var(--clr-primary) !important;
+}
+
+.text-secondary {
+    color: var(--clr-neutral-200) !important;
+}
+
+.text-light {
+    color: var(--clr-neutral-100) !important;
+}
+
+.text-greyed {
+    color: var(--clr-neutral-800) !important;
+}
+.text-dark {
+    color: var(--clr-neutral-900) !important;
+}
+
+/* @media screen and (max-width:1200px) {
+    .search__search-bar{
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+} */

@@ -23,6 +23,9 @@ a{
     text-decoration: inherit;
     color: inherit;
 } 
+a:hover{
+    color: inherit !important;
+}
 
 img{
     max-width: 100%;

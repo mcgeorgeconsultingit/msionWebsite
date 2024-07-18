@@ -363,9 +363,33 @@
 
     <section class="testimonials">
       <div class="testimonial__wrapper container-lg py-5 wrapper">
-        <div class="row gap p-5 text-center">
-          <div class="testimonial col-12 col-md-4 p-5 rounded-3 d-flex align-items-center flex-column" style="background-image: url(assets/noise.png);">
-            <p class="fst-italic fw-200" style="font-size: clamp(0.75rem, 0.4375rem + 1vw, 0.825rem);">
+        <div class="row py-5 gap-3 text-center d-flex justify-content-center justify-content-md-between align-items-center flex-column flex-lg-row">
+          <div class="testimonial col-12 col-sm-10 col-lg  px-3 py-2 pt-5 rounded-3 d-flex align-items-center flex-column" style="background-image: url(assets/noise.png);">
+            <p class="testimonial__quote fst-italic fw-200" style="font-size: clamp(0.75rem, 0.4375rem + 1vw, 0.825rem);">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+            <div class="avatar d-flex flex-column gap-2 align-items-center">
+              <img src="assets/avatar.png" alt="" />
+              <div class="avatar__name text-dark fw-semibold">John Simth</div>
+              <p class="avatar__role text-greyed" style="font-size: 9px;">Founder of Awesomeux Technology</p>
+            </div>
+          </div>
+          <div class="testimonial col-12 col-sm-10 col-md-6 col-lg  px-3 py-2 pt-5 rounded-3 d-flex align-items-center flex-column" style="background-image: url(assets/noise.png);">
+            <p class="testimonial__quote fst-italic fw-200" style="font-size: clamp(0.75rem, 0.4375rem + 1vw, 0.825rem);">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+            <div class="avatar d-flex flex-column gap-2 align-items-center">
+              <img src="assets/avatar.png" alt="" />
+              <div class="avatar__name text-dark fw-semibold">John Simth</div>
+              <p class="avatar__role text-greyed" style="font-size: 9px;">Founder of Awesomeux Technology</p>
+            </div>
+          </div>
+          <div class="testimonial col-12 col-sm-10 col-lg  px-3 py-2 pt-5 rounded-3 d-flex align-items-center flex-column" style="background-image: url(assets/noise.png);">
+            <p class="testimonial__quote fst-italic fw-200" style="font-size: clamp(0.75rem, 0.4375rem + 1vw, 0.825rem);">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s.
@@ -381,7 +405,7 @@
 
     <footer class="py-5 bg-primary text-white">
       <div class="footer__wrapper container-lg px-4 px-lg-0">
-        <div class="row gap-4 gap-lg-0 mb-3">
+        <div class="row gap-4 gap-lg-0 mb-3" style="border-bottom: 1px solid #ffffff83;">
           <div class="footer__navlist col-12 col-md-5 col-lg-3 d-flex flex-column gap-2 mb-3">
             <a href="/"><h5 class="" style="font-size: 20px;">MSION</h5></a>
             <a href="">About Us</a>
@@ -490,6 +514,9 @@
 
       .testimonial{
         background-repeat: no-repeat ;
+        background-position: center;
+        overflow: hidden;
+        border-radius: 25px;
       }
 
       .testimonials::before{
@@ -506,6 +533,38 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+      }
+
+      .testimonial__quote{
+        position: relative;
+        max-width: 310px;
+        margin: 0 auto;
+      }
+      .testimonial__quote::before{
+        content: '';
+        width: 24px;
+        display: block;
+        position: absolute;
+        aspect-ratio: 1/1;
+        background-image: url('assets/quote_open.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        top: -50%;
+        left: 0;
+      }
+      .testimonial__quote::after{
+        content: '';
+        width: 24px;
+        display: block;
+        position: absolute;
+        aspect-ratio: 1/1;
+        background-image: url('assets/quote_close.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        bottom: -30%;
+        right: 0;
       }
 
       .footer__navlist > a:not(:has(h5)){
@@ -531,6 +590,10 @@
           flex: 1;
           margin-left: 15vw;
         }
+      }
+
+      .testimonial::before{
+        display: none;
       }
 
       section.hero {

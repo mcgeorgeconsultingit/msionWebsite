@@ -20,7 +20,7 @@
         <div class="d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center gap-3">
             <a href="#" class="text-black fw-bold">Home</a>
-            <a href="#" class="text-black">Job Search</a>
+            <a href="/search.html" class="text-black">Job Search</a>
             <a href="#" class="text-black">Resources</a>
             <a href="#" class="text-black">About us</a>
             <a href="#" class="text-black">Contact</a>
@@ -113,7 +113,7 @@
           what you're looking for.
         </p>
         <form class="search__search-bar d-flex flex-column-reverse flex-xl-row align-items-xl-center align-items-start mb-4 justify-content-between gap-3" >
-          <div class="search__fields d-flex align-items-center bg-white p-2 rounded-4" style="box-shadow: 0px 0px 0px 3px #D8F3FF, 0 4px 6px 5px rgba(0, 0, 0, 0.041);">
+          <div class="search__fields d-flex align-items-center bg-white p-2 rounded-4" style="box-shadow: 0px 0px 0px 3px #D8F3FF, 0 4px 6px 5px rgba(0, 0, 0, 0.041); border: 1.5px solid #13B7FD;">
             <div class="search__field d-flex align-items-center  mb-lg-0">
               <img src="styles/home/assets/search.png" alt="" class="me-2">
               <input
@@ -457,44 +457,7 @@
 
     </footer>
     <style>
-      header {
-        max-width: 1240px;
-        margin: 0 auto;
-        padding: 1.2rem 0;
-      }
 
-      .nav__wrapper__links__link {
-        color: black;
-      }
-
-      .nav__wrapper__links__link.active {
-        font-weight: 700;
-      }
-
-      .burger {
-        height: 40px;
-        width: 40px;
-        position: relative;
-      }
-
-      .burger span {
-        height: 2px;
-        width: 40px;
-        background-color: black;
-        display: block;
-        border-radius: 20px;
-        position: absolute;
-        right: 0;
-      }
-
-      .burger span:nth-of-type(1) {
-        top: 30%;
-      }
-
-      .burger span:nth-of-type(2) {
-        width: 70%;
-        bottom: 40%;
-      }
 
       .testimonial{
         backdrop-filter: blur(6px);
@@ -505,11 +468,6 @@
       .testimonial::before{
         width: 100%;
         height: 100%;
-      }
-
-      footer{
-        position: relative;
-        /* margin-top: 500px; */
       }
 
       .testimonial{
@@ -565,31 +523,6 @@
         background-position: bottom;
         bottom: -30%;
         right: 0;
-      }
-
-      .footer__navlist > a:not(:has(h5)){
-        opacity: .8;
-      }
-
-      @media screen and (max-width: 1024px) {
-        header {
-          width: 90%;
-        }
-
-        nav {
-          display: none;
-        }
-      }
-
-      @media screen and (min-width: 735px) {
-        header {
-          padding: 24px 0;
-        }
-
-        nav {
-          flex: 1;
-          margin-left: 15vw;
-        }
       }
 
       .testimonial::before{

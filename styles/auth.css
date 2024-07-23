@@ -1,0 +1,50 @@
+input{
+    background: none;
+}
+
+@media screen and (max-width:800px) {
+    h1{
+        font-size: clamp(1.25rem, 0.2348rem + 3.0303vw, 1.75rem);
+        text-align: center !important;
+    }
+
+    input[type="checkbox"]{
+        margin-right:.5em;
+   }
+
+   section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+   }
+
+   section > img.w-50{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+   }
+
+   div.auth__wrapper{
+    height: max-content !important;
+    background: white;
+    min-height: max-content !important;
+    padding: 2rem;
+    border-radius: 12px;
+   }
+
+   section div.form.w-50{
+    height: max-content !important;
+    width: max-content !important;
+   }
+
+   input:not(input[type="checkbox"]){
+    width: 70% !important;
+   }
+
+   label{
+    font-size: 14px;
+   }
+}

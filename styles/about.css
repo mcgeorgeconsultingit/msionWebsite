@@ -1,0 +1,35 @@
+section .story__wrapper .story-img{ 
+    border-radius: 15px;
+}
+ 
+@media screen and (max-width:576px){
+    section .story__wrapper .story-img{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .cta .wrapper p{
+        max-width: 232px;
+    }
+      
+}
+
+.cta img{
+    position: absolute;
+    z-index: -1;
+    width: 40vw;
+    top: -25%;
+    right: 0;
+    rotate: 90deg;
+}
+
+.cta .wrapper{
+    overflow: hidden;
+    isolation: isolate;
+    position: relative;
+    padding: 5% 3%;
+}
+
+.cta .wrapper p{
+    max-width: 538px;
+}

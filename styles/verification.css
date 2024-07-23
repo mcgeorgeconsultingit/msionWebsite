@@ -29,7 +29,6 @@ h1, p{
     border: none;
     outline: 0.4mm solid var(--clr-neutral-200);
     text-align: center;
-    font-family: poppins;
     background: white;
     font-size: 18px;
     transition: all .3s ease-out;

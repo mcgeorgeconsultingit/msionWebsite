@@ -48,7 +48,7 @@ input:focus, input:focus-visible, input:focus-within{
 }
 button{
     border-radius: 20px;
-    border: none;
+    border: none !important;
     font-size: 1rem;
     cursor: pointer;
 }
@@ -57,7 +57,7 @@ button{
 .btn-primary:focus,
 .btn-primary:active {
     background-color: var(--clr-primary-200);
-    border-color: var(--clr-primary-600);
+    /* border-color: var(--clr-primary-600); */
 }
 
 /* Override Bootstrap background colors */

@@ -37,3 +37,44 @@ input:valid {
 textarea {
   height: 300px;
 }
+
+.social-icons div{
+  position: relative;
+  width: max-content;
+  border-radius: 50%;
+}
+
+.social-icons div.active{
+  border: 2px solid #15B097  ;
+}
+
+/* styles.css */
+.link_input {
+  display: none;
+}
+
+.link_input.active {
+  display: flex;
+}
+
+.social-icons{
+  cursor: pointer;
+}
+
+.social-icons div.active::before{
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url('../assets/onboarding/CheckCircle.png');
+  top: 0;
+  right: 0;
+}
+
+.link_input img{
+  width: 64px;
+}
+
+.link_input input{
+  border-color: var(--clr-neutral-200) !important;
+}

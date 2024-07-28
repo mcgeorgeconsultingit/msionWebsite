@@ -43,8 +43,7 @@
           </button>
         </div>
         <form action="" method="POST" enctype="multipart/form-data">
-
-          <!-- <div class="tab w-100">
+          <div class="tab w-100">
             <div class="profile-img mb-5">
               <div id="addImgBtn-wrapper" style="cursor: pointer">
                 <img
@@ -65,16 +64,21 @@
               <div>Upload profile image</div>
             </div>
             <h2 class="fw-semibold mb-2">Upload Resume/CV</h2>
-            <div id="addImgBtn-wrapper-2" class="w-100 p-5 border rounded-4 d-flex flex-column text-center justify-content-center align-items-center mb-5" style="cursor: pointer; border: 2px #cacaca dashed;">
+            <div
+              id="addImgBtn-wrapper-2"
+              class="w-100 p-5 border rounded-4 d-flex flex-column text-center justify-content-center align-items-center mb-5"
+              style="cursor: pointer; border: 2px #cacaca dashed"
+            >
               <img
                 id="addImgBtn-2"
                 src="assets/onboarding/addImg2.png"
                 onclick="getFile2()"
                 alt=""
               />
-              <p class="text-greyed" style="font-size: 12px;">
-                <span class="text-primary">Click to upload</span> or drag and drop
-                <br>
+              <p class="text-greyed" style="font-size: 12px">
+                <span class="text-primary">Click to upload</span> or drag and
+                drop
+                <br />
                 SVG, PNG, JPG or GIF (max. 800x400px)
               </p>
               <div style="height: 0px; width: 0px; overflow: hidden">
@@ -87,13 +91,26 @@
               </div>
             </div>
             <div class="personal-info">
-                <input class="bg-base mb-3" type="text" name="Name" placeholder="Name" required>
-                <input class="bg-base mb-2" type="email" name="email" placeholder="Email" required>
+              <input
+                id="name"
+                class="bg-base mb-3"
+                type="text"
+                name="Name"
+                placeholder="Name"
+                required
+              />
+              <input
+                id="email"
+                class="bg-base mb-2"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
             </div>
-          </div> -->
+          </div>
 
-          <!-- <div class="tab w-100">
-
+          <div class="tab w-100">
             <h2 class="mt-5 mb-2 text-semibold">Biography</h2>
             <textarea name="biography" id="biography"></textarea>
 
@@ -102,62 +119,170 @@
 
             <h2 class="fw-semibold mt-5">Skills (enter up to 15)</h2>
             <input
-                type="skills"
-                class="transition"
-                placeholder="Skills"
-                name="skills"
-              />
+              type="skills"
+              class="transition"
+              placeholder="Skills"
+              name="skills"
+            />
 
             <h2 class="fw-semibold mt-5">Stack (Tools used)</h2>
-            
-          </div> -->
+          </div>
 
           <div class="tab w-100">
-            <h2 class="mb-3 fw-semibold">Social handles </h2>
+            <h2 class="mb-3 fw-semibold">Social handles</h2>
             <div class="social-icons d-flex flex-row flex-wrap gap-2 mb-5">
-              <div id="behance" class="active"><img src="/assets/onboarding//social/behance.png" alt="" class="rounded-circle"></div>
-              <div id="amazon"><img src="/assets/onboarding//social/amazon.png" alt="" class="rounded-circle"></div>
-              <div id="github"><img src="/assets/onboarding//social/github.png" alt="" class="rounded-circle"></div>
-              <div id="instagram"><img src="/assets/onboarding//social/instagram.png" alt="" class="rounded-circle"></div>
-              <div id="tiktok"><img src="/assets/onboarding//social/tiktok.png" alt="" class="rounded-circle"></div>
-              <div id="x"><img src="/assets/onboarding//social/x.png" alt="" class="rounded-circle"></div>
-              <div id="youtube"><img src="/assets/onboarding//social/youtube.png" alt="" class="rounded-circle"></div>
-              <div id="website"><img src="/assets/onboarding//social/website.png" alt="" class="rounded-circle"></div>           
+              <div id="behance" class="active">
+                <img
+                  src="/assets/onboarding//social/behance.png"
+                  alt=""
+                  class="rounded-circle"
+                />
+              </div>
+              <div id="amazon">
+                <img
+                  src="/assets/onboarding//social/amazon.png"
+                  alt=""
+                  class="rounded-circle"
+                />
+              </div>
+              <div id="github">
+                <img
+                  src="/assets/onboarding//social/github.png"
+                  alt=""
+                  class="rounded-circle"
+                />
+              </div>
+              <div id="instagram">
+                <img
+                  src="/assets/onboarding//social/instagram.png"
+                  alt=""
+                  class="rounded-circle"
+                />
+              </div>
+              <div id="tiktok">
+                <img
+                  src="/assets/onboarding//social/tiktok.png"
+                  alt=""
+                  class="rounded-circle"
+                />
+              </div>
+              <div id="x">
+                <img
+                  src="/assets/onboarding//social/x.png"
+                  alt=""
+                  class="rounded-circle"
+                />
+              </div>
+              <div id="youtube">
+                <img
+                  src="/assets/onboarding//social/youtube.png"
+                  alt=""
+                  class="rounded-circle"
+                />
+              </div>
+              <div id="website">
+                <img
+                  src="/assets/onboarding//social/website.png"
+                  alt=""
+                  class="rounded-circle"
+                />
+              </div>
             </div>
 
             <div class="social-links d-flex flex-column gap-3">
               <h2 class="mb-3 fw-semibold">Enter Links</h2>
-              <div class="link_input flex-row align-items-center gap-3 active" id="behance">
-                <img src="assets/onboarding/social/behance.png" alt="">
-                <input type="text" name="behance_link" id="behance" placeholder="Enter Link">
+              <div
+                class="link_input flex-row align-items-center gap-3 active"
+                id="behance"
+              >
+                <img src="assets/onboarding/social/behance.png" alt="" />
+                <input
+                  type="text"
+                  name="behance_link"
+                  id="behance"
+                  placeholder="Enter Link"
+                />
               </div>
-              <div class="link_input flex-row align-items-center gap-3" id="amazon">
-                <img src="assets/onboarding/social/amazon.png" alt="">
-                <input type="text" name="amazon_link" id="amazon" placeholder="Enter Link">
+              <div
+                class="link_input flex-row align-items-center gap-3"
+                id="amazon"
+              >
+                <img src="assets/onboarding/social/amazon.png" alt="" />
+                <input
+                  type="text"
+                  name="amazon_link"
+                  id="amazon"
+                  placeholder="Enter Link"
+                />
               </div>
-              <div class="link_input flex-row align-items-center gap-3" id="github">
-                <img src="assets/onboarding/social/github.png" alt="">
-                <input type="text" name="github_link" id="github" placeholder="Enter Link">
+              <div
+                class="link_input flex-row align-items-center gap-3"
+                id="github"
+              >
+                <img src="assets/onboarding/social/github.png" alt="" />
+                <input
+                  type="text"
+                  name="github_link"
+                  id="github"
+                  placeholder="Enter Link"
+                />
               </div>
-              <div class="link_input flex-row align-items-center gap-3" id="instagram">
-                <img src="assets/onboarding/social/instagram.png" alt="">
-                <input type="text" name="instagram_link" id="instagram" placeholder="Enter Link">
+              <div
+                class="link_input flex-row align-items-center gap-3"
+                id="instagram"
+              >
+                <img src="assets/onboarding/social/instagram.png" alt="" />
+                <input
+                  type="text"
+                  name="instagram_link"
+                  id="instagram"
+                  placeholder="Enter Link"
+                />
               </div>
-              <div class="link_input flex-row align-items-center gap-3" id="tiktok">
-                <img src="assets/onboarding/social/tiktok.png" alt="">
-                <input type="text" name="tiktok_link" id="tiktok" placeholder="Enter Link">
+              <div
+                class="link_input flex-row align-items-center gap-3"
+                id="tiktok"
+              >
+                <img src="assets/onboarding/social/tiktok.png" alt="" />
+                <input
+                  type="text"
+                  name="tiktok_link"
+                  id="tiktok"
+                  placeholder="Enter Link"
+                />
               </div>
               <div class="link_input flex-row align-items-center gap-3" id="x">
-                <img src="assets/onboarding/social/x.png" alt="">
-                <input type="text" name="x_link" id="x" placeholder="Enter Link">
+                <img src="assets/onboarding/social/x.png" alt="" />
+                <input
+                  type="text"
+                  name="x_link"
+                  id="x"
+                  placeholder="Enter Link"
+                />
               </div>
-              <div class="link_input flex-row align-items-center gap-3" id="youtube">
-                <img src="assets/onboarding/social/youtube.png" alt="">
-                <input type="text" name="youtube_link" id="youtube" placeholder="Enter Link">
+              <div
+                class="link_input flex-row align-items-center gap-3"
+                id="youtube"
+              >
+                <img src="assets/onboarding/social/youtube.png" alt="" />
+                <input
+                  type="text"
+                  name="youtube_link"
+                  id="youtube"
+                  placeholder="Enter Link"
+                />
               </div>
-              <div class="link_input flex-row align-items-center gap-3" id="website">
-                <img src="assets/onboarding/social/website.png" alt="">
-                <input type="text" name="website_link" id="website" placeholder="Enter Link">
+              <div
+                class="link_input flex-row align-items-center gap-3"
+                id="website"
+              >
+                <img src="assets/onboarding/social/website.png" alt="" />
+                <input
+                  type="text"
+                  name="website_link"
+                  id="website"
+                  placeholder="Enter Link"
+                />
               </div>
             </div>
           </div>
@@ -171,6 +296,7 @@
               Go back
             </button>
             <button
+              id="submitBtn"
               class="col btn btn-primary rounded-4 px-2 px-sm-3 py-2 py-sm-3 bg-opacity-75"
             >
               Continue
@@ -181,29 +307,6 @@
     </section>
 
     <script src="/js/addImg.js"></script>
-    <script>
-      // script.js
-      document.addEventListener('DOMContentLoaded', function () {
-          // Select all social handle divs and link input divs
-          const socialHandles = document.querySelectorAll('.social-icons div');
-          const linkInputs = document.querySelectorAll('.link_input');
-
-          // Function to toggle active class and display state
-          function toggleActiveLink(event) {
-              // Get the id of the clicked social handle
-              const clickedId = event.currentTarget.id;
-
-              // Add the active class to the clicked social handle div and the corresponding link input div
-              event.currentTarget.classList.toggle('active');
-              document.querySelector(`.link_input#${clickedId}`).classList.toggle('active');
-          }
-
-          // Add click event listener to each social handle div
-          socialHandles.forEach(handle => {
-              handle.addEventListener('click', toggleActiveLink);
-          });
-      });
-
-    </script>
+    <script src="/js/onboarding.js"></script>
   </body>
 </html>

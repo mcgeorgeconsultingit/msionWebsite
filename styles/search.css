@@ -1,0 +1,13 @@
+.filters{
+    display: none !important;
+}
+
+@media screen and (max-width:1024px) {
+    .filters-md{
+        display: none !important;
+    }
+
+    .filters{
+        display: flex !important;
+    }
+}

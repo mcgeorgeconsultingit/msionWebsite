@@ -97,3 +97,20 @@ textarea {
 .link_input input{
   border-color: var(--clr-neutral-200) !important;
 }
+
+@media screen and (max-width:536px) {
+  .profile-img{
+    font-size: 24px;
+    gap: .5em;
+  }
+
+  #addImgBtn{
+    width: 130px ;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  #addImgBtn-wrapper{
+    max-width: fit-content;
+  }
+}

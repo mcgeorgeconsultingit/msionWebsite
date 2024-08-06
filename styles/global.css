@@ -31,7 +31,7 @@ img{
     max-width: 100%;
 }
 
-body{
+body, html{
     overflow-x: hidden;
 }
 
@@ -111,6 +111,7 @@ header {
     max-width: 1240px;
     margin: 0 auto;
     padding: 1.2rem 0;
+    position: relative;
   }
 
   .nav__wrapper__links__link {
@@ -125,6 +126,7 @@ header {
     height: 40px;
     width: 40px;
     position: relative;
+    display: none;
   }
 
   .burger span {
@@ -161,18 +163,42 @@ header {
     }
 
     nav {
-      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: white;
+      transform: translateY(64px);
+      border-radius: 12px;
+      transition-property: display opacity;
+      transition-duration: .5s;
+      transition-timing-function: ease-in-out;
+      transition-behavior: allow-discrete !important;
+      opacity: 0;
     }
+
+    nav.active{
+      display: flex !important;
+      opacity: 1;
+    }
+
+    nav div{
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      width:100vw;
+      padding: 1.2rem;
+    }
+
   }
 
-  @media screen and (min-width: 735px) {
+  @media screen and (min-width: 1024px) {
     header {
       padding: 24px 0;
     }
 
     nav {
       flex: 1;
-      margin-left: 15vw;
+      margin-left: 12vw;
     }
   }
   @media screen and (max-width: 1024px) {
@@ -183,15 +209,9 @@ header {
     nav {
       display: none;
     }
-  }
 
-  @media screen and (min-width: 735px) {
-    header {
-      padding: 24px 0;
-    }
-
-    nav {
-      flex: 1;
-      margin-left: 15vw;
+    .burger{
+      display: block;
     }
   }
+

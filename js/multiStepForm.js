@@ -1,72 +1,99 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Select all social handle divs and link input divs
-  const socialHandles = document.querySelectorAll(".social-icons div");
-  const linkInputs = document.querySelectorAll(".link_input");
-
-  let currentTab = 0; // Current tab is set to be the first tab (0)
-  showTab(currentTab); // Display the current tab
-
-  function showTab(n) {
-    // This function will display the specified tab of the form
-    const tabs = document.querySelectorAll(".tab");
-    tabs[n].classList.add("active");
-
-    // Adjust the Next/Previous buttons
-    if (n == 0) {
-      document.querySelector(".btn-secondary").style.display = "none";
-    } else {
-      document.querySelector(".btn-secondary").style.display = "inline";
+    const socialHandles = document.querySelectorAll(".social-icons div");
+    const linkInputs = document.querySelectorAll(".link_input");
+    const submitBtn = document.querySelector(".btn-primary");
+    const nameInput = document.querySelector("input[name='Name']");
+    const emailInput = document.querySelector("input[name='email']");
+    const progressBar = document.getElementById("progress");
+  
+    let currentTab = 0; // Current tab is set to be the first tab (0)
+    showTab(currentTab); // Display the current tab
+  
+    function showTab(n) {
+      const tabs = document.querySelectorAll(".tab");
+      tabs.forEach((tab, index) => {
+        tab.classList.remove("active");
+        if (index === n) {
+          tab.classList.add("active");
+        }
+      });
+  
+      if (n == 0) {
+        document.querySelector(".btn-secondary").style.display = "none";
+      } else {
+        document.querySelector(".btn-secondary").style.display = "inline";
+      }
+      if (n == tabs.length - 1) {
+        submitBtn.textContent = "Submit";
+      } else {
+        submitBtn.textContent = "Continue";
+      }
+  
+      updateProgressBar();
     }
-    if (n == tabs.length - 1) {
-      document.querySelector(".btn-primary").textContent = "Submit";
-    } else {
-      document.querySelector(".btn-primary").textContent = "Continue";
+  
+    function nextPrev(n) {
+      const tabs = document.querySelectorAll(".tab");
+      if (n === 1 && !validateForm()) {
+        return false;
+      }
+  
+      currentTab += n;
+      if (currentTab >= tabs.length) {
+        if (validateForm()) {
+            emailInput.preventDefault
+          window.location.href = "profile.html";
+        }
+        return false;
+      }
+      showTab(currentTab);
     }
-  }
-
-  function nextPrev(n) {
-    // This function will figure out which tab to display
-    const tabs = document.querySelectorAll(".tab");
-    tabs[currentTab].classList.remove("active");
-
-    // Increase or decrease the current tab by 1
-    currentTab = currentTab + n;
-
-    // if you have reached the end of the form...
-    if (currentTab >= tabs.length) {
-      return false;
+  
+    function validateForm() {
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return name !== "" && emailRegex.test(email);
     }
-    // Otherwise, display the correct tab:
-    showTab(currentTab);
-  }
-
-  // Event listeners for navigation buttons
-  document
-    .querySelector(".btn-secondary")
-    .addEventListener("click", function () {
+  
+    function updateSubmitButtonState() {
+      submitBtn.disabled = !validateForm();
+    }
+  
+    function updateProgressBar() {
+      const tabs = document.querySelectorAll(".tab");
+      const percentage = ((currentTab + 1) / tabs.length) * 100;
+      progressBar.style.width = `${percentage}%`;
+      progressBar.setAttribute("aria-valuenow", percentage);
+      document.querySelector("label[for='progress']").textContent = `${Math.round(percentage)}%`;
+    }
+  
+    submitBtn.addEventListener("click", function (event) {
+      if (currentTab >= document.querySelectorAll(".tab").length - 1 && !validateForm()) {
+        event.preventDefault();
+      } else {
+        event.preventDefault();
+        nextPrev(1);
+      }
+    });
+  
+    document.querySelector(".btn-secondary").addEventListener("click", function () {
       nextPrev(-1);
     });
-
-  document
-    .querySelector(".btn-primary")
-    .addEventListener("click", function () {
-      nextPrev(1);
+  
+    nameInput.addEventListener("input", updateSubmitButtonState);
+    emailInput.addEventListener("input", updateSubmitButtonState);
+  
+    updateSubmitButtonState();
+  
+    function toggleActiveLink(event) {
+      const clickedId = event.currentTarget.id;
+      event.currentTarget.classList.toggle("active");
+      document.querySelector(`.link_input#${clickedId}`).classList.toggle("active");
+    }
+  
+    socialHandles.forEach((handle) => {
+      handle.addEventListener("click", toggleActiveLink);
     });
-
-  // Function to toggle active class and display state
-  function toggleActiveLink(event) {
-    // Get the id of the clicked social handle
-    const clickedId = event.currentTarget.id;
-
-    // Add the active class to the clicked social handle div and the corresponding link input div
-    event.currentTarget.classList.toggle("active");
-    document
-      .querySelector(`.link_input#${clickedId}`)
-      .classList.toggle("active");
-  }
-
-  // Add click event listener to each social handle div
-  socialHandles.forEach((handle) => {
-    handle.addEventListener("click", toggleActiveLink);
   });
-});
+  

@@ -11,11 +11,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles/global.css" />
-    <link rel="stylesheet" href="/styles/profile.css" />
+    <link rel="stylesheet" href="styles/profile.css" />
   </head>
   <body>
     <header class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="/" class="">MSION</a></h1>
+      <img src="assets/logo.png" alt="" class="logo">
       <nav class="">
         <div class="d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center gap-3">
@@ -42,9 +42,9 @@
 
     </header>
 
-    <section class="main py-5">
-      <div class="wrapper profile__wrapper container">
-        <div class="col-12 col-md bg-base rounded-4 p-4 mb-4 mb-md-0">
+    <section class="main py-3">
+      <div class="wrapper profile__wrapper container d-flex gap-2 flex">
+        <div class="profile-col-1 col-12 col-md-7 col-lg-8 bg-base rounded-4 p-4 mb-4 mb-md-0">
           <div class="d-flex justify-content-between align-items-center p-4 bg-white w-100 rounded-4"
           >
             <div class="details d-flex align-items-center gap-3">
@@ -160,25 +160,85 @@ With a keen eye for aesthetics and a strong understanding of design principles, 
           </div>
 
         </div>
-        <div class="col-12 col-md bg-base rounded-5 p-4">
-          <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 mt-4">
+        <div class="profile-col-2 col-12 col-md-5 col-lg-4 bg-base rounded-4 p-4">
+          <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 gap-2">
             <div class="d-flex w-100 justify-content-between align-items-center">
               <h2>Resume</h2>
               <img
                 src="assets/profile/NotePencil.png"
                 alt=""
-                class="bg-base p-3 rounded-circle"
+                class=""
               />
             </div>
-            <div class="d-flex w-100 justify-content-between align-items-center">
-              <img src="assets/profile/pdf-icon.png" alt="" id="pdf-icon">
-              <div>
+            <div class="resume-input d-flex w-100 justify-content-start align-items-center ">
+              <img src="assets/profile/pdf-icon.png" alt="" id="pdf-icon" class="me-2">
+              <div class="resume-name fw-semibold">
                 Moyin’s Resume
-                <br><span class="text-greyed">313 KB . 2 July, 2024  </span>
+                <br><span class="resume-small-text fw-light">313 KB . 2 July, 2024  </span>
               </div>
-              <img src="assets/profile/bin.png" alt="" id="bin">
+              <img src="assets/profile/bin.png" alt="" id="bin" class="ms-auto">
             </div>
-            <button class="btn btn-primary">Extract CV from profile</button>
+            <button class="btn btn-primary w-100 py-3 rounded-4">Extract CV from profile</button>
+          </div>
+          <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 gap-2 mt-4">
+            <div class="d-flex w-100 justify-content-between align-items-center">
+              <h2>Skills</h2>
+              <img
+                src="assets/profile/NotePencil.png"
+                alt=""
+                class=""
+              />
+            </div>
+            <div class="skills d-flex flex-wrap gap-2">
+              <span class="skill bg-base rounded-3 px-3 py-2">Creativity</span>
+              <span class="skill bg-base rounded-3 px-3 py-2">Prototyping</span>
+              <span class="skill bg-base rounded-3 px-3 py-2">Js</span>
+              <span class="skill bg-base rounded-3 px-3 py-2">Figma</span>
+              <span class="skill bg-base rounded-3 px-3 py-2">Design</span>
+              <span class="skill bg-base rounded-3 px-3 py-2">HTML</span>
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 gap-2 mt-4">
+            <div class="d-flex w-100 justify-content-between align-items-center">
+              <h2>Stack</h2>
+              <img
+                src="assets/profile/NotePencil.png"
+                alt=""
+                class=""
+              />
+            </div>
+            <div class="skills d-flex flex-wrap gap-2">
+              <img src="assets/profile/figma.png" alt="">
+              <img src="assets/profile/figma.png" alt="">
+              <img src="assets/profile/figma.png" alt="">
+              <img src="assets/profile/figma.png" alt="">
+              <img src="assets/profile/figma.png" alt="">
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 gap-2 mt-4">
+            <div class="d-flex w-100 justify-content-between align-items-center">
+              <h2>Social Handles</h2>
+              <img
+                src="assets/profile/NotePencil.png"
+                alt=""
+                class=""
+              />
+            </div>
+            <div class="skills d-flex flex-wrap gap-2">
+              <img src="assets/profile/figma.png" alt="">
+              <img src="assets/profile/figma.png" alt="">
+              <img src="assets/profile/figma.png" alt="">
+              <img src="assets/profile/figma.png" alt="">
+              <img src="assets/profile/figma.png" alt="">
+            </div>
+          </div>
+          <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 gap-2 mt-4">
+              <h2>Certification</h2>
+              <div class="bg-base p-3 d-flex flex-column w-100 rounded-4 ">
+                <h6>UX Designer</h6>
+                <p>Accenture | Issued: Sept 2023</p>
+                <span style="color: rgba(0, 0, 0, 0.564);">Credential ID : 287GHB658BVR</span>
+              </div>
           </div>
         </div>
       </div>

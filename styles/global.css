@@ -114,6 +114,10 @@ header {
     position: relative;
   }
 
+  .logo{
+    width: 80px;
+  }
+
   .nav__wrapper__links__link {
     color: black;
   }
@@ -130,7 +134,7 @@ header {
   }
 
   .burger span {
-    height: 2px;
+    height: 3px;
     width: 40px;
     background-color: black;
     display: block;
@@ -191,16 +195,24 @@ header {
 
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     header {
       padding: 24px 0;
     }
 
     nav {
       flex: 1;
-      margin-left: 12vw;
+      margin-left: 20vw !important;
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    nav{
+      flex: 1;
+      margin-left: 12.5%;
+    }
+  }
+
   @media screen and (max-width: 1024px) {
     header {
       width: 90%;

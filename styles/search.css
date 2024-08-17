@@ -2,6 +2,32 @@
     display: none !important;
 }
 
+.result-img{
+    aspect-ratio: 1/1;
+    padding: 0;
+}
+
+.result__info{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.result-view-name{
+    font-size: 20px;
+}
+
+.result-view-title{
+    font-size: 40px;
+}
+
+.result__extras button{
+    font-size: 16px;
+}
+
+ ul{
+    list-style-type: disc !important;
+}
+
 @media screen and (max-width:1024px) {
     .filters-md{
         display: none !important;

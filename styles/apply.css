@@ -20,7 +20,7 @@ input:valid {
   border: 1.5px solid var(--clr-primary);
 }
 textarea {
-  height: 300px;
+  height: 250px;
 }
 
 
@@ -35,6 +35,21 @@ textarea {
 
 .progress-bar {
   transition: width 0.5s ease-in-out; /* Smooth transition for progress bar width */
+}
+
+@media screen and (max-width:536px) {
+
+  .apply-section  p{
+    font-size: 14px;
+  }
+  
+  h2{
+    font-size: 24px;
+  }
+
+  input::placeholder{
+    font-size: 14px;
+  }
 }
 
 @keyframes fadeEffect {

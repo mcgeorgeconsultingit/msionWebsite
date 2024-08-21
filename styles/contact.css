@@ -42,3 +42,22 @@
 textarea{
     height: 300px;
 }
+
+@media screen and (max-width:576px){
+
+    .contact{
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+        text-align: center;
+        padding-inline: 2rem;
+    }
+    
+    
+
+    .main-img{
+        width: 80vw;
+        height: 80vw;
+        padding: 0;
+    }
+
+}

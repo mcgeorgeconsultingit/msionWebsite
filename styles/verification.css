@@ -7,6 +7,10 @@ h1, p{
     max-width: 400px;
 }
 
+.submit-btn{
+  width: 100%;
+}
+
 .code__inputs {
     max-width: 100%;
     display: flex;

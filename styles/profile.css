@@ -1,3 +1,7 @@
+.edit-btn{
+    cursor: pointer;
+}
+
 .role-tag,
 .experience p,
 .experience a{
@@ -32,3 +36,4 @@ h2{
         flex-wrap: wrap !important;
     }
 }
+

@@ -1,3 +1,27 @@
+
+@media screen and (min-width:1024px) {
+    .result-container.view-open{
+        display: grid;
+        gap: 1em;
+        grid-template-columns: 33% 67%;
+        position: inherit;
+    }
+    
+    .result-container.view-open .all-results{
+        flex-direction: column;
+    }
+    
+    .result-container.view-open .all-results > *{
+        width: 100%;
+        height: max-content;
+    }
+}
+
+
+.result-container.view-open .result-view{
+    display: block;
+}
+
 .filters{
     display: none !important;
 }
@@ -10,6 +34,12 @@
 .result__info{
     margin-left: 0;
     margin-right: 0;
+}
+
+.result-view{
+    transition: all .3s ease-out;
+    display: none;
+    transition-behavior: allow-discrete;
 }
 
 .result-view-name{
@@ -28,6 +58,11 @@
     list-style-type: disc !important;
 }
 
+p{
+    line-height: 24px !important;
+}
+
+
 @media screen and (max-width:1024px) {
     .filters-md{
         display: none !important;
@@ -36,4 +71,54 @@
     .filters{
         display: flex !important;
     }
+
+    .result-container.view-open .result-view{
+        position: fixed;
+        z-index: 1000;
+        background-color: white;
+        height: 80vh;
+        min-height: 400px;
+        bottom: 0;
+        left: 0;
+        overflow: scroll;
+        box-shadow: 0px 6px 40px 0px rgb(0 0 0 / 39%);
+    }
+
+    /* .result-container.view-open::before{
+        height: 100%;
+        width: 100vw;
+        display: block;
+        background: rgba(0, 0, 0, 0.584);
+        content: '';
+        z-index: 100;
+        top: 0;
+        left: 0;
+        position: fixed;
+    } */
+}
+
+@media screen and (max-width:1024px) {
+
+    .result-container.view-open .result-view h2.result-view-title{
+        font-size: 32px !important;
+    }
+
+    .result-container.view-open .result-view{
+        bottom: -3%;
+    }
+
+    .result-container.view-open .result-view .result__tags img{
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .result-container, .filter-bar{
+        padding-inline: 1.5rem;
+    }
+
+    .result-container.view-open .result-view button{
+        font-size: 12px;
+        padding: 0;
+    }
+
 }

@@ -110,12 +110,12 @@ button{
 header {
     max-width: 1240px;
     margin: 0 auto;
-    padding: 1.2rem 0;
+    padding: .8rem 0;
     position: relative;
   }
 
   .logo{
-    width: 80px;
+    width: 70px;
   }
 
   .nav__wrapper__links__link {
@@ -157,9 +157,6 @@ header {
     /* margin-top: 500px; */
   }
 
-  .footer__navlist > a:not(:has(h5)){
-    opacity: .8;
-  }
 
   @media screen and (max-width: 1024px) {
     header {

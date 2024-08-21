@@ -21,15 +21,15 @@
     <link rel="stylesheet" href="styles/global.css" />
   </head>
   <body>
-    <header class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="/" class="">MSION</a></h1>
+    <header class="container d-flex align-items-center justify-content-between ">
+      <a href="/"><img src="assets/logo.png" alt="" class="logo"></a>
       <nav class="">
         <div class="d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center gap-3">
-            <a href="/" class="text-black fw-bold">Home</a>
+            <a href="/" class="text-black">Home</a>
             <a href="search.html" class="text-black">Job Search</a>
             <a href="resources.html" class="text-black">Resources</a>
-            <a href="about.html" class="text-black">About us</a>
+            <a href="about.html" class="text-black fw-bold">About us</a>
             <a href="contact.html" class="text-black">Contact</a>
           </div>
           <div class="d-flex align-items-center gap-3">
@@ -62,15 +62,15 @@
             love, research the fastest-growing remote companies
           </p>
         </div>
-        <div class="row px-3 px-sm-0">
+        <div class="hero-images px-sm-0 d-flex gap-2 gap-sm-3 align-items-stretch flex-nowrap ">
           <img
-            class="col-8 overflow-hidden ps-0"
+            class="overflow-hidden p-0 rounded-3 w-auto flex-grow-1"
             src="assets/about/grid1.png"
             alt=""
             style="object-fit: cover; object-position: center"
           />
           <img
-            class="col-4 overflow-hidden pe-0"
+            class="overflow-hidden p-0 rounded-3 w-auto"
             src="assets/about/grid2.png"
             alt=""
             style="object-fit: cover; object-position: center"
@@ -147,6 +147,35 @@
       </div>
     </section>
 
+    <section class="our-team py-5 bg-base text-center">
+      <div class="our-team__title">
+        <h2 class="fw-bold">Our team</h2>
+        <p>Find jobs that suits your interest & skills, find remote jobs you love, research the fastest-growing remote companies </p>
+      </div>
+      <div class="team-list d-flex mt-5 p-4 flex-wrap gap-2">
+        <div class="member bg-white d-flex align-items-center flex-column justify-content-between px-3 py-5 rounded-4 border-1 border flex-grow-1">
+          <img src="assets/avatar-2.png" alt="" width="80" class="mb-3">
+          <h5 class="p-0 m-0 fw-semibold">John Doe</h5>
+          <p class="p-0 m-0 text-secondary fs-6">Senior Engineer</p>
+        </div>
+        <div class="member bg-white d-flex align-items-center flex-column justify-content-between px-3 py-5 rounded-4 border-1 border flex-grow-1">
+          <img src="assets/avatar-2.png" alt="" width="80" class="mb-3">
+          <h5 class="p-0 m-0 fw-semibold">John Doe</h5>
+          <p class="p-0 m-0 text-secondary fs-6">Senior Engineer</p>
+        </div>
+        <div class="member bg-white d-flex align-items-center flex-column justify-content-between px-3 py-5 rounded-4 border-1 border flex-grow-1">
+          <img src="assets/avatar-2.png" alt="" width="80" class="mb-3">
+          <h5 class="p-0 m-0 fw-semibold">John Doe</h5>
+          <p class="p-0 m-0 text-secondary fs-6">Senior Engineer</p>
+        </div>
+        <div class="member bg-white d-flex align-items-center flex-column justify-content-between px-3 py-5 rounded-4 border-1 border flex-grow-1">
+          <img src="assets/avatar-2.png" alt="" width="80" class="mb-3">
+          <h5 class="p-0 m-0 fw-semibold">John Doe</h5>
+          <p class="p-0 m-0 text-secondary fs-6">Senior Engineer</p>
+        </div>
+      </div>
+    </section>
+
     <section class="cta py-5">
       <div class="wrapper cta__wrapper container bg-primary text-white d-flex flex-column align-items-start rounded-4">
         <h1 class="fw-bold">Join us today</h1>
@@ -154,6 +183,7 @@
         <img src="assets/about/fan.png" alt="">
       </div>
     </section>
+
     <footer class="py-5 bg-primary text-white">
       <div class="footer__wrapper container-lg px-4 px-lg-0">
         <div class="row gap-4 gap-lg-0 mb-3" style="border-bottom: 1px solid #ffffff83;">
@@ -195,7 +225,7 @@
           <a href=""><img src="assets/linkedin.png" alt=""></a>
           <a href=""><img src="assets/instagram.png" alt=""></a>
         </div>
-        <div class="row justify-content-between">
+        <div class="row justify-content-between flex-column flex-md-row">
           <p class="copyright col col-md-6">© 2023 MSION - All rights reserved</p>
           <div class="extras col col-md-5 d-flex justify-content-between">
             <a href="#" class="opacity-75">Terms of Use</a>

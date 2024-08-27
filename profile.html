@@ -14,38 +14,74 @@
     <link rel="stylesheet" href="styles/profile.css" />
   </head>
   <body>
-    <header class="container d-flex align-items-center justify-content-between">
+    <header class="container d-flex align-items-center justify-content-between" >
       <a href="/"><img src="assets/logo.png" alt="" class="logo"></a>
       <nav class="">
         <div class="d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center gap-3">
             <a href="/" class="text-black">Home</a>
             <a href="search.html" class="text-black">Job Search</a>
-            <a href="resources.html" class="text-black">Resources</a>
+            <a href="#" class="text-black">Resources</a>
             <a href="about.html" class="text-black">About us</a>
             <a href="contact.html" class="text-black">Contact</a>
           </div>
-          <div class="d-flex align-items-center gap-3">
-            <a href="login.html" class="text-primary text-body">Login</a>
-            <a href="signup.html"
-              ><button class="btn-primary px-4 py-3 rounded-4">
-                Get Started
-              </button></a
-            >
-          </div>
         </div>
       </nav>
-        <div class="burger" id="burgerMenu">
+        <div class="burger d-none" id="burgerMenu">
           <span></span>
           <span></span>
         </div>
 
+        <div class="avatar-menu position-relative">
+            <img src="assets/profile/profile 1 (1).png" alt="" class="menu-trigger rounded-circle " style="width: 60px; cursor: pointer;">
+            <div class="user-menu position-absolute bg-base p-2 rounded-4 shadow-lg" style="width: 300px; right: 0%; bottom: -800%; opacity: 0; visibility: hidden;">
+                <div class="bg-white rounded-4 px-3 py-2">
+                    <a href="profile.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="assets/nav/UserCircle.png" alt="">
+                        <p class="m-0">Profile</p>
+                    </a>
+                    <a href="#" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="assets/nav/Bag.png" alt="">
+                        <p class="m-0">My Jobs</p>
+                    </a>
+                    <a href="applied-jobs.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="assets/nav/TextAlignJustify.png" alt="">
+                        <p class="m-0">Applications</p>
+                    </a>
+                    <a href="saved-jobs.html" class="p-3 d-flex gap-3 align-items-center">
+                        <img src="assets/nav/UserCircle.png" alt="">
+                        <p class="m-0">Saved Jobs</p>
+                        <p class="bg-base rounded-4 px-3 py-1 m-0" style="font-size: 12px; margin-left: auto !important;">3</p>
+                    </a>
+                </div>
+                <div class="bg-white rounded-4 px-3 py-2 mt-2">
+                    <a href="contact.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="assets/nav/Headset.png" alt="">
+                        <p class="m-0">Help</p>
+                    </a>
+                    <a href="/settings.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="assets/nav/Gear.png" alt="">
+                        <p class="m-0">Settings</p>
+                    </a>
+                    <a href="#" class="p-3 d-flex gap-3 align-items-center">
+                        <img src="assets/nav/SignOut.png" alt="">
+                        <p class="m-0">Sign Out</p>
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <section class="main py-3">
       <div class="wrapper profile__wrapper container d-flex gap-2 flex">
+
+        <a href="onboarding.html" class="bg-base px-3 py-2 rounded-3 mb-3 d-sm-none">
+          <img src="assets/profile/NotePencil.png" alt="" class="me-3">
+          Edit Profile
+        </a>
+
         <div class="profile-col-1 col-12 col-md-7 col-lg-8 bg-base rounded-4 p-4 mb-4 mb-md-0">
-          <div class="d-flex justify-content-between align-items-center p-4 bg-white w-100 rounded-4"
+          <div class="details-wrapper d-flex justify-content-between align-items-center p-4 bg-white w-100 rounded-4"
           >
             <div class="details d-flex align-items-center gap-3">
               <img
@@ -60,20 +96,25 @@
                 </h3>
               </div>
             </div>
-            <img
-              src="assets/profile/NotePencil.png"
-              alt=""
-              class="bg-base p-3 rounded-circle edit-btn"
-            />
-          </div>
-          <div class="d-flex flex-column justify-content-between align-items-center p-4 bg-white w-100 rounded-4 mt-4">
-            <div class="d-flex w-100 justify-content-between align-items-center">
-              <h2>Biography</h2>
+            <a href="settings.html">
               <img
                 src="assets/profile/NotePencil.png"
                 alt=""
                 class="bg-base p-3 rounded-circle edit-btn"
               />
+            </a>
+          </div>
+          <div class="d-flex flex-column justify-content-between align-items-center p-4 bg-white w-100 rounded-4 mt-4">
+            <div class="d-flex w-100 justify-content-between align-items-center">
+              <h2>Biography</h2>
+              <a href="onboarding.html">
+                <img
+                  src="assets/profile/NotePencil.png"
+                  alt=""
+                  class="bg-base p-3 rounded-circle edit-btn block d-md-none"
+                />
+              </a>
+             
             </div>
             <p>
               My design philosophy centers around a user-centric approach, where every design decision is informed by a deep understanding of the target audience and their needs. Whether designing a logo, website, app or physical product, I focus on creating experiences that are intuitive, engaging, and memorable.
@@ -83,11 +124,13 @@ With a keen eye for aesthetics and a strong understanding of design principles, 
           <div class="d-flex flex-column justify-content-between align-items-center p-4 bg-white w-100 rounded-4 mt-4">
             <div class="d-flex w-100 justify-content-between align-items-center">
               <h2>Biography</h2>
-              <img
-                src="assets/profile/NotePencil.png"
-                alt=""
-                class="bg-base p-3 rounded-circle edit-btn"
-              />
+              <a href="onboarding.html">
+                <img
+                  src="assets/profile/NotePencil.png"
+                  alt=""
+                  class="bg-base p-3 rounded-circle edit-btn"
+                />
+              </a>
             </div>
             <p>
               My design philosophy centers around a user-centric approach, where every design decision is informed by a deep understanding of the target audience and their needs. Whether designing a logo, website, app or physical product, I focus on creating experiences that are intuitive, engaging, and memorable.
@@ -97,11 +140,13 @@ With a keen eye for aesthetics and a strong understanding of design principles, 
           <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 mt-4">
             <div class="d-flex w-100 justify-content-between align-items-center">
               <h2>Experience</h2>
-              <img
-                src="assets/profile/NotePencil.png"
-                alt=""
-                class="bg-base p-3 rounded-circle edit-btn"
-              />
+              <a href="onboarding.html">
+                <img
+                  src="assets/profile/NotePencil.png"
+                  alt=""
+                  class="bg-base p-3 rounded-circle edit-btn"
+                />
+              </a>
             </div>
             <div class="experience px-3 py-4 bg-base mt-3 rounded-4 w-100">
               <h6 class="fw-bold"> UI/UX Designer | McGeorge</h6>
@@ -164,11 +209,13 @@ With a keen eye for aesthetics and a strong understanding of design principles, 
           <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 gap-2">
             <div class="d-flex w-100 justify-content-between align-items-center">
               <h2>Resume</h2>
-              <img
-                src="assets/profile/NotePencil.png"
-                alt=""
-                class=" edit-btn"
-              />
+              <a href="onboarding.html">
+                <img
+                  src="assets/profile/NotePencil.png"
+                  alt=""
+                  class=" edit-btn"
+                />
+              </a>
             </div>
             <div class="resume-input d-flex w-100 justify-content-start align-items-center ">
               <img src="assets/profile/pdf-icon.png" alt="" id="pdf-icon" class="me-2">
@@ -183,11 +230,13 @@ With a keen eye for aesthetics and a strong understanding of design principles, 
           <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 gap-2 mt-4">
             <div class="d-flex w-100 justify-content-between align-items-center">
               <h2>Skills</h2>
-              <img
-                src="assets/profile/NotePencil.png"
-                alt=""
-                class=" edit-btn"
-              />
+              <a href="onboarding.html">
+                <img
+                  src="assets/profile/NotePencil.png"
+                  alt=""
+                  class=" edit-btn"
+                />
+              </a>
             </div>
             <div class="skills d-flex flex-wrap gap-2">
               <span class="skill bg-base rounded-3 px-3 py-2">Creativity</span>
@@ -201,11 +250,13 @@ With a keen eye for aesthetics and a strong understanding of design principles, 
           <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 gap-2 mt-4">
             <div class="d-flex w-100 justify-content-between align-items-center">
               <h2>Stack</h2>
-              <img
-                src="assets/profile/NotePencil.png"
-                alt=""
-                class=" edit-btn"
-              />
+              <a href="onboarding.html">
+                <img
+                  src="assets/profile/NotePencil.png"
+                  alt=""
+                  class=" edit-btn"
+                />
+              </a>
             </div>
             <div class="skills d-flex flex-wrap gap-2">
               <img src="assets/profile/figma.png" alt="">
@@ -218,11 +269,14 @@ With a keen eye for aesthetics and a strong understanding of design principles, 
           <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 gap-2 mt-4">
             <div class="d-flex w-100 justify-content-between align-items-center">
               <h2>Social Handles</h2>
-              <img
+              <a href="onboarding.html">
+                <img
                 src="assets/profile/NotePencil.png"
                 alt=""
                 class=" edit-btn"
               />
+            </a>
+              
             </div>
             <div class="skills d-flex flex-wrap gap-2">
               <img src="assets/profile/figma.png" alt="">

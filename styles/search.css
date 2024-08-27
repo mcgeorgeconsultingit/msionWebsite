@@ -84,17 +84,6 @@ p{
         box-shadow: 0px 6px 40px 0px rgb(0 0 0 / 39%);
     }
 
-    /* .result-container.view-open::before{
-        height: 100%;
-        width: 100vw;
-        display: block;
-        background: rgba(0, 0, 0, 0.584);
-        content: '';
-        z-index: 100;
-        top: 0;
-        left: 0;
-        position: fixed;
-    } */
 }
 
 @media screen and (max-width:1024px) {

@@ -152,6 +152,7 @@ header {
     bottom: 40%;
   }
 
+
   footer{
     position: relative;
     /* margin-top: 500px; */
@@ -194,7 +195,7 @@ header {
 
   @media screen and (min-width: 1200px) {
     header {
-      padding: 24px 0;
+      padding: 14px 0;
     }
 
     nav {
@@ -224,3 +225,23 @@ header {
     }
   }
 
+
+  /* This is included for the avatar image in the header when the user is logged in. Odoo manages that state, I suppose. */
+
+  .user-menu{
+    transition: all ease-out .3s;
+    transition-behavior: allow-discrete;
+    z-index: 1000000 !important;
+  }
+  .user-menu.active{
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .user-menu > div > *{
+    transition: background-color .3s ease-out;
+  }
+
+  .user-menu > div >:hover {
+    background-color: rgba(230, 230, 230, 0.356);
+  }

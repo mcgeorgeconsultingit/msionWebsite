@@ -3,4 +3,4 @@
 - about kinks*
 - search mobile and interactivity*
 - applied jobs
-- saved jobs
+- saved jobsdd

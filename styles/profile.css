@@ -32,6 +32,23 @@ h2{
 }
 
 @media screen and (max-width:769px) {
+
+    .details > img{
+        width: 30%;
+    }
+
+    div:has( > .details){
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+ .details + img{
+        display: none;
+    }
+
+    .details h3{
+        font-size: 18px !important;
+    }
+    
     .profile__wrapper{
         flex-wrap: wrap !important;
     }

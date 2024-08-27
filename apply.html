@@ -187,6 +187,70 @@
       </section>
 
     <script src="js/nav.js"></script>
-    <script src="js/multistepForm.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  const steps = document.querySelectorAll('.tab');
+  const progress = document.getElementById('progress');
+  const submitBtn = document.getElementById('submitBtn');
+  let currentStep = 0;
+
+  // Ensure the first tab is visible
+  steps[currentStep].style.display = 'block';
+
+  function showStep(step) {
+    steps.forEach((tab, index) => {
+      tab.style.display = index === step ? 'block' : 'none';
+    });
+
+    // Update progress bar
+    const progressPercent = ((step + 1) / steps.length) * 100;
+    progress.style.width = `${progressPercent}%`;
+    progress.setAttribute('aria-valuenow', progressPercent);
+    progress.nextElementSibling.textContent = `${progressPercent}%`;
+
+    // Adjust button text and functionality
+    if (step === steps.length - 1) {
+      submitBtn.textContent = 'Submit';
+    } else {
+      submitBtn.textContent = 'Continue';
+    }
+  }
+
+  function validateStep(step) {
+    const inputs = steps[step].querySelectorAll('input, textarea');
+    for (let input of inputs) {
+      if (!input.checkValidity()) {
+        // Temporarily show the current step for validation
+        steps[step].style.display = 'block';
+        input.reportValidity();
+        steps[step].style.display = 'none';
+        return false;
+      }
+    }
+    return true;
+  }
+
+  function nextStep() {
+    if (validateStep(currentStep)) {
+      if (currentStep < steps.length - 1) {
+        currentStep++;
+        showStep(currentStep);
+      } else {
+        // At the end of the form
+        window.location.href = 'saved-jobs.html';
+      }
+    }
+  }
+
+  submitBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    nextStep();
+  });
+
+  // Initialize form
+  showStep(currentStep);
+});
+
+      </script>
   </body>
 </html>

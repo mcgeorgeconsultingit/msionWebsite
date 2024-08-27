@@ -62,6 +62,36 @@ p{
     line-height: 24px !important;
 }
 
+.filters-mobile{
+    /* position: absolute; */
+    isolation: isolate;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all .3s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    transition-behavior: allow-discrete;
+}
+
+.filters-mobile.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* .page-overlay{
+    height: 100vh;
+    width: 100vw;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.439);
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute !important;
+    z-index: -1;
+} */
+
+
 
 @media screen and (max-width:1024px) {
     .filters-md{

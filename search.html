@@ -48,6 +48,7 @@
         </div>
 
     </header>
+    <div class="page-overlay"></div>
 
       <section class="intro bg-base py-5">
         <div class="intro__wrapper wrapper conatiner d-flex flex-column text-center align-items-center mb-3 px-4 px-sm-4">
@@ -88,8 +89,8 @@
                 id="location"
                 style="padding: 0; font-size: 14px;"
               />
-              <div class="dropdown">
-                <div class=" dropdown-toggle px-3 py-2 bg-base rounded-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="">
+                <div class="mobile-filters-trigger text-nowrap px-2 px-sm-3 py-2 bg-base rounded-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Other filters
                 </div>
             </div>
@@ -102,10 +103,10 @@
                   Date Posted
                 </div>
                 <div class="dropdown-menu rounded-4" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item px-3 py-2" href="#"><input class="me-3" type="checkbox" name="today" id="">Today</a>
-                  <a class="dropdown-item px-3 py-2" href="#"><input class="me-3" type="checkbox" name="7days" id="">Last 7 days</a>
-                  <a class="dropdown-item px-3 py-2" href="#"><input class="me-3" type="checkbox" name="14days" id="">Last 14 days</a>
-                  <a class="dropdown-item px-3 py-2" href="#"><input class="me-3" type="checkbox" name="30days" id="">Last 30 days</a>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="today" id="">Today</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="7days" id="">Last 7 days</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="14days" id="">Last 14 days</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="30days" id="">Last 30 days</span>
                 </div>
             </div>
             <div class="dropdown">
@@ -113,44 +114,123 @@
                   Experience Level
                 </div>
                 <div class="dropdown-menu rounded-4" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item px-3 py-2" href="#"><input class="me-3" type="checkbox" name="entry" id="">Entry</a>
-                    <a class="dropdown-item px-3 py-2" href="#"><input class="me-3" type="checkbox" name="junior" id="">Junior</a>
-                    <a class="dropdown-item px-3 py-2" href="#"><input class="me-3" type="checkbox" name="mid" id="">Mid Level</a>
-                    <a class="dropdown-item px-3 py-2" href="#"><input class="me-3" type="checkbox" name="senior" id="">Senior</a>
-                    <a class="dropdown-item px-3 py-2" href="#"><input class="me-3" type="checkbox" name="manager" id="">Manager</a>
+                    <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="entry" id="">Entry</span>
+                    <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="junior" id="">Junior</span>
+                    <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="mid" id="">Mid Level</span>
+                    <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="senior" id="">Senior</span>
+                    <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="manager" id="">Manager</span>
                 </div>
             </div>
             <div class="dropdown">
                 <div class=" dropdown-toggle px-3 py-2 bg-base rounded-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown button
+                  Salary Range
                 </div>
                 <div class="dropdown-menu rounded-4" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item px-3 py-2" href="#">Action</a>
-                  <a class="dropdown-item px-3 py-2" href="#">Action</a>
-                  <a class="dropdown-item px-3 py-2" href="#">Action</a>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" id="">0 - 500</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" id="">500 - 1000</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" id="">1000 - 5000</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" id="">5000+</span>
                 </div>
             </div>
             <div class="dropdown">
                 <div class=" dropdown-toggle px-3 py-2 bg-base rounded-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown button
+                  Job Type
                 </div>
                 <div class="dropdown-menu rounded-4" aria-labelledby="dropdownMenuButton">
-                    <a href="" class="dropdown-item">Action 1</a>
-                    <a href="" class="dropdown-item">Action 1</a>
-                    <a href="" class="dropdown-item">Action 1</a>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="fullTime" id="">Full Time</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="partTime" id="">Part Time</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="contract" id="">Contract</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="internship" id="">Internship</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="volunteer" id="">Volunteer</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" name="other" id="">Other</span>
                 </div>
             </div>
             <div class="dropdown">
                 <div class=" dropdown-toggle px-3 py-2 bg-base rounded-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown button
+                  Work Type
                 </div>
                 <div class="dropdown-menu rounded-4" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item px-3 py-2" href="#">Action</a>
-                  <a class="dropdown-item px-3 py-2" href="#">Another action</a>
-                  <a class="dropdown-item px-3 py-2" href="#">Something else class</a>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" checked id="">On-Site</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" checked id="">Remote</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" checked id="">Hybrid</span>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class=" dropdown-toggle px-3 py-2 bg-base rounded-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Benefits
+                </div>
+                <div class="dropdown-menu rounded-4" aria-labelledby="dropdownMenuButton">
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" id="">Company credit card</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" id="">Company events</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" id="">Mid year bonuses</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" id="">Health insurance</span>
+                  <span class="dropdown-item px-3 py-2"><input class="me-3" type="checkbox" id="">Free lunch</span>
                 </div>
             </div>
         </div>
+
+        <!-- Mobile Sidebar -->
+        <div class="filters-mobile right-0 mb-5 p-2 rounded-3 d-md-none d-block shadow-lg" style="background-color: white; width: 300px; height: 100%; overflow-y: auto; overflow-x: hidden;">
+          <!-- Toggle button for the sidebar -->
+      
+          <!-- Sidebar content -->
+          <div id="sidebarContent" class="d-flex flex-column gap-3 p-3">
+
+            <div class="close-btn ms-auto me-3 bg-base rounded-4 px-4 py-3" style="width: max-content;">X</div>
+            <button class="submit-btn btn btn-primary w-full mb-3">Done</button>
+              <div class="filter-section">
+                  <h5>Date Posted</h5>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="today" id=""> label Today</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="7days" id="">Last 7 days</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="14days" id="">Last 14 days</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="30days" id="">Last 30 days</span>
+              </div>
+      
+              <div class="filter-section">
+                  <h5>Experience Level</h5>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="entry" id="">Entry</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="junior" id="">Junior</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="mid" id="">Mid Level</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="senior" id="">Senior</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="manager" id="">Manager</span>
+              </div>
+      
+              <div class="filter-section">
+                  <h5>Salary Range</h5>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" id="">0 - 500</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" id="">500 - 1000</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" id="">1000 - 5000</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" id="">5000+</span>
+              </div>
+      
+              <div class="filter-section">
+                  <h5>Job Type</h5>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="fullTime" id="">Full Time</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="partTime" id="">Part Time</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="contract" id="">Contract</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="internship" id="">Internship</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="volunteer" id="">Volunteer</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" name="other" id="">Other</span>
+              </div>
+      
+              <div class="filter-section">
+                  <h5>Work Type</h5>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" checked id="">On-Site</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" checked id="">Remote</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" checked id="">Hybrid</span>
+              </div>
+      
+              <div class="filter-section">
+                  <h5>Benefits</h5>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" id="">Company credit card</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" id="">Company events</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" id="">Mid year bonuses</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" id="">Health insurance</span>
+                  <span class="d-block px-3 py-2"><input class="me-3" type="checkbox" id="">Free lunch</span>
+              </div>
+          </div>
+      </div>
+      
       </section>
 
       <section class="search__results py-5">
@@ -165,10 +245,10 @@
                       Sort By
                     </div>
                     <div class="dropdown-menu rounded-4" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item px-3 py-2" href="#">Today</a>
-                      <a class="dropdown-item px-3 py-2" href="#">Last 7 days</a>
-                      <a class="dropdown-item px-3 py-2" href="#">Last 14 days</a>
-                      <a class="dropdown-item px-3 py-2" href="#">Last 30 days</a>
+                      <span class="dropdown-item px-3 py-2">Today</span>
+                      <span class="dropdown-item px-3 py-2">Last 7 days</span>
+                      <span class="dropdown-item px-3 py-2">Last 14 days</span>
+                      <span class="dropdown-item px-3 py-2">Last 30 days</span>
                     </div>
                 </div>
             </div>
@@ -493,7 +573,9 @@
         const resultView = document.querySelector('.result-view');
         const resultContainer = document.querySelector('.result-container');
         const buttons = document.querySelectorAll('.all-results button');
-
+        const mobileTrigger = document.querySelector('.mobile-filters-trigger');
+        const mobileFilters = document.querySelector('.filters-mobile');
+        
         // Event listener for button clicks
         buttons.forEach(button => {
           button.addEventListener('click', (event) => {
@@ -513,6 +595,31 @@
         resultView.addEventListener('click', (event) => {
           event.stopPropagation();
         });
+
+        // Event listener for button clicks
+          mobileTrigger.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click event from propagating to the window
+            mobileFilters.classList.add('open');
+          });
+
+        // Close the container when clicking outside of it
+        window.addEventListener('click', (event) => {
+          if (!mobileFilters.contains(event.target)) {
+            mobileFilters.classList.remove('open');
+          }
+        });
+
+        // Prevent closing when clicking inside the result container
+        mobileFilters.addEventListener('click', (event) => {
+          event.stopPropagation();
+        });
+
+        document.querySelector('.close-btn').addEventListener('click', () => {
+          mobileFilters.classList.remove('open')
+        })
+        document.querySelector('.submit-btn').addEventListener('click', () => {
+          mobileFilters.classList.remove('open')
+        })
 
       </script>
   </body>

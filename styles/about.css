@@ -2,9 +2,6 @@ section .story__wrapper .story-img{
     border-radius: 15px;
 }
 
-.cta .wrapper{
-    background-color: var(--clr-primary-800) !important;
-}
  
 @media screen and (max-width:576px){
 

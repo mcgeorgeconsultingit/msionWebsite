@@ -56,7 +56,7 @@ button{
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-    background-color: var(--clr-primary-200);
+    background-color: var(--clr-primary-600);
     /* border-color: var(--clr-primary-600); */
 }
 
@@ -80,6 +80,10 @@ button{
     background-color: var(--clr-neutral-900) !important;
 }
 
+.bg-neutral-100 {
+    background-color: var(--clr-neutral-100) !important;
+}
+
 /* Override Bootstrap text colors */
 .text-primary {
     color: var(--clr-primary) !important;
@@ -94,18 +98,37 @@ button{
 }
 
 .text-greyed {
-    color: var(--clr-neutral-800) !important;
+    color: var(--clr-neutral-600) !important;
 }
 .text-dark {
     color: var(--clr-neutral-900) !important;
 }
 
-/* @media screen and (max-width:1200px) {
-    .search__search-bar{
-        flex-direction: column !important;
-        align-items: flex-start !important;
-    }
-} */
+/* Text utility classes */
+
+.text-sm{
+  font-size: 14px;
+}
+
+.fw-normal{
+  font-weight: 500 !important;
+}
+
+
+/* Bprder utility classes */
+
+.border-neutral-100{
+  border-color: var(--clr-neutral-100) !important;
+}
+.border-neutral-200{
+  border-color: var(--clr-neutral-200) !important;
+}
+
+
+
+p{
+  letter-spacing: .1px;
+}
 
 header {
     max-width: 1240px;
@@ -245,3 +268,11 @@ header {
   .user-menu > div >:hover {
     background-color: rgba(230, 230, 230, 0.356);
   }
+
+
+  /* General utilities */
+
+  
+.preview-avatar{
+  max-width: 64px;
+}

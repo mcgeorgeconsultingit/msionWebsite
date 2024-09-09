@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post a new Job</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.css>
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.css>
+        <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css>
+        <script src=https://flatpickr.js.org/javascripts/modernizr.js></script>
+
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/recruiters/post-job.css" />
+  </head>
+  <body>
+    <header class="container d-flex align-items-center justify-content-between">
+        <a href="../"><img src="../assets/logo.png" alt="" class="logo"></a>
+        <nav class="">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-3">
+              <a href="../" class="text-black">Home</a>
+              <a href="talent-search.html" class="text-black">Talent Search</a>
+              <a href="#" class="text-black">Resources</a>
+              <a href="../about.html" class="text-black">About us</a>
+              <a href="../contact.html" class="text-black">Contact</a>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <a href="../login.html" class="text-primary text-body">Login</a>
+              <a href="../signup.html"
+                ><button class="btn-primary px-4 py-3 rounded-4">
+                  Get Started
+                </button></a
+              >
+            </div>
+          </div>
+        </nav>
+          <div class="burger" id="burgerMenu">
+            <span></span>
+            <span></span>
+          </div>
+  
+      </header>
+
+    <section class="main py-3 pb-5">
+      <div class="wrapper profile__wrapper container">
+        <h3 class="fw-bold mb-5">Post job</h3>
+
+        <div class="row">
+          <div class="job-form-col-1 col-12 col-lg-6">
+            <div class="bg-base rounded-4 p-4 mb-4 mb-md-0">
+              <div class="p-4 bg-white w-100 rounded-4">
+                <p class="mb-2 text-sm">Job Title</p>
+                <input type="text" data-normal class="text-sm d-block mb-4" placeholder="e.g Project Manager">
+  
+                <p class="mb-2 text-sm">Job Description</p>
+                <textarea class="text-sm d-block" placeholder="enter text"></textarea>
+  
+                <button class="btn bg-base text-dark p-4 align-self-start mt-3 rounded-5">
+                  <img src="./assets/Plus.png" alt="" class="me-3">
+                  Add extra info
+                </button>
+              </div>
+  
+              <div class="p-4 bg-white w-100 rounded-4 mt-4">
+                <p class="mb-2 text-sm">Location</p>
+                <div class="flex align-items-center p-3 rounded-4 gap-4 d-flex border border-neutral-200 flex-wrap">
+                  <div class="location-field">
+                    <input type="checkbox" name="location" id="remote" value="remote" class="me-1">
+                    <label for="remote">Remote</label>
+                  </div>
+                  <div class="location-field">
+                    <input type="checkbox" name="location" id="onsite" value="onsite" class="me-1">
+                    <label for="onsite">On-Site</label>
+                  </div>
+                  <div class="location-field">
+                    <input type="checkbox" name="location" id="hybrid" value="hybrid" class="me-1">
+                    <label for="hybrid">Hybrid</label>
+                  </div>
+                </div>
+                
+                <div class="my-4">
+                  <input type="checkbox" name="specific-timezones" id="specific-timezones" class="me-1">
+                  <label for="specific-timezones">Select specific timezones</label>
+                </div>
+  
+                <p class="mb-2 text-sm">Experience</p>
+                <div class="flex align-items-center p-3 rounded-4 gap-4 d-flex border border-neutral-200 flex-wrap">
+                  <div class="experience-field">
+                    <input type="checkbox" name="experience" value="entry" id="entry" class="me-1">
+                    <label for="entry">Entry Level</label>
+                  </div>
+                  <div class="experience-field">
+                    <input type="checkbox" name="experience" value="junior" id="junior" class="me-1">
+                    <label for="junior">Junior Level</label>
+                  </div>
+                  <div class="experience-field">
+                    <input type="checkbox" name="experience" value="mid" id="mid" class="me-1">
+                    <label for="mid">Mid Level</label>
+                  </div>
+                  <div class="experience-field">
+                    <input type="checkbox" name="experience" value="senior" id="senior" class="me-1">
+                    <label for="senior">Senior</label>
+                  </div>
+                  <div class="experience-field">
+                    <input type="checkbox" name="experience" value="manager" id="manager" class="me-1">
+                    <label for="manager">Manager</label>
+                  </div>
+                  <div class="experience-field">
+                    <input type="checkbox" name="experience" value="executive" id="executive" class="me-1">
+                    <label for="executive">Executive</label>
+                  </div>
+                </div>
+  
+                <p class="mb-2 text-sm mt-4">Job Type</p>
+                <div class="flex align-items-center p-3 rounded-4 gap-4 d-flex border border-neutral-200 flex-wrap">
+                  <div class="job-type-field">
+                    <input type="checkbox" name="job-type" value="fulltime" id="fulltime" class="me-1">
+                    <label for="fulltime">Full Time</label>
+                  </div>
+                  <div class="job-type-field">
+                    <input type="checkbox" name="job-type" value="parttime" id="parttime" class="me-1">
+                    <label for="parttime">Part Time</label>
+                  </div>
+                  <div class="job-type-field">
+                    <input type="checkbox" name="job-type" value="contract" id="contract" class="me-1">
+                    <label for="contract">Contract</label>
+                  </div>
+                  <div class="job-type-field">
+                    <input type="checkbox" name="job-type" value="internship" id="internship" class="me-1">
+                    <label for="internship">Internship</label>
+                  </div>
+                  <div class="job-type-field">
+                    <input type="checkbox" name="job-type" value="volunteer" id="volunteer" class="me-1">
+                    <label for="volunteer">Volunteer</label>
+                  </div>
+                  <div class="job-type-field">
+                    <input type="checkbox" name="job-type" value="other" id="other" class="me-1">
+                    <label for="other">Other</label>
+                  </div>
+                </div>
+  
+                <p class="mb-2 text-sm mt-4">Relevant skill tags</p>
+                <div class="flex align-items-center p-3 rounded-4 gap-2 d-flex border border-neutral-200 flex-wrap">
+                  <span class="p-1 bg-base border border-neutral-200 border-1 rounded-3 text-sm me-2">
+                    UI/UX Design
+                    <img src="./assets/X.png" alt="">
+                  </span>
+                  <span class="p-1 bg-base border border-neutral-200 border-1 rounded-3 text-sm me-2">
+                    Creative Design
+                    <img src="./assets/X.png" alt="">
+                  </span>
+                  <span class="p-1 bg-base border border-neutral-200 border-1 rounded-3 text-sm me-2">
+                    Figma
+                    <img src="./assets/X.png" alt="">
+                  </span>
+                  <span class="p-1 bg-base border border-neutral-200 border-1 rounded-3 text-sm me-2">
+                    Design
+                    <img src="./assets/X.png" alt="">
+                  </span>
+                </div>
+                
+              </div>
+  
+  
+            </div>
+          </div>
+
+          
+          <div class="job-form-col-1 col-12 col-lg-6">
+            <div class="job-form-col-1 bg-base rounded-4 p-4 mb-4 mb-md-0">
+
+              <div class="p-4 bg-white w-100 rounded-4">
+                <p class="mb-2 text-sm">Upload Resume</p>
+                <div class="resume-upload border p-3 py-4 rounded-3 d-flex align-items-center gap-3" style="border-style: dashed !important;">
+                  <img src="./assets/Upload.png" alt="">
+                  <div class="text flex-grow-1">
+                    <h6 class="fw-semibold m-0">Tap to Upload</h6>
+                    <span class="text-light text-sm">SVG, PNG, JPG, GIF | 10MB max.</span>
+                  </div>
+                  <button class="btn btn-primary rounded-2 px-3 py-2" >Upload</button>
+                </div>
+
+                <button class="btn bg-base text-dark p-4 align-self-start mt-3 rounded-5">
+                  <img src="./assets/Plus.png" alt="" class="me-3">
+                  Request upload of another file
+                </button>
+
+                <p class="mb-2 text-sm mt-4">Annual Salary (or salary range)</p>
+                <div class="flex align-items-center p-3 rounded-4 gap-2 d-flex border border-neutral-200  relative">
+                  <div class="d-flex align-items-center gap-2 pe-3 border-end" style="cursor: pointer;">
+                    <img src="./assets/flag-us.png" alt="">
+                    <span class="text-sm">USD</span>
+                    <img src="./assets/dropdown.png" alt="">
+                  </div>
+                  <!-- TODO: finish modal-->
+                  <div class="currency-menu position-absolute bottom bg-white shadow-lg p-0">
+                    <!-- <span>
+                      <img src="./assets/flag-us.png" alt="">
+                      <span>USD</span>
+                    </span> -->
+                  </div>
+
+                  <div class="salary-range d-flex align-items-center">
+                    $ <input type="number" name="start" class="d-flex ms-2">
+                    <p class="" style="margin:0 3%;">-</p>
+                    $ <input type="number" name="end" class="d-flex ms-2">
+                  </div>
+
+                </div>
+
+                <p class="mb-2 text-sm mt-4">Application Deadline</p>
+                <div class=" date-picker-container flex align-items-center p-3 rounded-4 d-flex border border-neutral-200 justify-content-between " style="cursor: pointer;">
+                  <input type="text" data-normal id="date-input" placeholder="July 6th, 2024" class="m-0 text-sm" style="color: var(--clr-neutral-800);" readonly="readonly"/>
+                  <img src="./assets/CalendarX.png" alt="">
+                </div>
+
+                <p class="mb-2 text-sm mt-3">External application link</p>
+                <input type="text" data-normal class="text-sm d-block mb-4 text-dark" value="https://">
+
+                <p class="mb-2 text-sm mt-4">How many people are you hiring for this role?</p>
+                <select name="number-of-people" class="flex align-items-center p-3 rounded-4 d-flex border border-neutral-200 justify-content-between w-100" style="cursor: pointer;">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">4</option>
+                  <option value="more">5+</option>
+                </select>
+              </div>
+
+              <div class="p-4 bg-white w-100 rounded-4 mt-4">
+                <p class="mb-2 text-sm">Company's name</p>
+                <input type="text" data-normal class="text-sm d-block mb-4 text-dark" value="Nike">
+
+                <p class="mb-2 text-sm mt-3">Company's website</p>
+                <input type="text" data-normal class="text-sm d-block mb-4 text-dark" value="https://nike.com">
+                
+                <p class="mb-2 text-sm mt-3">Company's email</p>
+                <input type="text" data-normal class="text-sm d-block mb-4 text-dark" value="email@nike.com">
+                
+              </div>
+
+            </div>
+
+            <button class="btn btn-primary py-3 w-100 rounded-4 mt-3">Publish Job</button>
+
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    
+    <footer class="py-5 bg-primary text-white">
+      <div class="footer__wrapper container-lg px-4 px-lg-0 gy-5 py-3">
+        <div class="row gap-4 py-4 gap-lg-0 mb-5 fw-semibold" style="border-bottom: 1px solid #ffffff21;">
+          <img src="/assets/logo.png" alt="" class="me-5" style="max-width: 120px; height: max-content;">
+          <div class="footer__navlist col-12 col-md-4 col-lg-2 d-flex flex-column gap-2 mb-3">
+            <h5 class="" style="font-size: 20px;">Candidates</h5>
+            <a href="" class="opacity-75">About Us</a>
+            <a href="" class="opacity-75">Add your Resume</a>
+            <a href="" class="opacity-75">Search Jobs</a>
+            <a href="" class="opacity-75">Contact Us</a>
+          </div>
+          <div class="footer__navlist col-12 col-md-4 col-lg-2 d-flex flex-column gap-2 mb-3">
+            <h5 class="" style="font-size: 20px;">News & Advice</h5>
+            <a href="" class="opacity-75">News</a>
+            <a href="" class="opacity-75">Newsletter Subscription</a>
+          </div>
+        </div>
+        <div class="d-flex gap-3 mb-5">
+          <a href=""><img src="assets/facebook.png" alt=""></a>
+          <a href=""><img src="assets/twitter.png" alt=""></a>
+          <a href=""><img src="assets/linkedin.png" alt=""></a>
+          <a href=""><img src="assets/instagram.png" alt=""></a>
+        </div>
+        <div class="row justify-content-between flex-column flex-md-row">
+          <p class="copyright col col-md-6 text-sm">© 2023 MSION - All rights reserved</p>
+          <div class="extras col col-md-5 d-flex justify-content-between">
+            <a href="#" class="text-sm opacity-75">Terms of Use</a>
+            <a href="#" class="text-sm opacity-75">Privacy Policy</a>
+            <a href="#" class="text-sm opacity-75">Cookie Policy</a>
+            <a href="#" class="text-sm opacity-75">GDPR</a>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
+
+    <script src="../js/nav.js"></script>
+    <script src=https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.js></script>
+    <script>
+      // This determines the features for the datepicker library. You can choose to move this into a fie on its own but it seemed too small to do that //
+
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr("#date-input", {
+              altInput: true,
+              altFormat: "F j, Y",
+              dateFormat: "Y-m-d",
+            });
+        });
+
+    </script>
+  </body>
+</html>

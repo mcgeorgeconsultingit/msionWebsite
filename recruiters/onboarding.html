@@ -63,70 +63,78 @@
               </div>
               <div class="title">Upload profile image</div>
             </div>
-            <h2 class="fw-semibold mb-2">Upload Resume/CV</h2>
-            <div
-              id="addImgBtn-wrapper-2"
-              class="w-100 p-5 border rounded-4 d-flex flex-column text-center justify-content-center align-items-center mb-5"
-              style="cursor: pointer; border: 2px #cacaca dashed"
-              onclick="getFile2()"
-            >
-              <img
-              id="addImgBtn-2"
-              src="../assets/onboarding/addImg2.png"
-              alt=""
-              />
-              <p id="filename"></p>
-              <p class="text-greyed" style="font-size: 12px">
-                <span class="text-primary">Click to upload</span> or drag and
-                drop
-                <br />
-                PDF, DOC or JPG (max. 800x400px)
-              </p>
-              <div style="height: 0px; width: 0px; overflow: hidden">
-                <input
-                  id="upfile2"
-                  type="file"
-                  accept="image/*"
-                  onchange="sub2(this)"
-                />
-              </div>
-            </div>
             <div class="personal-info">
               <input
                 id="name"
-                class="bg-base mb-3"
+                class="mb-3"
                 type="text"
                 name="Name"
                 placeholder="Name"
                 required
               />
               <input
-                id="email"
-                class="bg-base mb-2"
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
+                id="tagline"
+                class="mb-2"
+                type="text"
+                name="tagline"
+                placeholder="Tagline"
               />
+              <br>
+              <h2 class="mt-5 mb-2 text-semibold">About</h2>
+              <textarea name="about" id="about"></textarea>
             </div>
           </div>
 
           <div class="tab w-100">
-            <h2 class="mt-5 mb-2 text-semibold">Biography</h2>
-            <textarea name="biography" id="biography"></textarea>
-
-            <h2 class="mt-5 mb-2 text-semibold">What I'm looking for</h2>
-            <textarea name="biography" id="biography"></textarea>
-
-            <h2 class="fw-semibold mt-5">Skills (enter up to 15)</h2>
+            <h2 class="mt-5 mb-2 text-semibold">Location</h2>
             <input
-              type="skills"
-              class="transition"
+            id="location"
+            class="mb-3"
+            type="text"
+            name="Location"
+            placeholder="Location"
+            />
+
+            <h2 class="fw-semibold mt-5">Founding Year</h2>
+            <input
+              type="number"
+              class="transition mb-3"
               placeholder="Skills"
               name="skills"
+              max="2024"
+            />
+
+            <h2 class="fw-semibold mt-5">Size of Company</h2>
+            <input
+              type="size"
+              class="transition"
+              placeholder="Size"
+              name="Size"
+            />
+
+            <h2 class="fw-semibold mt-5">Industry (enter up to 10)</h2>
+            <input
+              type="industry"
+              class="transition"
+              placeholder="Industry"
+              name="Industry"
+            />
+
+            <h2 class="fw-semibold mt-5">Services (enter up to 30)</h2>
+            <input
+              type="industry"
+              class="transition"
+              placeholder="Industry"
+              name="Industry"
             />
 
             <h2 class="fw-semibold mt-5">Stack (Tools used)</h2>
+            <input
+              type="stack"
+              class="transition"
+              placeholder="Stack"
+              name="Stack"
+            />
           </div>
 
           <div class="tab w-100">
@@ -196,7 +204,7 @@
                 class="link_input flex-row align-items-center gap-3 active"
                 id="behance"
               >
-                <img src="assets/onboarding/social/behance.png" alt="" />
+                <img src="../assets/onboarding/social/behance.png" alt="" />
                 <input
                   type="text"
                   name="behance_link"
@@ -208,7 +216,7 @@
                 class="link_input flex-row align-items-center gap-3"
                 id="amazon"
               >
-                <img src="assets/onboarding/social/amazon.png" alt="" />
+                <img src="../assets/onboarding/social/amazon.png" alt="" />
                 <input
                   type="text"
                   name="amazon_link"
@@ -220,7 +228,7 @@
                 class="link_input flex-row align-items-center gap-3"
                 id="github"
               >
-                <img src="assets/onboarding/social/github.png" alt="" />
+                <img src="../assets/onboarding/social/github.png" alt="" />
                 <input
                   type="text"
                   name="github_link"
@@ -232,7 +240,7 @@
                 class="link_input flex-row align-items-center gap-3"
                 id="instagram"
               >
-                <img src="assets/onboarding/social/instagram.png" alt="" />
+                <img src="../assets/onboarding/social/instagram.png" alt="" />
                 <input
                   type="text"
                   name="instagram_link"
@@ -244,7 +252,7 @@
                 class="link_input flex-row align-items-center gap-3"
                 id="tiktok"
               >
-                <img src="assets/onboarding/social/tiktok.png" alt="" />
+                <img src="../assets/onboarding/social/tiktok.png" alt="" />
                 <input
                   type="text"
                   name="tiktok_link"
@@ -253,7 +261,7 @@
                 />
               </div>
               <div class="link_input flex-row align-items-center gap-3" id="x">
-                <img src="assets/onboarding/social/x.png" alt="" />
+                <img src="../assets/onboarding/social/x.png" alt="" />
                 <input
                   type="text"
                   name="x_link"
@@ -265,7 +273,7 @@
                 class="link_input flex-row align-items-center gap-3"
                 id="youtube"
               >
-                <img src="assets/onboarding/social/youtube.png" alt="" />
+                <img src="../assets/onboarding/social/youtube.png" alt="" />
                 <input
                   type="text"
                   name="youtube_link"
@@ -277,7 +285,7 @@
                 class="link_input flex-row align-items-center gap-3"
                 id="website"
               >
-                <img src="assets/onboarding/social/website.png" alt="" />
+                <img src="../assets/onboarding/social/website.png" alt="" />
                 <input
                   type="text"
                   name="website_link"
@@ -292,8 +300,9 @@
             class="navigation-buttons row d-flex justify-content-around gap-3 mt-5 px-2"
           >
             <button
-              class="col btn btn-secondary rounded-4 px-2 px-sm-3 py-2 py-sm-3 bg-opacity-75"
+              class="back-btn col btn bg-base text-dark rounded-4 px-2 px-sm-3 py-2 py-sm-3 bg-opacity-75"
             >
+              <img src="../assets/ArrowRight.png" alt=" " />
               Go back
             </button>
             <button
@@ -307,8 +316,107 @@
       </div>
     </section>
 
-    <script src="/js/addImg.js"></script>
-    <script src="/js/multistepForm.js"></script>
-    <script src="js/nav.js"></script>
+    <script src="../js/addImg.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+    const socialHandles = document.querySelectorAll(".social-icons div");
+    const linkInputs = document.querySelectorAll(".link_input");
+    const submitBtn = document.querySelector(".btn-primary");
+    const nameInput = document.querySelector("input[name='Name']");
+    const emailInput = document.querySelector("input[name='email']");
+    const progressBar = document.getElementById("progress");
+
+    document.querySelector(".back-btn").style.display = "none";
+
+  
+    let currentTab = 0; // Current tab is set to be the first tab (0)
+    showTab(currentTab); // Display the current tab
+  
+    function showTab(n) {
+      const tabs = document.querySelectorAll(".tab");
+      tabs.forEach((tab, index) => {
+        tab.classList.remove("active");
+        if (index === n) {
+          tab.classList.add("active");
+        }
+      });
+  
+      if (n == 0) {
+        document.querySelector(".back-btn").style.display = "none";
+      } else {
+        document.querySelector(".back-btn").style.display = "inline";
+      }
+      if (n == tabs.length - 1) {
+        submitBtn.textContent = "Submit";
+      } else {
+        submitBtn.textContent = "Continue";
+      }
+  
+      updateProgressBar();
+    }
+  
+    function nextPrev(n) {
+      const tabs = document.querySelectorAll(".tab");
+      if (n === 1 && !validateForm()) {
+        return false;
+      }
+  
+      currentTab += n;
+      if (currentTab >= tabs.length) {
+        if (validateForm()) {
+          window.location.href = "profile.html";
+        }
+        return false;
+      }
+      showTab(currentTab);
+    }
+  
+    function validateForm() {
+      const name = nameInput.value.trim();
+      return name !== "";
+    }
+  
+    function updateSubmitButtonState() {
+      submitBtn.disabled = !validateForm();
+    }
+  
+    function updateProgressBar() {
+      const tabs = document.querySelectorAll(".tab");
+      const percentage = ((currentTab + 1) / tabs.length) * 100;
+      progressBar.style.width = `${percentage}%`;
+      progressBar.setAttribute("aria-valuenow", percentage);
+      document.querySelector("label[for='progress']").textContent = `${Math.round(percentage)}%`;
+    }
+  
+    submitBtn.addEventListener("click", function (event) {
+      if (currentTab >= document.querySelectorAll(".tab").length - 1 && !validateForm()) {
+        event.preventDefault();
+      } else {
+        event.preventDefault();
+        nextPrev(1);
+      }
+    });
+  
+    document.querySelector(".back-btn").addEventListener("click", function () {
+      event.preventDefault();
+      nextPrev(-1);
+    });
+  
+    nameInput.addEventListener("input", updateSubmitButtonState);
+  
+    updateSubmitButtonState();
+  
+    function toggleActiveLink(event) {
+      const clickedId = event.currentTarget.id;
+      event.currentTarget.classList.toggle("active");
+      document.querySelector(`.link_input#${clickedId}`).classList.toggle("active");
+    }
+  
+    socialHandles.forEach((handle) => {
+      handle.addEventListener("click", toggleActiveLink);
+    });
+  });
+  
+    </script>
   </body>
 </html>

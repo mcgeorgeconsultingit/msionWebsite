@@ -1,0 +1,80 @@
+input[type="checkbox"]{
+    cursor: pointer;
+}
+
+input[type="text"]{
+  border: 0;
+  padding: 0;
+  box-shadow: none !important;
+  outline: none;
+}
+
+input[type="checkbox"]:checked{
+    background-color: var(--clr-primary);
+}
+
+
+input[data-normal],
+textarea,
+button {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 15px;
+  transition: all 0.3s ease-out;
+}
+
+input[data-normal],
+textarea {
+  border: 1.5px solid var(--clr-neutral-200);
+}
+input[data-normal]:focus,
+textarea:focus {
+  box-shadow: 0px 0px 0px 5px rgba(194, 197, 234, 1), 0 4px 6px 5px rgba(0, 0, 0, 0.041);
+  outline: 1.5px solid rgba(76, 84, 194, 1);
+}
+/* input[type="text"]:valid {
+  border: 1.5px solid var(--clr-primary);
+} */
+textarea {
+  height: 200px;
+  resize: none;
+}
+
+button{
+    width: max-content;
+}
+
+.salary-range input{
+  width: 30%;
+  font-size: small;
+  border: none;
+  outline: none;
+  padding-top: .2em;
+  min-width: 100px;
+}
+
+select:focus,
+select:focus-visible,
+select:active{
+  outline: none;
+} 
+
+
+
+.salary-range input:focus,
+.salary-range input:focus-visible,
+.salary-range input:active 
+{
+  border-bottom: 1px solid var(--clr-neutral-200) !important;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield !important; /* Hides arrows in Firefox */
+  appearance: textfield !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Hides arrows in Chrome */
+  margin: 0;
+}

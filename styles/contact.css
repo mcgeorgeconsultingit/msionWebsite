@@ -19,8 +19,8 @@
 }
 
 .contact__wrapper input:focus,  textarea:focus{
-    box-shadow: 0px 0px 0px 5px #D8F3FF, 0 4px 6px 5px rgba(0, 0, 0, 0.041);
-    outline: 1.5px solid #13B7FD;
+    box-shadow: 0px 0px 0px 5px rgba(194, 197, 234, 1), 0 4px 6px 5px rgba(0, 0, 0, 0.041);
+    outline: 1.5px solid rgba(76, 84, 194, 1);
   }
   .contact__wrapper input:valid{
     border: 1.5px solid var(--clr-primary);

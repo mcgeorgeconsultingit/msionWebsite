@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const nameInput = document.querySelector("input[name='Name']");
     const emailInput = document.querySelector("input[name='email']");
     const progressBar = document.getElementById("progress");
+
+    document.querySelector(".navigation-buttons .btn.bg-base").style.display = "none";
+
   
     let currentTab = 0; // Current tab is set to be the first tab (0)
     showTab(currentTab); // Display the current tab
@@ -19,9 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   
       if (n == 0) {
-        document.querySelector(".btn-secondary").style.display = "none";
+        document.querySelector(".navigation-buttons .btn.bg-base").style.display = "none";
       } else {
-        document.querySelector(".btn-secondary").style.display = "inline";
+        document.querySelector(".navigation-buttons .btn.bg-base").style.display = "inline";
       }
       if (n == tabs.length - 1) {
         submitBtn.textContent = "Submit";
@@ -77,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   
-    document.querySelector(".btn-secondary").addEventListener("click", function () {
+    document.querySelector(".navigation-buttons .btn.bg-base").addEventListener("click", function (event) {
       nextPrev(-1);
     });
   

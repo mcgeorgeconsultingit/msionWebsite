@@ -56,9 +56,18 @@ button{
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-    background-color: var(--clr-primary-600);
+    background-color: rgb(63, 63, 145);
     /* border-color: var(--clr-primary-600); */
 }
+
+.btn-primary:disabled{
+  background-color: var(--clr-primary-600);
+}
+
+button.bg-base{
+  background-color: var(--clr-base-button) !important;
+}
+
 
 /* Override Bootstrap background colors */
 .bg-primary {
@@ -143,6 +152,11 @@ header {
 
   .nav__wrapper__links__link {
     color: black;
+    font-weight: 500 !important;
+  }
+
+  header a{
+    font-weight: 500;
   }
 
   .nav__wrapper__links__link.active {

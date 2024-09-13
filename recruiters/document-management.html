@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documents</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/recruiters/document-management.css" />
+  </head>
+  <body>
+    <header class="container d-flex align-items-center justify-content-between">
+        <a href="../"><img src="../assets/logo.png" alt="" class="logo"></a>
+        <nav class="">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-3">
+              <a href="../" class="text-black">Home</a>
+              <a href="talent-search.html" class="text-black">Talent Search</a>
+              <a href="#" class="text-black">Resources</a>
+              <a href="../about.html" class="text-black">About us</a>
+              <a href="../contact.html" class="text-black">Contact</a>
+            </div>
+          </div>
+        </nav>
+        <div class="avatar-menu position-relative">
+            <img src="../assets/profile/profile 1 (1).png" alt="" class="menu-trigger rounded-circle " style="width: 60px; cursor: pointer;">
+            <div class="user-menu position-absolute bg-base p-2 rounded-4 shadow-lg" style="width: 300px; right: 0%; bottom: -800%; opacity: 0; visibility: hidden;">
+                <div class="bg-white rounded-4 px-3 py-2">
+                    <a href="profile.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="../assets/nav/UserCircle.png" alt="">
+                        <p class="m-0">Profile</p>
+                    </a>
+                    <a href="#" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="../assets/nav/Bag.png" alt="">
+                        <p class="m-0">My Jobs</p>
+                    </a>
+                    <a href="applied-jobs.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="../assets/nav/TextAlignJustify.png" alt="">
+                        <p class="m-0">Applications</p>
+                    </a>
+                    <a href="saved-jobs.html" class="p-3 d-flex gap-3 align-items-center">
+                        <img src="../assets/nav/UserCircle.png" alt="">
+                        <p class="m-0">Saved Jobs</p>
+                        <p class="bg-base rounded-4 px-3 py-1 m-0" style="font-size: 12px; margin-left: auto !important;">3</p>
+                    </a>
+                </div>
+                <div class="bg-white rounded-4 px-3 py-2 mt-2">
+                    <a href="contact.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="../assets/nav/Headset.png" alt="">
+                        <p class="m-0">Help</p>
+                    </a>
+                    <a href="/settings.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="../assets/nav/Gear.png" alt="">
+                        <p class="m-0">Settings</p>
+                    </a>
+                    <a href="#" class="p-3 d-flex gap-3 align-items-center">
+                        <img src="../assets/nav/SignOut.png" alt="">
+                        <p class="m-0">Sign Out</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+  
+      </header>
+
+    <section class="main">
+        <div class="wrapper documents__wrapper row position-relative">
+            <div class="documents-controls col-lg col-lg-4 bg-base px-5 px-lg-4 py-lg-5 pt-5">
+                <h4 class="fw-bold mb-lg-5">Document manager</h4>
+                <div class="filters">
+                    <div class="border-neutral-100 px-3 py-lg-4 bg-white border rounded-4">
+                        <div class="tab-select">
+                            <input type="radio" name="tab-select" id="admin" checked>
+                            <label for="admin">Administrative Documents</label>
+                        </div>
+                        <div class="tab-select">
+                            <input type="radio" name="tab-select" id="applicants">
+                            <label for="applicants">Applicant Documents</label>
+                        </div>
+                    </div>
+                    <div class="border-neutral-100 px-3 py-lg-4 bg-white border rounded-4 mt-4">
+                        <button class="w-100 px-3 py-3 rounded-4 text-start d-flex">
+                            Tags
+                            <img src="./assets/Plus.png" alt="" class="ms-auto">
+                        </button>
+    
+                        <div class="align-items-start d-flex flex-column mt-3 gap-3">
+                            <div class="tag-option">
+                              <input type="checkbox" name="document-tag" id="all" class="me-2" checked>
+                              <label class="text-dark" for="all">All (5)</label>
+                            </div>
+                            <div class="tag-option">
+                              <input type="checkbox" name="document-tag" id="nda" class="me-2">
+                              <label class="text-dark" for="nda">Non Disclosure Agreement (1)</label>
+                            </div>
+                            <div class="tag-option">
+                              <input type="checkbox" name="document-tag" id="employment" class="me-2">
+                              <label class="text-dark" for="employment">Employment Contract (1)</label>
+                            </div>
+                            <div class="tag-option">
+                              <input type="checkbox" name="document-tag" id="job-description" class="me-2">
+                              <label class="text-dark" for="job-description">Job description (1)</label>
+                            </div>
+                            <div class="tag-option">
+                              <input type="checkbox" name="document-tag" id="handbook" class="me-2">
+                              <label class="text-dark" for="handbook">Employee Handbook (1)</label>
+                            </div>
+                            <div class="tag-option">
+                              <input type="checkbox" name="document-tag" id="favorites" class="me-2">
+                              <label class="text-dark" for="favorites">Favorites (1)</label>
+                            </div>
+                          </div>
+            
+                    </div>
+                </div>
+            </div>
+
+            <div class="documents-view admin col-12 col-lg-8 ps-4 pt-lg-5 pe-0  position-relative">
+                <div class="d-flex flex-column align-items-center flex-lg-row justify-content-lg-start mb-4 gap-3 gap-lg-0">
+                    <div class="search__fields d-flex align-items-center bg-white py-2 px-4 rounded-4 flex-row" style="width: 40%; box-shadow: 0px 0px 0px 3px rgba(194, 197, 234, 1), 0 4px 6px 5px rgba(0, 0, 0, 0.041); border: 1.5px solid rgba(76, 84, 194, 1); max-width: 440px;">
+                        <img src="../styles/home/assets/search.png" alt="">
+                        <input type="text" name="query" id="search-query" placeholder="Search" class="border-0 ms-3">
+                    </div>
+
+                    <div class="action-bar ms-lg-auto justify-content-between justify-content-lg-start  d-flex align-items-center gap-3" style="cursor: pointer;">
+                        <div class="quick-actions position-relative">
+                            <span class="text-primary">Quick actions</span>
+                            <img src="./assets/dropdown-blue.png" alt="" class="ms-2">
+                            <div class="quick-actions-menu admin modal-menu position-absolute bg-base p-2 rounded-4 shadow-lg" style="width: 280px; right: 0%; top: 100%; opacity: 0; visibility: hidden;">
+                                <div class="bg-white rounded-4 px-3 py-2">
+                                    <span class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                                        <img src="./assets/FileDoc.png" alt="" style="width: 20px;">
+                                         <p class="m-0">View document</p>
+                                    </span>
+                                    <span class="applicants-docs p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                                        <img src="./assets/EnvelopeSimple.png" alt="" style="width: 20px;">
+                                        <p class="m-0">Send an email</p>
+                                    </span>
+                                    <span class="admin-docs p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                                        <img src="./assets/PencilSimple.png" alt="" style="width: 20px;">
+                                        <p class="m-0">Rename document</p>
+                                    </span>
+                                    <span class="admin-docs p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                                        <img src="./assets/ArrowsCounterClockwise.png" alt="" style="width: 20px;">
+                                        <p class="m-0">Replace document</p>
+                                    </span>
+                                    <span class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                                        <img src="./assets/TagSimple.png" alt="" style="width: 20px;">
+                                        <p class="m-0">Change tag</p>
+                                    </span>
+                                    <span class="applicants-docs p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                                        <img src="./assets/Plus.png" alt="" style="width: 20px;">
+                                        <p class="m-0">Add a note</p>
+                                    </span>
+                                    <span class="applicants-docs p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                                        <img src="./assets/ChartBar.png" alt="" style="width: 20px;">
+                                        <p class="m-0">Grade document</p>
+                                    </span>
+                                    <span class="applicants-docs p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                                        <img src="./assets/CalendarPlus.png" alt="" style="width: 20px;">
+                                        <p class="m-0">Schedule Interview</p>
+                                    </span>
+                                    <span class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                                        <img src="./assets/DownloadSimple.png" alt="" style="width: 20px;">
+                                        <p class="m-0">Download document</p>
+                                    </span>
+                                    <span class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                                        <img src="./assets/circle.png" alt="" style="width: 20px;">
+                                        <p class="m-0">Select all documents</p>
+                                    </span>
+                                    <span class="p-3 d-flex gap-3 align-items-center ">
+                                        <img src="./assets/Trash.png" alt="" style="width: 20px;">
+                                        <p class="m-0">Delete</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary p-3 rounded-4">
+                            <img src="./assets/upload-outline.png" alt="" class="me-2">
+                            Upload Document
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="documents-list admin-documents gap-3">
+                    <div class="document-card overflow-hidden border border-neutral-100 rounded-4">
+                        <img src="./assets/document1.png" alt="">
+                        <div class="document-details bg-base">
+                            <h5 class="document-name">Data Protection and compliance</h5>
+                            <span class="document-description">Regulatory compliance</span>
+                            <div class="options">
+                                <span class="date">11/12/2024</span>
+                                <span class="star" checked>
+                                </span>
+                                <span class="download bg-primary"><img src="./assets/upload-outline.png" style="rotate: 180deg;" alt="" ></span>
+                            </div>
+                        </div>
+
+                        <div class="custom-radio">
+                            <input type="checkbox" id="radio1" class="radio-input">
+                            <label for="radio1" class="radio-label"></label>
+                        </div>                          
+                        
+                    </div>
+                    <div class="document-card overflow-hidden border border-neutral-100 rounded-4">
+                        <img src="./assets/document1.png" alt="">
+                        <div class="document-details bg-base">
+                            <h5 class="document-name">Data Protection and compliance</h5>
+                            <span class="document-description">Regulatory compliance</span>
+                            <div class="options">
+                                <span class="date">11/12/2024</span>
+                                <span class="star" >
+                                </span>
+                                <span class="download bg-primary"><img src="./assets/upload-outline.png" style="rotate: 180deg;" alt="" ></span>
+                            </div>
+                        </div>
+
+                        <div class="custom-radio">
+                            <input type="checkbox" id="radio2" class="radio-input">
+                            <label for="radio2" class="radio-label"></label>
+                        </div>   
+                        
+                    </div>
+                    <div class="document-card overflow-hidden border border-neutral-100 rounded-4">
+                        <img src="./assets/document1.png" alt="">
+                        <div class="document-details bg-base">
+                            <h5 class="document-name">Data Protection and compliance</h5>
+                            <span class="document-description">Regulatory compliance</span>
+                            <div class="options">
+                                <span class="date">11/12/2024</span>
+                                <span class="star" checked>
+                                </span>
+                                <span class="download bg-primary"><img src="./assets/upload-outline.png" style="rotate: 180deg;" alt="" ></span>
+                            </div>
+                        </div>
+
+                        <div class="custom-radio">
+                            <input type="checkbox" id="radio3" class="radio-input">
+                            <label for="radio3" class="radio-label"></label>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="documents-list applicants-documents gap-3">
+                    <div class="document-card overflow-hidden border border-neutral-100 rounded-4">
+                        <img src="./assets/document1.png" alt="">
+                        <div class="document-details bg-base">
+                            <h5 class="document-name">Data Protection and compliance</h5>
+                            <span class="document-description">Regulatory compliance</span>
+                            <div class="options">
+                                <span class="date">11/12/2024</span>
+                                <span class="star" checked>
+                                </span>
+                                <span class="download bg-primary"><img src="./assets/upload-outline.png" style="rotate: 180deg;" alt="" ></span>
+                            </div>
+                        </div>
+
+                        <div class="custom-radio">
+                            <input type="checkbox" id="radio4" class="radio-input">
+                            <label for="radio4" class="radio-label"></label>
+                        </div>
+                        
+                    </div>
+                    <div class="document-card overflow-hidden border border-neutral-100 rounded-4">
+                        <img src="./assets/document1.png" alt="">
+                        <div class="document-details bg-base">
+                            <h5 class="document-name">Data Protection and compliance</h5>
+                            <span class="document-description">Regulatory compliance</span>
+                            <div class="options">
+                                <span class="date">11/12/2024</span>
+                                <span class="star" >
+                                </span>
+                                <span class="download bg-primary"><img src="./assets/upload-outline.png" style="rotate: 180deg;" alt="" ></span>
+                            </div>
+                        </div>
+
+                        <div class="custom-radio">
+                            <input type="checkbox" id="radio5" class="radio-input">
+                            <label for="radio5" class="radio-label"></label>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="document-expanded">
+                    <div class="document-title-block d-flex justify-content-between">
+                        <div class="">
+                            <h6 class="mb-1">Photography employment contract</h6>
+                            <div class="d-flex align-items-center">
+                                <span class="document-description d-block" style="width: 8px; height: 8px; border-radius: 50%; background: var(--clr-primary-600); margin-right: 4px;"></span>
+                                <span>Employment contract</span>
+                            </div>
+                        </div>
+                        <div class="options">
+                            <span class="star" checked>
+                            </span>
+                            <span class="download bg-primary"><img src="./assets/upload-outline.png" style="rotate: 180deg;" alt="" ></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 bg-primary text-white">
+      <div class="footer__wrapper container-lg px-4 px-lg-0 gy-5 py-3">
+        <div class="row gap-4 py-4 gap-lg-0 mb-5 fw-semibold" style="border-bottom: 1px solid #ffffff21;">
+          <img src="/assets/logo.png" alt="" class="me-5" style="max-width: 120px; height: max-content;">
+          <div class="footer__navlist col-12 col-md-4 col-lg-2 d-flex flex-column gap-2 mb-3">
+            <h5 class="" style="font-size: 20px;">Candidates</h5>
+            <a href="" class="opacity-75">About Us</a>
+            <a href="" class="opacity-75">Add your Resume</a>
+            <a href="" class="opacity-75">Search Jobs</a>
+            <a href="" class="opacity-75">Contact Us</a>
+          </div>
+          <div class="footer__navlist col-12 col-md-4 col-lg-2 d-flex flex-column gap-2 mb-3">
+            <h5 class="" style="font-size: 20px;">News & Advice</h5>
+            <a href="" class="opacity-75">News</a>
+            <a href="" class="opacity-75">Newsletter Subscription</a>
+          </div>
+        </div>
+        <div class="d-flex gap-3 mb-5">
+          <a href=""><img src="../assets/facebook.png" alt=""></a>
+          <a href=""><img src="../assets/twitter.png" alt=""></a>
+          <a href=""><img src="../assets/linkedin.png" alt=""></a>
+          <a href=""><img src="../assets/instagram.png" alt=""></a>
+        </div>
+        <div class="row justify-content-between flex-column flex-md-row">
+          <p class="copyright col col-md-6 text-sm">© 2023 MSION - All rights reserved</p>
+          <div class="extras col col-md-5 d-flex justify-content-between">
+            <a href="#" class="text-sm opacity-75">Terms of Use</a>
+            <a href="#" class="text-sm opacity-75">Privacy Policy</a>
+            <a href="#" class="text-sm opacity-75">Cookie Policy</a>
+            <a href="#" class="text-sm opacity-75">GDPR</a>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/radio.js"></script>
+    <script src="../js/document-management.js"></script>
+  </body>
+</html>

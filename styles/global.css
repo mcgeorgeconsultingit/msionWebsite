@@ -262,10 +262,56 @@ header {
     }
   }
 
+  /* Custom radio button */
+  
+  .custom-radio {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .radio-input {
+    display: none; /* Hide the default checkbox */
+  }
+  
+  .radio-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--clr-neutral-200); /* Outer circle */
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .radio-label::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .radio-input:checked + .radio-label::after {
+    background-color: var(--clr-primary); /* Inner circle when checked */
+  }
+  
+  .radio-input:checked + .radio-label {
+    border-color: var(--clr-primary); /* Keep the border same as inner circle */
+  }
+  
+
 
   /* This is included for the avatar image in the header when the user is logged in. Odoo manages that state, I suppose. */
 
-  .user-menu{
+  .user-menu, .modal-menu{
     transition: all ease-out .3s;
     transition-behavior: allow-discrete;
     z-index: 1000000 !important;
@@ -275,11 +321,11 @@ header {
     visibility: visible !important;
   }
 
-  .user-menu > div > *{
+  .user-menu > div > *, .modal-menu > div > *{
     transition: background-color .3s ease-out;
   }
 
-  .user-menu > div >:hover {
+  .user-menu > div >:hover, .modal-menu > div >:hover {
     background-color: rgba(230, 230, 230, 0.356);
   }
 

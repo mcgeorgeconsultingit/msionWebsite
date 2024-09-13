@@ -1,0 +1,50 @@
+p{
+    margin: 0;
+}
+
+.dashboard-title{
+    font-size: 28px;
+}
+.dashboard-stats{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr) ) ;
+}
+
+.table__wrapper{
+    width: 100%;
+}
+
+table {
+    width: 100%;          /* Table takes up the full width of its container */
+    border-collapse: collapse;
+    text-wrap: nowrap;
+}
+th, td {
+    padding: 10px; /* You can adjust the padding size */
+    text-align: left;
+    font-weight: 400;
+}
+th{
+    font-weight: 600;
+}
+
+/* Padding for the checkbox specifically */
+td input[type="checkbox"] {
+    margin-right: 10px; /* Adds space between the checkbox and the text */
+}
+
+th:nth-child(1), td:nth-child(1) {
+    width: 25%; /* Set desired width */
+}
+
+th:nth-child(6), td:nth-child(6) {
+    width: 18%; /* Set desired width */
+}
+
+tr:nth-child(odd){
+    background: rgb(247, 247, 247);
+}
+
+tr:nth-child(even){
+    background: rgb(255, 255, 255);
+}

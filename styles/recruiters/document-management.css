@@ -1,0 +1,211 @@
+.documents-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr) ) ;
+}
+
+.documents-view.applicants .admin-documents{
+    display: none;
+}
+
+.documents-view.admin .applicants-documents{
+    display: none;
+}
+
+.document-card{
+    border-width: 2px !important;
+    border-radius: 20px !important;
+    position: relative;
+}
+
+.document-card > img{
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+
+}
+
+.document-card .document-details{
+    padding: 1rem;
+}
+
+.document-card .document-name{
+    font-weight: 700;
+}
+
+.document-card .custom-radio{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background: white;
+    padding: .3em !important;
+    border-radius: 50%;
+
+}
+
+.document-description{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+.options{
+    display: flex;
+    align-items: center;
+}
+
+.document-details .options {
+    margin-top: 1em;
+}
+
+.document-details .options .date{
+    color: rgba(1, 107, 152, 1);
+}
+
+.star{
+    background: url("../../recruiters/assets/star-outline.png"), var(--clr-base-white);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    border: 1.3px solid var(--clr-neutral-200);
+    margin-right: .4em;
+}
+
+.star[checked]{
+    background: url("../../recruiters/assets/star.png"), var(--clr-base-white);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 55%;
+}
+.document-expanded .star{
+    background: url("../../recruiters/assets/star-outline-light.png"), rgba(231, 235, 239, 0.2);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    border: 1.3px solid rgba(114, 108, 108, 1);
+    margin-right: .4em;
+}
+
+.document-expanded .star[checked]{
+    background: url("../../recruiters/assets/star.png"), rgba(231, 235, 239, 0.2);
+    ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 55%;
+}
+
+.star, .download{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: stretch;
+    padding: .5em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.document-details .star{
+    margin-left: auto;
+}
+
+.quick-actions-menu{
+    position: absolute;
+    z-index: 100;
+    font-size: 14px;
+}
+
+.quick-actions-menu[data-visible]{
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.quick-actions-menu.admin .applicants-docs{
+    display: none !important;
+}
+.quick-actions-menu.applicants .admin-docs{
+    display: none !important;
+}
+
+.document-expanded{
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: rgba(131, 131, 131, 0.531);
+    padding: 4rem;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.document-expanded[data-visible]{
+    display: block;
+}
+
+.document-title-block{
+    color: white;
+    background: black;
+    border-radius: 10px;
+    padding: .5em 1.5em;
+    max-width: 1128.48px;
+}
+
+.document-title-block .document-description{
+    font-size: 14px;
+}
+
+
+@media screen and (max-width:569px){
+    .documents-list{
+        grid-template-columns: repeat(auto-fill, minmax(187px, 1fr) ) ;
+    }
+
+    .document-card .document-name{
+        font-size: 14px;
+    }
+    .document-card .document-description{
+        font-size: 12px;
+    }
+    .document-card .date{
+        font-size: 12px;
+    }
+
+    .star, .download{
+        width: 28px;
+        height: 28px;
+        padding: 6px;
+    }
+}
+
+
+@media screen and (max-width:992px){
+    .filters{
+        display: none;
+    }
+
+    .documents-controls{
+        background-color: none !important;
+        background: none !important;
+    }
+
+    .search__fields{
+        width: 90% !important;
+        max-width: unset !important;
+    }
+    .action-bar{
+        width: 90%;
+    }
+
+    .documents-view{
+        padding: 0 !important;
+    }
+
+    .documents-list{
+        padding-inline: 1.5rem;
+    }
+}
+
+@media screen and (min-width:992px){
+    .documents-controls{
+        max-width: 354px;
+    }
+}

@@ -1,0 +1,50 @@
+.searcharrowleft-icon {
+    width: 24px;
+    height: 24px;
+}
+.searcharrowleft-parent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.searchstar-wrapper {
+    border-radius: 8px;
+    background-color: rgba(231, 235, 239, 0.2);
+    border: 1px solid #726c6c;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    cursor: pointer;
+
+}
+.searchchats-wrapper {
+    border-radius: 8px;
+    background-color: rgba(231, 235, 239, 0.2);
+    border: 1px solid #726c6c;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    cursor: pointer;
+}
+.frame-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.frame-parent {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 28px;
+    color: #000003;
+    margin-bottom: 1.5rem;
+}
+

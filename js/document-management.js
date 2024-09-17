@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const list = document.querySelector(".documents-view");
     const quickActions = document.querySelector('.quick-actions');
     const quickActionsMenu = document.querySelector('.quick-actions-menu');
-    const selectAllButton = document.querySelector('.quick-actions-menu');
+    const gradeBtn = document.querySelector('#gradeTrigger');
+    // const selectAllButton = document.querySelector('.quick-actions-menu');
     
 
 //  Both tabs are actually rendered but I used css classes to hide 
@@ -29,6 +30,6 @@ window.addEventListener('click', (event) => {
       quickActionsMenu.removeAttribute('data-visible');
     }
   });
-  
+
 
 })

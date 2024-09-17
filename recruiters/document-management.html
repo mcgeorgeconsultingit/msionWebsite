@@ -88,7 +88,7 @@
                     <div class="border-neutral-100 px-3 py-lg-4 bg-white border rounded-4 mt-4">
                         <button class="w-100 px-3 py-3 rounded-4 text-start d-flex">
                             Tags
-                            <img src="./assets/Plus.png" alt="" class="ms-auto">
+                            <img src="./assets/Plus.svg" alt="" class="ms-auto">
                         </button>
     
                         <div class="align-items-start d-flex flex-column mt-3 gap-3">
@@ -136,47 +136,47 @@
                             <div class="quick-actions-menu admin modal-menu position-absolute bg-base p-2 rounded-4 shadow-lg" style="width: 280px; right: 0%; top: 100%; opacity: 0; visibility: hidden;">
                                 <div class="bg-white rounded-4 px-3 py-2">
                                     <span class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
-                                        <img src="./assets/FileDoc.png" alt="" style="width: 20px;">
+                                        <img src="./assets/FileDoc.svg" alt="" style="width: 20px;">
                                          <p class="m-0">View document</p>
                                     </span>
                                     <span class="applicants-docs p-3 d-flex gap-3 align-items-center border-1 border-bottom">
-                                        <img src="./assets/EnvelopeSimple.png" alt="" style="width: 20px;">
+                                        <img src="./assets/EnvelopeSimple.svg" alt="" style="width: 20px;">
                                         <p class="m-0">Send an email</p>
                                     </span>
                                     <span class="admin-docs p-3 d-flex gap-3 align-items-center border-1 border-bottom">
-                                        <img src="./assets/PencilSimple.png" alt="" style="width: 20px;">
+                                        <img src="./assets/PencilSimple.svg" alt="" style="width: 20px;">
                                         <p class="m-0">Rename document</p>
                                     </span>
                                     <span class="admin-docs p-3 d-flex gap-3 align-items-center border-1 border-bottom">
-                                        <img src="./assets/ArrowsCounterClockwise.png" alt="" style="width: 20px;">
+                                        <img src="./assets/ArrowsCounterClockwise.svg" alt="" style="width: 20px;">
                                         <p class="m-0">Replace document</p>
                                     </span>
                                     <span class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
-                                        <img src="./assets/TagSimple.png" alt="" style="width: 20px;">
+                                        <img src="./assets/TagSimple.svg" alt="" style="width: 20px;">
                                         <p class="m-0">Change tag</p>
                                     </span>
                                     <span class="applicants-docs p-3 d-flex gap-3 align-items-center border-1 border-bottom">
-                                        <img src="./assets/Plus.png" alt="" style="width: 20px;">
+                                        <img src="./assets/Plus.svg" alt="" style="width: 20px;">
                                         <p class="m-0">Add a note</p>
                                     </span>
-                                    <span class="applicants-docs p-3 d-flex gap-3 align-items-center border-1 border-bottom">
-                                        <img src="./assets/ChartBar.png" alt="" style="width: 20px;">
+                                    <span class="applicants-docs p-3 d-flex gap-3 align-items-center border-1 border-bottom" id="gradeTrigger">
+                                        <img src="./assets/ChartBar.svg" alt="" style="width: 20px;">
                                         <p class="m-0">Grade document</p>
                                     </span>
                                     <span class="applicants-docs p-3 d-flex gap-3 align-items-center border-1 border-bottom">
-                                        <img src="./assets/CalendarPlus.png" alt="" style="width: 20px;">
+                                        <img src="./assets/CalendarPlus.svg" alt="" style="width: 20px;">
                                         <p class="m-0">Schedule Interview</p>
                                     </span>
                                     <span class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
-                                        <img src="./assets/DownloadSimple.png" alt="" style="width: 20px;">
+                                        <img src="./assets/DownloadSimple.svg" alt="" style="width: 20px;">
                                         <p class="m-0">Download document</p>
                                     </span>
                                     <span class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
-                                        <img src="./assets/circle.png" alt="" style="width: 20px;">
+                                        <img src="./assets/circle.svg" alt="" style="width: 20px;">
                                         <p class="m-0">Select all documents</p>
                                     </span>
                                     <span class="p-3 d-flex gap-3 align-items-center ">
-                                        <img src="./assets/Trash.png" alt="" style="width: 20px;">
+                                        <img src="./assets/Trash.svg" alt="" style="width: 20px;">
                                         <p class="m-0">Delete</p>
                                     </span>
                                 </div>
@@ -251,47 +251,41 @@
                 </div>
 
                 <div class="documents-list applicants-documents gap-3">
-                    <div class="document-card overflow-hidden border border-neutral-100 rounded-4">
-                        <img src="./assets/document1.png" alt="">
-                        <div class="document-details bg-base">
-                            <h5 class="document-name">Data Protection and compliance</h5>
-                            <span class="document-description">Regulatory compliance</span>
-                            <div class="options">
-                                <span class="date">11/12/2024</span>
-                                <span class="star" checked>
-                                </span>
-                                <span class="download bg-primary"><img src="./assets/upload-outline.png" style="rotate: 180deg;" alt="" ></span>
+                    <div class="document-card-container position-relative">
+                        <div class="document-card overflow-hidden border border-neutral-100 rounded-4">
+                            <img src="./assets/document1.png" alt="">
+                            <div class="document-details bg-base">
+                                <h5 class="document-name">Data Protection and compliance</h5>
+                                <span class="document-description">Regulatory compliance</span>
+                                <div class="options">
+                                    <span class="date">11/12/2024</span>
+                                    <span class="star" checked>
+                                    </span>
+                                    <span class="download bg-primary"><img src="./assets/upload-outline.png" style="rotate: 180deg;" alt="" ></span>
+                                </div>
+                            </div>
+    
+                            <div class="custom-radio">
+                                <input type="checkbox" id="radio4" class="radio-input">
+                                <label for="radio4" class="radio-label"></label>
                             </div>
                         </div>
-
-                        <div class="custom-radio">
-                            <input type="checkbox" id="radio4" class="radio-input">
-                            <label for="radio4" class="radio-label"></label>
-                        </div>
+                        <div class="rating-modal position-absolute bg-white p-3 rounded-4 shadow-lg">
+                            <h6 class="fw-bold">Give rating</h6>
+                            <p class="text-sm">Rate how this meets the job requirements on a scale of 1 - 100</p>
                         
-                    </div>
-                    <div class="document-card overflow-hidden border border-neutral-100 rounded-4">
-                        <img src="./assets/document1.png" alt="">
-                        <div class="document-details bg-base">
-                            <h5 class="document-name">Data Protection and compliance</h5>
-                            <span class="document-description">Regulatory compliance</span>
-                            <div class="options">
-                                <span class="date">11/12/2024</span>
-                                <span class="star" >
-                                </span>
-                                <span class="download bg-primary"><img src="./assets/upload-outline.png" style="rotate: 180deg;" alt="" ></span>
+                            <div class="range">
+                                
+                                <input type="range" min="0" max="100" value="0" id="range" /> 
+                                <div class="value">0%</div>
                             </div>
-                        </div>
-
-                        <div class="custom-radio">
-                            <input type="checkbox" id="radio5" class="radio-input">
-                            <label for="radio5" class="radio-label"></label>
-                        </div>
                         
+                            <button class="w-100 btn btn-primary py-3 rounded-4">Done</button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="document-expanded">
+                <div class="document-expanded admin">
                     <div class="document-title-block d-flex justify-content-between">
                         <div class="">
                             <h6 class="mb-1">Photography employment contract</h6>
@@ -305,6 +299,49 @@
                             </span>
                             <span class="download bg-primary"><img src="./assets/upload-outline.png" style="rotate: 180deg;" alt="" ></span>
                         </div>
+                    </div>
+                </div>
+                <div class="document-expanded applicant">
+                    <div class="document-title-block d-flex justify-content-between" >
+                        <div class="">
+                            <h6 class="mb-1">Photography employment contract</h6>
+                            <div class="d-flex align-items-center">
+                                <span class="document-description d-block" style="width: 8px; height: 8px; border-radius: 50%; background: var(--clr-primary-600); margin-right: 4px;"></span>
+                                <span>Employment contract</span>
+                            </div>
+                        </div>
+                        <div class="options">
+                            <div class="schedule-btn me-3 text-sm">Schedule Interview</div>
+                            <span class="chat"></span>
+                            <span class="star" checked></span>
+                            <span class="download bg-primary"><img src="./assets/upload-outline.png" style="rotate: 180deg;" alt="" ></span>
+                        </div>
+                    </div>
+
+                    <div class="actions-modal open">
+                        <div class="tab-switches">
+                            <div class="switch border border-neutral-200 rounded-3">
+                                <img src="./assets/EnvelopeSimple.svg" alt="">
+                                <span>Send a message</span>
+                            </div>
+                            <div class="switch border border-neutral-200 rounded-3">
+                                <img src="./assets/EnvelopeSimple.svg" alt="">
+                                <span>Send a message</span>
+                            </div>
+                            <div class="switch border border-neutral-200 rounded-3">
+                                <img src="./assets/EnvelopeSimple.svg" alt="">
+                                <span>Send a message</span>
+                            </div>
+                        </div>
+                        <div class="tab-wrapper">
+                            <div class="tab-1 messages-tab">
+                                <img src="" alt="">
+                                <div class="messages">
+                                    <div class="message">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos, inventore officiis nostrum consequatur cumque.
+                                    </div>
+                                </div>
+                            </div>                    </div>
                     </div>
                 </div>
             </div>
@@ -350,6 +387,7 @@
 
     <script src="../js/nav.js"></script>
     <script src="../js/radio.js"></script>
+    <script src="../js/slider.js"></script>
     <script src="../js/document-management.js"></script>
   </body>
 </html>

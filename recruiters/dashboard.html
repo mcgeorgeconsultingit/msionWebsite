@@ -10,11 +10,6 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.css>
-    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.css>
-        <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css>
-        <script src=https://flatpickr.js.org/javascripts/modernizr.js></script>
-
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/recruiters/dashboard.css" />
   </head>
@@ -103,18 +98,55 @@
     </section>
 
 
-    <section class="main py-5 pb-5 container" style="overflow-x: scroll;">
-        <div class="table__wrapper">
+    <section class="main py-5 pb-5 container">
+        <div class="table__wrapper" style="overflow-x: scroll;">
             <table>
                 <thead>
                     <tr class="table-header bg-primary text-white p-3 text-start">
                         <th><input type="checkbox" id="select-all" class="me-1"> Applicant</th>
                         <th>Date</th>
                         <th>Time</th>
-                        <th class="job-title-dropdown">Job Title <img src="" alt="" width="15"></th>
+                        <th class="job-title-dropdown trigger-cell">
+                          <div>
+                            <div class="position-relative" style="cursor: pointer;">Job Title <img src="./assets/dropdown-white.svg" alt="" width="15"></div>
+                                <div class="job-titles-menu modal-menu position-absolute shadow-lg bg-white rounded-4 px-3 py-2 text-dark" style="visibility: hidden; opacity: 0;">
+                                    <span class="p-2 d-flex gap-3 align-items-center border-1 border-bottom">
+                                        <input type="checkbox" id="frontend">
+                                        <label for="frontend" class="m-0 text-sm"><a href="./applications.html">Frontend Engineer</a></label>
+                                    </span>
+                                    <span class="p-2 d-flex gap-3 align-items-center border-1 border-bottom">
+                                        <input type="checkbox" id="uiux">
+                                        <label for="uiux" class="m-0 text-sm"><a href="#">UI/UX Design</a></label>
+                                    </span>
+                                    <span class="p-2 d-flex gap-3 align-items-center border-1 mb-2">
+                                        <input type="checkbox" id="data-analyst">
+                                        <label for="data-analyst" class="m-0 text-sm"><a href="#">Data Analyst</a></label>
+                                    </span>
+                                    <button class="btn bg-base p-2 rounded-3 text-dark w-100 text-sm" >Select All</button>
+                                </div>
+                            </div>
+                          </div>
+                        </th>
                         <th>Stage</th>
                         <th>Application Status</th>
-                        <th>Ranking</th>
+                        <th class="ranking-dropdown trigger-cell">
+                          <div>
+                            <div class="position-relative" style="cursor: pointer;">
+                              Ranking 
+                              <img src="./assets/dropdown-white.svg" alt="" width="15"></div>
+                                <div class="ranking-menu modal-menu position-absolute shadow-lg bg-white rounded-4 px-3 py-2 text-dark" style="visibility: hidden; opacity: 0;">
+                                    <span class="p-2 d-flex gap-3 align-items-center">
+                                        <input type="checkbox" name="sort-order" id="ascending">
+                                        <label for="ascending" class="m-0 text-sm">Ascending</label>
+                                    </span>
+                                    <span class="p-2 d-flex gap-3 align-items-center border-1">
+                                        <input type="checkbox" name="sort-order" id="descending">
+                                        <label for="descending" class="m-0 text-sm">Descending</label>
+                                    </span>
+                                </div>
+                            </div>
+                          </div>
+                        </th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -127,7 +159,48 @@
                         <td>Interview</td>
                         <td>Hired</td>
                         <td>85%</td>
-                        <td><img src="./assets/menu-vertical.png" alt=""></td>
+                        <td class="trigger-cell">
+                          <img src="./assets/menu-vertical.png" alt="">
+                          <div class="document-menu">
+                            <div class="document-menu admin modal-menu position-absolute bg-base p-2 rounded-4 shadow-lg" 
+                            style="width: 280px; right: 10%; bottom: 0%; visibility: hidden; opacity: 0;">
+                              <div class="bg-white rounded-4 px-3 py-2">
+                                  <span class="applicants-docs p-2 d-flex gap-3 align-items-center border-1 border-bottom">
+                                      <img src="./assets/EnvelopeSimple.svg" alt="" style="width: 20px;">
+                                      <p class="m-0">Send an email</p>
+                                  </span>
+                                  <span class="applicants-docs p-2 d-flex gap-3 align-items-center border-1 border-bottom">
+                                      <img src="./assets/CalendarPlus.svg" alt="" style="width: 20px;">
+                                      <p class="m-0">Schedule Interview</p>
+                                  </span>
+                                  <span class="p-2 d-flex gap-3 align-items-center border-1 border-bottom">
+                                      <img src="./assets/Files.svg" alt="" style="width: 20px;">
+                                      <p class="m-0">View application details</p>
+                                  </span>
+                                  <span class="p-2 d-flex gap-3 align-items-center border-1 border-bottom">
+                                      <img src="./assets/FolderSimpleStar.svg" alt="" style="width: 20px;">
+                                      <p class="m-0">View Graded Applicants</p>
+                                  </span>
+                                  <span class="p-2 d-flex gap-3 align-items-center border-1 border-bottom">
+                                    <img src="./assets/Files.svg" alt="" style="width: 20px;">
+                                    <p class="m-0">View Resume</p>
+                                  </span>
+                                  <span class="p-2 d-flex gap-3 align-items-center border-1 border-bottom">
+                                    <img src="./assets/Files.svg" alt="" style="width: 20px;">
+                                    <p class="m-0">View Cover Letter</p>
+                                  </span>
+                                  <span class="p-2 d-flex gap-3 align-items-center border-1 border-bottom">
+                                    <img src="./assets/CheckCircle.svg" alt="" style="width: 20px;">
+                                    <p class="m-0">Hired</p>
+                                  </span>
+                                  <span class="p-2 d-flex gap-3 align-items-center ">
+                                      <img src="./assets/Trash.svg" alt="" style="width: 20px;">
+                                      <p class="m-0">Reject Application</p>
+                                  </span>
+                              </div>
+                          </div>
+                          </div>
+                        </td>
                     </tr>
                     <tr>
                         <td><input type="checkbox"> Jane Smith</td>
@@ -203,16 +276,41 @@
 
 
     <script src="../js/nav.js"></script>
-    <script src=https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.js></script>
     <script>
-      // This determines the features for the datepicker library. You can choose to move this into a fie on its own but it seemed too small to do that //
+      
+        const table = document.querySelector('table')
+        document.querySelectorAll('.trigger-cell').forEach(cell => {
+          const menu = cell.querySelector('.modal-menu');
 
-        document.addEventListener('DOMContentLoaded', function () {
-            flatpickr("#date-input", {
-              altInput: true,
-              altFormat: "F j, Y",
-              dateFormat: "Y-m-d",
-            });
+          const updateMenuPosition = () => {
+            const rect = cell.getBoundingClientRect(); // Get the position of the cell
+
+            // Position the menu relative to the cell
+            menu.style.left = `${rect.left}px`;
+          };
+
+          cell.addEventListener('click', () => {
+            menu.style.position = 'absolute';
+            updateMenuPosition();
+            menu.classList.toggle('active') ; // Show the menu
+          });
+
+          // Hide the menu when clicking outside
+          document.addEventListener('click', (event) => {
+            if (!cell.contains(event.target) && !menu.contains(event.target)) {
+              menu.classList.remove('active') ; // Hide the menu if clicked outside
+            }
+          });
+
+          // Update the menu position on window resize
+          window.addEventListener('resize', () => {
+            if (menu.style.display === 'block') {
+              updateMenuPosition();
+            }
+          });
+          table.addEventListener('scroll', () => {
+              updateMenuPosition();
+          });
         });
 
     </script>

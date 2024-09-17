@@ -12,6 +12,7 @@ p{
 
 .table__wrapper{
     width: 100%;
+    margin-bottom: 5rem;
 }
 
 table {
@@ -24,7 +25,7 @@ th, td {
     text-align: left;
     font-weight: 400;
 }
-th{
+th:not(th >){
     font-weight: 600;
 }
 
@@ -42,9 +43,29 @@ th:nth-child(6), td:nth-child(6) {
 }
 
 tr:nth-child(odd){
-    background: rgb(247, 247, 247);
+    background: rgba(231, 235, 239, 1);
 }
 
 tr:nth-child(even){
     background: rgb(255, 255, 255);
 }
+
+.job-titles-menu, .modal-menu{
+    transition: all ease-out .3s;
+    transition-behavior: allow-discrete;
+    z-index: 1000 !important;
+  }
+  .job-titles-menu.active{
+    opacity: 1 !important;
+    visibility: visible !important;
+    left: 0;
+  }
+
+  .job-titles-menu > *, .modal-menu > *{
+    transition: background-color .3s ease-out;
+    cursor: pointer;
+  }
+
+  .job-titles-menu >:hover, .modal-menu >:hover {
+    background-color: rgba(230, 230, 230, 0.356);
+  }

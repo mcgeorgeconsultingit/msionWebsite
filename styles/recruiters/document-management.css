@@ -1,6 +1,6 @@
 .documents-list{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr) ) ;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr) ) ;
 }
 
 .documents-view.applicants .admin-documents{
@@ -31,6 +31,7 @@
 
 .document-card .document-name{
     font-weight: 700;
+    font-size: 18px;
 }
 
 .document-card .custom-radio{
@@ -72,7 +73,7 @@
 }
 
 .star[checked]{
-    background: url("../../recruiters/assets/star.png"), var(--clr-base-white);
+    background: url("../../recruiters/assets/Star.svg"), var(--clr-base-white);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 55%;
@@ -87,14 +88,14 @@
 }
 
 .document-expanded .star[checked]{
-    background: url("../../recruiters/assets/star.png"), rgba(231, 235, 239, 0.2);
+    background: url("../../recruiters/assets/Star.svg"), rgba(231, 235, 239, 0.2);
     ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 55%;
 }
 
-.star, .download{
+.star, .download, .chat{
     width: 44px;
     height: 44px;
     display: flex;
@@ -126,12 +127,42 @@
     display: none !important;
 }
 
+.document-card-container:has(.rating-modal.open){
+    z-index: 2;
+}
+
+.document-card-container:has(.rating-modal.open) .document-card{
+    border: 1px solid var(--clr-primary) !important;
+}
+
+
+.rating-modal{
+    width: 300px;
+    z-index: 3;
+    bottom: -10%;
+    left: 20%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-out;
+    transition-behavior: allow-discrete;
+}
+.documents-view:has(.rating-modal.open)::after{
+    width: 150%;
+    height: 100%;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.374);
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+}
+
 .document-expanded{
     position: absolute;
     width: 200%;
     height: 100%;
-    background: rgba(131, 131, 131, 0.531);
-    padding: 4rem;
+    background: rgba(0, 0, 0, 0.531);
+    padding: 4rem ;
     top: 0;
     left: 0;
     display: none;
@@ -139,6 +170,10 @@
 
 .document-expanded[data-visible]{
     display: block;
+}
+
+.document-expanded .document-title-block{
+    width: 50%;
 }
 
 .document-title-block{
@@ -151,6 +186,64 @@
 
 .document-title-block .document-description{
     font-size: 14px;
+}
+
+.chat{
+    background: url("../../recruiters/assets/Chats.svg"), rgba(231, 235, 239, 0.2);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    border: 1.3px solid rgba(114, 108, 108, 1);
+    margin-right: .4em;
+}
+
+.schedule-btn{
+    background: rgba(231, 235, 239, 0.20); border-radius: 8px; border: 1px #726C6C solid;
+    padding: .5em 1.5em;
+    cursor: pointer;
+}
+
+.document-expanded .actions-modal{
+    background: white;
+    width: 80vw;
+    padding: 1rem;
+    position: fixed;
+    bottom: 50vh;
+    max-width: 1128.48px;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.actions-modal .tab-switches{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    width: 100%;
+    border-bottom: 2px solid var(--clr-neutral-200);
+    padding: .5rem;
+    padding-bottom: 1.6rem;
+}
+
+.tab-switches .switch{
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    gap: .4em;
+    background: var(--clr-base-white);
+}
+
+.switch img{
+    width: 20px;
+}
+
+.messages .message{
+    font-size: 14px;
+    padding: .7rem;
+    background: var(--clr-base-white);
+    border-radius: 12px;
+    border-top-left-radius: 0;
+    max-width: 70%;
 }
 
 
@@ -169,15 +262,23 @@
         font-size: 12px;
     }
 
-    .star, .download{
+    .star, .download, .chat{
         width: 28px;
         height: 28px;
         padding: 6px;
     }
+
+
+
 }
 
 
 @media screen and (max-width:992px){
+
+    .documents-controls{
+        margin-bottom: 1rem;
+    }
+
     .filters{
         display: none;
     }
@@ -190,6 +291,7 @@
     .search__fields{
         width: 90% !important;
         max-width: unset !important;
+        margin-top: 2rem;
     }
     .action-bar{
         width: 90%;
@@ -201,6 +303,18 @@
 
     .documents-list{
         padding-inline: 1.5rem;
+    }
+
+    .quick-actions-menu{
+        left: 50%;
+    }
+
+    .document-expanded .document-title-block{
+        width: 80vw !important;
+    } 
+
+    .document-expanded .schedule-btn{
+        display: none;
     }
 }
 

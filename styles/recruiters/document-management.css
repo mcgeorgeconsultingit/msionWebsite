@@ -288,6 +288,60 @@ textarea{
 }
 
 
+.line-parent {
+    position: relative;
+    border-radius: 19.5px;
+    border: 1.6px solid #cccbcb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13.6px;
+    color: #667185;
+    font-family: Inter;
+    gap: 15.6px;
+  }
+  
+  .time-selection {
+    display: flex;
+    align-items: center;
+    gap: 11.7px;
+    margin-top: 1.5rem;
+  }
+  
+  .input-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #cccbcb;
+    padding: .8rem;
+    width: 60px;
+  }
+  
+  .time-frame {
+    width: 62.4px;
+    border-radius: 19.5px;
+    /* background-color: #fff; */
+  }
+
+  .time-frame[data-checked="true"]{
+    background-color: var(--clr-primary-600);
+    color: white;
+  }
+  
+  .time-section {
+    font-size: 15.6px;
+    color: #1d2739;
+    text-align: center;
+  }
+  
+  .separator {
+    font-size: 15.6px;
+    color: #1d2739;
+  }
+  
+
 @media screen and (max-width:569px){
     .documents-list{
         grid-template-columns: repeat(auto-fill, minmax(187px, 1fr) ) ;

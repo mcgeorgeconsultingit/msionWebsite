@@ -11,6 +11,10 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.css>
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.css>
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css>
+    <script src=https://flatpickr.js.org/javascripts/modernizr.js></script>
 
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/recruiters/document-management.css" />
@@ -373,19 +377,39 @@
                                         <div class="note">
                                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos, inventore officiis nostrum consequatur cumque.
                                         </div>
-                                        <div class="note note-file">
+                                        <div class="note note-file w-100">
                                             <img src="" alt="">
-                                            <div>
-                                                <img src="" alt="">
-                                                <div>
-                                                    <h6>Filename.pdf</h6>
+                                            <div class="d-flex gap-2 align-items-center w-100 p-3 bg-base">
+                                                <img src="./assets/file type.svg" alt="">
+                                                <div class="flex-grow-1">
+                                                    <h6 class="m-0">Filename.pdf</h6>
                                                     <span>James Daniel • 4:59 PM</span>
                                                 </div>
+                                                <img src="./assets/download-grey.svg" alt="" id="file-download-btn">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>                 
+                            </div>
+                            <div class="tab-3 schedule-tab py-2">
+                                <div class="schedule-wrapper">
+                                    <input type="text" data-normal id="date-input" placeholder="July 6th, 2024" class="m-0 text-sm d-none" style="color: var(--clr-neutral-800); " readonly="readonly" />
+                                    <div class="time-selection">
+                                        <input type="text" class="input-frame time-section" value="29">
+                                        <div class="separator">:</div>
+                                        <input type="text" class="input-frame time-section" value="00">
+                                        <div class="meridian d-flex gap-2">
+                                            <div class="am time-frame input-frame" data-checked="true">AM</div>
+                                            <div class="pm time-frame input-frame" data-checked="false">PM</div>
+                                        </div>
+                                    </div>
+                                    <textarea class="mt-3 p-3 w-100 border-1 border-neutral-200 rounded-4" style="resize: none; height: 200px;" name="note" id="activity-note" placeholder="add note"></textarea>
+                                    <div class="activity-buttons w-100 d-flex">
+                                        <button class="btn bg-base rounded-4 p-3 flex-grow-1">Cancel</button>
+                                        <button class="btn btn-primary rounded-4 py-3 flex-grow-1">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="message-input d-flex align-items-start gap-2 mt-2">
                             <img src="./assets/circleplus.svg" alt="">
@@ -439,5 +463,52 @@
     <script src="../js/radio.js"></script>
     <script src="../js/slider.js"></script>
     <script src="../js/document-management.js"></script>
+    <script src=https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.js></script>
+    <script>
+      // This determines the features for the datepicker library. You can choose to move this into a fie on its own but it seemed too small to do that //
+
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr("#date-input", {
+              altInput: true,
+              altFormat: "F j, Y",
+              dateFormat: "Y-m-d",
+              inline: true
+            });
+        });
+
+        document.querySelectorAll('.switch').forEach((switchBtn, index) => {
+                switchBtn.addEventListener('click', () => {
+                    // Remove 'active' class from all switches
+                    document.querySelectorAll('.switch').forEach(btn => btn.classList.remove('active'));
+
+                    // Add 'active' class to the clicked switch
+                    switchBtn.classList.add('active');
+
+                    // Hide all tab contents
+                    document.querySelectorAll('.tab-wrapper > div').forEach(tab => tab.style.display = 'none');
+
+                    // Show the corresponding tab based on index
+                    document.querySelector(`.tab-wrapper .tab-${index + 1}`).style.display = 'block';
+                });
+            });
+
+            // Initialize the first tab to be visible
+            document.querySelector('.tab-wrapper .tab-1').style.display = 'block';
+
+            
+            const amButton = document.querySelector('.am');
+            const pmButton = document.querySelector('.pm');
+
+            amButton.addEventListener('click', () => {
+                amButton.setAttribute('data-checked', 'true');
+                pmButton.setAttribute('data-checked', 'false');
+            });
+
+            pmButton.addEventListener('click', () => {
+                pmButton.setAttribute('data-checked', 'true');
+                amButton.setAttribute('data-checked', 'false');
+            });
+
+    </script>
   </body>
 </html>

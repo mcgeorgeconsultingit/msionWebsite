@@ -182,7 +182,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-primary p-3 rounded-4">
+                        <button class="btn btn-primary px-1 py-3 p-lg-3 rounded-4">
                             <img src="./assets/upload-outline.png" alt="" class="me-2">
                             Upload Document
                         </button>
@@ -301,13 +301,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="document-expanded applicant">
+                <div class="document-expanded applicant" data-visible>
                     <div class="document-title-block d-flex justify-content-between" >
                         <div class="">
-                            <h6 class="mb-1">Photography employment contract</h6>
+                            <h6 class="mb-1">Hussein Farouk CV</h6>
                             <div class="d-flex align-items-center">
                                 <span class="document-description d-block" style="width: 8px; height: 8px; border-radius: 50%; background: var(--clr-primary-600); margin-right: 4px;"></span>
-                                <span>Employment contract</span>
+                                <span>Resume</span>
                             </div>
                         </div>
                         <div class="options">
@@ -320,35 +320,85 @@
 
                     <div class="actions-modal open">
                         <div class="tab-switches">
-                            <div class="switch border border-neutral-200 rounded-3">
+                            <div class="switch active border border-neutral-200 rounded-3">
                                 <img src="./assets/EnvelopeSimple.svg" alt="">
                                 <span>Send a message</span>
                             </div>
                             <div class="switch border border-neutral-200 rounded-3">
-                                <img src="./assets/EnvelopeSimple.svg" alt="">
-                                <span>Send a message</span>
+                                <img src="./assets/Note.svg" alt="">
+                                <span>Leave a note</span>
                             </div>
                             <div class="switch border border-neutral-200 rounded-3">
-                                <img src="./assets/EnvelopeSimple.svg" alt="">
-                                <span>Send a message</span>
+                                <img src="./assets/CalendarPlus.svg" alt="">
+                                <span>Schedule an activity</span>
+                            </div>
+                            <div class="ms-auto align-self-start">
+                                <img src="./assets/Close.svg" alt="">
                             </div>
                         </div>
                         <div class="tab-wrapper">
                             <div class="tab-1 messages-tab">
-                                <img src="" alt="">
-                                <div class="messages">
-                                    <div class="message">
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos, inventore officiis nostrum consequatur cumque.
+                                <div class="messages-wrapper py-3 d-flex gap-1 align-items-start" style="height: max-content;">
+                                    <img src="../assets/profile/profile 1 (1).png" alt="" class="rounded-circle" style="width: 48px; cursor: pointer;">
+                                    <div class="messages d-flex flex-column gap-1 align-items-start">
+                                        <div class="message">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos, inventore officiis nostrum consequatur cumque.
+                                        </div>
+                                        <div class="message">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos, inventore officiis nostrum consequatur cumque.
+                                        </div>
+                                        <div class="message">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos, inventore officiis nostrum consequatur cumque.
+                                        </div>
+                                        <div class="message">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos, inventore officiis nostrum consequatur cumque.
+                                        </div>
+                                        <div class="message">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos, inventore officiis nostrum consequatur cumque.
+                                        </div>
+                                        <div class="message">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos, inventore officiis nostrum consequatur cumque.
+                                        </div>
+                                        <div class="message">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos, inventore officiis nostrum consequatur cumque.
+                                        </div>
+                                        <span class="text-greyed text-sm">James Daniel • 4:59 PM</span>
                                     </div>
                                 </div>
-                            </div>                    </div>
+                            </div>
+                            <div class="tab-2 notes-tab">
+                                <div class="notes-wrapper py-3 d-flex gap-1 align-items-start" style="height: max-content;">
+                                    <img src="../assets/profile/profile 1 (1).png" alt="" class="rounded-circle" style="width: 48px; cursor: pointer;">
+                                    <div class="notes d-flex flex-column gap-1 align-items-start">
+                                        <div class="note">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos, inventore officiis nostrum consequatur cumque.
+                                        </div>
+                                        <div class="note note-file">
+                                            <img src="" alt="">
+                                            <div>
+                                                <img src="" alt="">
+                                                <div>
+                                                    <h6>Filename.pdf</h6>
+                                                    <span>James Daniel • 4:59 PM</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                 
+                        </div>
+                        <div class="message-input d-flex align-items-start gap-2 mt-2">
+                            <img src="./assets/circleplus.svg" alt="">
+                            <textarea name="message-body" id="message-body" placeholder="type message here..." class="flex-grow-1 border-1 border-neutral-200 rounded-4 p-2"></textarea>
+                            <img src="./assets/send.svg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-5 bg-primary text-white">
+    <footer class="py-5 bg-primary text-white" style="z-index: -1;">
       <div class="footer__wrapper container-lg px-4 px-lg-0 gy-5 py-3">
         <div class="row gap-4 py-4 gap-lg-0 mb-5 fw-semibold" style="border-bottom: 1px solid #ffffff21;">
           <img src="/assets/logo.png" alt="" class="me-5" style="max-width: 120px; height: max-content;">

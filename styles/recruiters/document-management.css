@@ -218,6 +218,13 @@ textarea{
     min-height: 400px;
     overflow: hidden;
     z-index: 10000000000;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.actions-modal.open{
+    visibility: visible;
+    opacity: 1;
 }
 
 .actions-modal .tab-switches{

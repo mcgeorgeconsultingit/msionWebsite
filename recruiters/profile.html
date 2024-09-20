@@ -25,20 +25,56 @@
             <a href="../about.html" class="text-black">About us</a>
             <a href="../contact.html" class="text-black">Contact</a>
           </div>
-          <div class="d-flex align-items-center gap-3">
-            <a href="../login.html" class="text-primary text-body">Login</a>
-            <a href="../signup.html"
-              ><button class="btn-primary px-4 py-3 rounded-4">
-                Get Started
-              </button></a
-            >
-          </div>
         </div>
       </nav>
-        <div class="burger" id="burgerMenu">
-          <span></span>
-          <span></span>
+      <div class="avatar-menu position-relative">
+        <img src="../assets/profile/profile 1 (1).png" alt="" class="menu-trigger rounded-circle " style="width: 60px; cursor: pointer;">
+        <div class="user-menu position-absolute bg-base p-2 rounded-4 shadow-lg" style="width: max-content; right: 0%; bottom: -1000%; opacity: 0; visibility: hidden;">
+            <div class="bg-white rounded-4 px-3 py-2">
+                <a href="profile.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                    <img src="../assets/nav/UserCircle.png" alt="">
+                    <p class="m-0">Profile</p>
+                </a>
+                <a href="dashboard.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                    <img src="./assets/CirclesFour.svg" alt="">
+                    <p class="m-0">Dashboard</p>
+                </a>
+                <a href="talent-search.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                    <img src="./assets/Users.svg" alt="">
+                    <p class="m-0">Find Talents</p>
+                </a>
+                <a href="notifications.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                    <img src="./assets/BellRinging.svg" alt="">
+                    <p class="m-0">Notifications</p>
+                    <p class="bg-base rounded-4 px-3 py-1 m-0" style="font-size: 12px; margin-left: auto !important;">3</p>
+                </a>
+                <a href="document-management.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                    <img src="./assets/FileDoc.svg" alt="">
+                    <p class="m-0">Document manager</p>
+                    <p class="bg-base rounded-4 px-3 py-1 m-0" style="font-size: 12px; margin-left: auto !important;">3</p>
+                </a>
+                <a href="#" class="p-3 d-flex gap-3 align-items-center">
+                    <img src="./assets/" alt="">
+                    <p class="m-0">Saved profiles</p>
+                    <p class="bg-base rounded-4 px-3 py-1 m-0" style="font-size: 12px; margin-left: auto !important;">3</p>
+                </a>
+            </div>
+            <div class="bg-white rounded-4 px-3 py-2 mt-2">
+                <a href="contact.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                    <img src="../assets/nav/Headset.png" alt="">
+                    <p class="m-0">Help</p>
+                </a>
+                <a href="/settings.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                    <img src="../assets/nav/Gear.png" alt="">
+                    <p class="m-0">Settings</p>
+                </a>
+                <a href="#" class="p-3 d-flex gap-3 align-items-center">
+                    <img src="../assets/nav/SignOut.png" alt="">
+                    <p class="m-0">Sign Out</p>
+                </a>
+            </div>
         </div>
+    </div>
 
     </header>
 
@@ -368,6 +404,6 @@
 
     </footer>
     
-    <script src="js/nav.js"></script>
+    <script src="../js/nav.js"></script>
   </body>
 </html>

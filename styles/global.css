@@ -1,5 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/montserrat');
-@import url('./_variables.css');
+@import url('./variables.css');
 /* @import url('./components/header.css'); */
 /* @import url('./components/button.css'); */
 
@@ -10,6 +10,7 @@
     font-family: 'montserrat';
     box-sizing: border-box;
 }
+
 
 ul,ol{
     list-style: none;
@@ -64,14 +65,23 @@ button{
   background-color: var(--clr-primary-600);
 }
 
-button.bg-base{
+/* button.bg-base{
   background-color: var(--clr-base-button) !important;
-}
+} */
 
 
 /* Override Bootstrap background colors */
 .bg-primary {
     background-color: var(--clr-primary) !important;
+}
+.bg-primary-100 {
+    background-color: var(--clr-primary-100) !important;
+}
+.bg-primary-600 {
+    background-color: var(--clr-primary-600) !important;
+}
+.bg-primary-800 {
+    background-color: var(--clr-primary-800) !important;
 }
 
 .bg-base {
@@ -79,6 +89,9 @@ button.bg-base{
 }
 .bg-secondary {
     background-color: var(--clr-neutral-200) !important;
+}
+.bg-neutral-600{
+  background-color: var(--clr-neutral-600);
 }
 
 .bg-light {
@@ -88,9 +101,16 @@ button.bg-base{
 .bg-dark {
     background-color: var(--clr-neutral-900) !important;
 }
+.bg-green{
+  background-color: #1ABE0C;
+}
 
 .bg-neutral-100 {
     background-color: var(--clr-neutral-100) !important;
+}
+
+.bg-dropdown{
+  background-color: rgba(116, 116, 128, 0.1);
 }
 
 /* Override Bootstrap text colors */
@@ -116,7 +136,10 @@ button.bg-base{
 /* Text utility classes */
 
 .text-sm{
-  font-size: 14px;
+  font-size: 14px !important;
+}
+.text-xs{
+  font-size: 12px !important;
 }
 
 .fw-normal{
@@ -124,7 +147,7 @@ button.bg-base{
 }
 
 
-/* Bprder utility classes */
+/* Border utility classes */
 
 .border-neutral-100{
   border-color: var(--clr-neutral-100) !important;
@@ -133,6 +156,11 @@ button.bg-base{
   border-color: var(--clr-neutral-200) !important;
 }
 
+
+/* Width utitlity classes */
+.w-max{
+  width: max-content;
+}
 
 
 p{
@@ -338,6 +366,16 @@ header {
 .preview-avatar{
   max-width: 64px;
 }
+
+.dropdown-item *{
+  cursor: pointer;
+}
+
+
+.dropdown-toggle::after{
+  display: none;
+}
+
 
 /* Custom Slider */
 input[type="range"] {

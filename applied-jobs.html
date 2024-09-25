@@ -18,6 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/search.css" />
+    <link rel="stylesheet" href="styles/applied-jobs.css" />
   </head>
   <body>
 
@@ -89,6 +90,7 @@
             <div class="dropdown col-md-1 justify-self-end">
                 <div class=" dropdown-toggle bg-transparent text-primary" type="button" id="dropdownMenuButton" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Sort By
+                  <img src="./recruiters/assets/dropdown-blue.png" alt="">
                 </div>
                 <div class="dropdown-menu rounded-4" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item px-3 py-2" href="#">Viewed</a>
@@ -109,13 +111,13 @@
                         <div class="row-1 d-flex flex-row justify-content-between align-items-center">
                           <h4 class="result-name fw-bold m-0">MSI Nigeria</h4>
                           <div class="status p-2 rounded-pill d-flex align-items-center gap-2"  style="width: max-content; background-color: #f9848480;">
-                              <div class="rounded-circle" style="width: 10px; height: 10px; background-color: rgb(255, 10, 10);"></div>
+                              <div class="status-dot declined rounded-circle bg-danger" style="width: 10px; height: 10px;"></div>
                               <span style="font-size: 10px;">Declined</span>
                           </div>
                        </div>
                         <div class="row-2 d-flex flex-row justify-content-between align-items-center">
-                          <p class="text-greyed mb-0" style="font-size: 14px;">Florida, USA</p>
-                          <p class="text-greyed mb-0" style="font-size: 14px;">2 hrs ago</p>
+                          <p class="text-greyed mb-0 text-sm">Florida, USA</p>
+                          <p class="text-greyed mb-0 text-sm">2 hrs ago</p>
                         </div>                      
                       </div>
                         
@@ -127,23 +129,16 @@
                     <div class="result__tags flex-wrap gap-2 d-flex align-items-center justify-content-sm-between mb-4">
                         <div class="bg-base text-center rounded-1 p-1 d-flex gap-1 align-items-center border border-1">
                             <img src="assets/Bag.png" alt="" width="18" height="18">
-                            <p style="font-size: 12px; margin: 0 !important;">Full Time</p>
+                            <p class="m-0 text-xs">Full Time</p>
                         </div>
                         <div class="bg-base text-center rounded-1 p-1 d-flex gap-1 align-items-center border border-1">
                             <img src="assets/Location.png" alt="" width="18" height="18">
-                            <p style="font-size: 12px; margin: 0 !important;">Remote</p>
+                            <p class="m-0 text-xs">Remote</p>
                         </div>
                         <div class="bg-base text-center rounded-1 p-1 d-flex gap-1 align-items-center text-primary border border-1">
                             <img src="assets/Money.png" alt="" width="18" height="18">
-                            <p style="font-size: 12px; margin: 0 !important;">$40k - $60k USD</p>
+                            <p class="m-0 text-xs">$40k - $60k USD</p>
                         </div>
-                    </div>
-                    <div class="result__extras d-flex justify-content-between">
-                        <div>
-                            <div class="" style="font-size: 14px;"><img src="assets/search/Users.png" alt="" class="me-2">95 applications</div>
-                            <div class="" style="font-size: 14px;"><img src="assets/search/Verified tick.png" class="me-2" alt="">Verified company</div>
-                        </div>
-                        <button class="btn btn-primary px-4 py-3 rounded-4 border-0">View Job</button>
                     </div>
                 </div>
                 </div>  
@@ -155,14 +150,14 @@
                       <div class="col-10">
                         <div class="row-1 d-flex flex-row justify-content-between align-items-center">
                           <h4 class="result-name fw-bold m-0">MSI Nigeria</h4>
-                          <div class="status p-2 rounded-pill d-flex align-items-center gap-2"  style="width: max-content; background-color: #88E76780;">
-                              <div class="rounded-circle" style="width: 10px; height: 10px; background-color: #1ABE0C;"></div>
+                          <div class="status p-2 rounded-pill d-flex align-items-center gap-2 w-max"  style="background-color: #88E76780;">
+                              <div class="status-dot seen rounded-circle bg-green"></div>
                               <span style="font-size: 10px;">Seen</span>
                           </div>
                        </div>
                         <div class="row-2 d-flex flex-row justify-content-between align-items-center">
-                          <p class="text-greyed mb-0" style="font-size: 14px;">Florida, USA</p>
-                          <p class="text-greyed mb-0" style="font-size: 14px;">2 hrs ago</p>
+                          <p class="text-greyed mb-0 text-sm">Florida, USA</p>
+                          <p class="text-greyed mb-0 text-sm">2 hrs ago</p>
                         </div>                      
                       </div>
                         
@@ -174,23 +169,16 @@
                     <div class="result__tags flex-wrap gap-2 d-flex align-items-center justify-content-sm-between mb-4">
                         <div class="bg-base text-center rounded-1 p-1 d-flex gap-1 align-items-center border border-1">
                             <img src="assets/Bag.png" alt="" width="18" height="18">
-                            <p style="font-size: 12px; margin: 0 !important;">Full Time</p>
+                            <p class="m-0 text-xs">Full Time</p>
                         </div>
                         <div class="bg-base text-center rounded-1 p-1 d-flex gap-1 align-items-center border border-1">
                             <img src="assets/Location.png" alt="" width="18" height="18">
-                            <p style="font-size: 12px; margin: 0 !important;">Remote</p>
+                            <p class="m-0 text-xs">Remote</p>
                         </div>
                         <div class="bg-base text-center rounded-1 p-1 d-flex gap-1 align-items-center text-primary border border-1">
                             <img src="assets/Money.png" alt="" width="18" height="18">
-                            <p style="font-size: 12px; margin: 0 !important;">$40k - $60k USD</p>
+                            <p class="m-0 text-xs">$40k - $60k USD</p>
                         </div>
-                    </div>
-                    <div class="result__extras d-flex justify-content-between">
-                        <div>
-                            <div class="" style="font-size: 14px;"><img src="assets/search/Users.png" alt="" class="me-2">95 applications</div>
-                            <div class="" style="font-size: 14px;"><img src="assets/search/Verified tick.png" class="me-2" alt="">Verified company</div>
-                        </div>
-                        <button class="btn btn-primary px-4 py-3 rounded-4 border-0">View Job</button>
                     </div>
                 </div>
                 </div>  
@@ -203,13 +191,13 @@
                         <div class="row-1 d-flex flex-row justify-content-between align-items-center">
                           <h4 class="result-name fw-bold m-0">MSI Nigeria</h4>
                           <div class="status p-2 rounded-pill d-flex align-items-center gap-2"  style="width: max-content; background-color: #7f7f7f80;">
-                              <div class="rounded-circle" style="width: 10px; height: 10px; background-color: gray;"></div>
+                              <div class="status-dot rounded-circle" style="width: 10px; height: 10px; background-color: gray;"></div>
                               <span style="font-size: 10px;">Not seen yet</span>
                           </div>
                        </div>
                         <div class="row-2 d-flex flex-row justify-content-between align-items-center">
-                          <p class="text-greyed mb-0" style="font-size: 14px;">Florida, USA</p>
-                          <p class="text-greyed mb-0" style="font-size: 14px;">2 hrs ago</p>
+                          <p class="text-greyed mb-0 text-sm">Florida, USA</p>
+                          <p class="text-greyed mb-0 text-sm">2 hrs ago</p>
                         </div>                      
                       </div>
                         
@@ -221,139 +209,59 @@
                     <div class="result__tags flex-wrap gap-2 d-flex align-items-center justify-content-sm-between mb-4">
                         <div class="bg-base text-center rounded-1 p-1 d-flex gap-1 align-items-center border border-1">
                             <img src="assets/Bag.png" alt="" width="18" height="18">
-                            <p style="font-size: 12px; margin: 0 !important;">Full Time</p>
+                            <p class="m-0 text-xs">Full Time</p>
                         </div>
                         <div class="bg-base text-center rounded-1 p-1 d-flex gap-1 align-items-center border border-1">
                             <img src="assets/Location.png" alt="" width="18" height="18">
-                            <p style="font-size: 12px; margin: 0 !important;">Remote</p>
+                            <p class="m-0 text-xs">Remote</p>
                         </div>
                         <div class="bg-base text-center rounded-1 p-1 d-flex gap-1 align-items-center text-primary border border-1">
                             <img src="assets/Money.png" alt="" width="18" height="18">
-                            <p style="font-size: 12px; margin: 0 !important;">$40k - $60k USD</p>
+                            <p class="m-0 text-xs">$40k - $60k USD</p>
                         </div>
-                    </div>
-                    <div class="result__extras d-flex justify-content-between">
-                        <div>
-                            <div class="" style="font-size: 14px;"><img src="assets/search/Users.png" alt="" class="me-2">95 applications</div>
-                            <div class="" style="font-size: 14px;"><img src="assets/search/Verified tick.png" class="me-2" alt="">Verified company</div>
-                        </div>
-                        <button class="btn btn-primary px-4 py-3 rounded-4 border-0">View Job</button>
                     </div>
                 </div>
                 </div>  
-              </div>
-              <div class="result-view bg-base rounded-4 p-4 mb-4 mb-md-0">
-                <div class="">
-                  <div class="px-4 py-4 bg-white w-100 rounded-4">
-                    <div class="result__info mb-4 d-flex align-items-center gap-3">
+                <div class="col-12 col-lg-6 col-xl-4">
+                  <div class="p-3 rounded-4 border">
+                    <div class="result__info row mb-4 align-items-center">
   
-                      <img src="assets/search/logo.png" alt="" class="result-img" style="width: 64px !important; ">
-                      <div class="flex-grow-1">
-                        <div class="d-flex flex-row justify-content-between align-items-center">
-                          <h4 class="result-view-name fw-bold m-0">MSI Nigeria</h4>
-                          <div class="status p-1 rounded-pill d-flex align-items-center gap-2"  style="width: max-content; background-color: #88E76780;">
-                              <div class="rounded-circle" style="width: 10px; height: 10px; background-color: #1ABE0C;"></div>
-                              <span style="font-size: 10px;">Active</span>
+                      <img src="assets/search/logo.png" alt="" class="result-img col-2">
+                      <div class="col-10">
+                        <div class="row-1 d-flex flex-row justify-content-between align-items-center">
+                          <h4 class="result-name fw-bold m-0">MSI Nigeria</h4>
+                          <div class="status p-2 rounded-pill d-flex align-items-center gap-2 bg-primary-100 w-max">
+                              <div class="status-dot rounded-circle bg-primary-800" style="width: 10px; height: 10px;"></div>
+                              <span style="font-size: 10px;">Interview</span>
                           </div>
                        </div>
-                        <div class="d-flex flex-row justify-content-between align-items-center">
-                          <p class="text-greyed mb-0">Florida, USA</p>
-                          <p class="text-greyed mb-0">2 hrs ago</p>
+                        <div class="row-2 d-flex flex-row justify-content-between align-items-center">
+                          <p class="text-greyed mb-0 text-sm">Florida, USA</p>
+                          <p class="text-greyed mb-0 text-sm">2 hrs ago</p>
                         </div>                      
                       </div>
                         
                     </div>
-                    <h2 class="result-view-title fw-normal text-black">Technical Support Specialist</h2>
-                    <div class="result__tags flex-wrap gap-2 d-flex align-items-center mb-4">
-                      <div class="bg-base text-center rounded-1 p-sm-2 p-1 d-flex gap-1 align-items-center border border-1">
-                            <img src="assets/Bag.png" alt="" width="24" height="24">
-                            <p style="font-size: 12px; margin: 0 !important;">Full Time</p>
-                        </div>
-                        <div class="bg-base text-center rounded-1 p-sm-2 p-1 d-flex gap-1 align-items-center border border-1">
-                            <img src="assets/Location.png" alt="" width="24" height="24">
-                            <p style="font-size: 12px; margin: 0 !important;">Remote</p>
-                        </div>
-                        <div class="bg-base text-center rounded-1 p-sm-2 p-1 d-flex gap-1 align-items-center text-primary border border-1">
-                            <img src="assets/Money.png" alt="" width="24" height="24">
-                            <p style="font-size: 12px; margin: 0 !important;">$40k - $60k USD</p>
-                        </div>
+                    <div class="result__details">
+                        <h2 class="fw-normal text-black" style="font-size: 24px;">Technical Support Specialist</h2>
+                        <p class="text-greyed " style="font-size: 14px;" >We are a car wash business and have been opened since 2001, we look are very concerned about providing the best customer <span class="text-primary" style="cursor: pointer;"><a href="#">...see more</a></span></p>
                     </div>
-                    <div class="result__extras d-flex flex-column gap-3">
-                        <div>
-                            <div class="" style="font-size: 14px;"><img src="assets/search/Users.png" alt="" class="me-2">95 applications</div>
-                            <div class="" style="font-size: 14px;"><img src="assets/search/Verified tick.png" class="me-2" alt="">Verified company</div>
+                    <div class="result__tags flex-wrap gap-2 d-flex align-items-center justify-content-sm-between mb-4">
+                        <div class="bg-base text-center rounded-1 p-1 d-flex gap-1 align-items-center border border-1">
+                            <img src="assets/Bag.png" alt="" width="18" height="18">
+                            <p class="m-0 text-xs">Full Time</p>
                         </div>
-                        <div class="d-flex gap-2">
-                          <a href="company-profile.html"><button class="btn bg-base py-3 px-4 rounded-4">Profile</button></a>
-                          <a href="#"><button class="btn bg-base p-3 rounded-4"><img src="assets/search/Vector.png" alt=""></button></a>
+                        <div class="bg-base text-center rounded-1 p-1 d-flex gap-1 align-items-center border border-1">
+                            <img src="assets/Location.png" alt="" width="18" height="18">
+                            <p class="m-0 text-xs">Remote</p>
+                        </div>
+                        <div class="bg-base text-center rounded-1 p-1 d-flex gap-1 align-items-center text-primary border border-1">
+                            <img src="assets/Money.png" alt="" width="18" height="18">
+                            <p class="m-0 text-xs">$40k - $60k USD</p>
                         </div>
                     </div>
-
-
-                  </div>
-                  <div class="px-4 py-4 bg-white w-100 rounded-4 mt-4">
-
-                    <div class="job-description">
-                      <h3 class="fw-semibold">Job Description</h3>
-                      <p>We are a Digital Product Engineering company that is scaling in a big way! We build products, services, and experiences that inspire, excite, and delight. We work at scale — across all devices and digital mediums, and our people exist everywhere in the world (18000+ experts across 36 countries, to be exact). Our work culture is dynamic and non-hierarchical. We are looking for great new colleagues. That's where you come in!</p>
-                    </div>
-                    <div class="responsibilities">
-                      <h3 class="fw-semibold">Responsibilities</h3>
-                      <ul>
-                        <li>Build web applications with web development best practices</li>
-                        <li>Basic understanding of user interface and user experience (UI/UX) design</li>
-                        <li>Work with UI/UX Designer to transform wireframes and mock-ups into usable/reusable front-end code with HTML, CSS, and JavaScript.</li>
-                        <li>Work with back-end developers to integrate UI components with APIs and databases</li>
-                        <li>Optimizing components for maximum performance across a vast array of web-capable devices, mobile and desktop browsers</li>
-                        <li>Write high-quality, scalable, and reusable code</li>
-                        <li>Collaborate with other teams to identify and resolve complex technical issues</li>
-                        <li>Attention to detail</li>
-                      </ul>
-                    </div>
-                    <div class="requirements">
-                      <h3 class="fw-semibold">Requirements</h3>
-                      <ul>
-                        <li>Minimum of 3+ year of experience developing modern, responsive, and cross-browser-compatible websites using HTML, CSS, and JavaScript</li>
-                        <li>Knowledge of JavaScript frameworks such as Vue and React.</li>
-                        <li>Experience with JavaScript libraries such as jQuery and Bootstrap</li>
-                        <li>Familiarity with CSS preprocessors such as Sass, Less, or Stylus</li>
-                        <li>Experience with building tools such as Gulp, or Webpack</li>
-                        <li>MUST HAVE real world experience working on a project</li>
-                        <li>Include your CV and portfolio links in the email for easy access.</li>
-                      </ul>
-                    </div>
-                    <div class="questions">
-                      <h3 class="fw-semibold">Application Questions</h3>
-                      <ul>
-                        <li>Have you worked with a team of Developers on a project?</li>
-                        <li>Have you worked with a team of Developers on a project?</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="benefits px-4 py-4 bg-white w-100 rounded-4 mt-4">
-                    <h3 class="fw-semibold">Employee Benefits</h3>
-                    <div class="benefits-list">
-                      <p class="d-flex align-items-center gap-2">
-                        <img src="assets/search/insurance.png" alt="" width="16" height="16">
-                        <span>Life insurance</span>
-                      </p>
-                      <p class="d-flex align-items-center gap-2">
-                        <img src="assets/search/health.png" alt="" width="16" height="16">
-                        <span>Healthcare insurance</span>
-                      </p>
-                      <p class="d-flex align-items-center gap-2">
-                        <img src="assets/search/eap.png" alt="" width="16" height="16">
-                        <span>Employee assistance program (EAP)</span>
-                      </p>
-                      <p class="d-flex align-items-center gap-2">
-                        <img src="assets/search/vacation.png" alt="" width="16" height="16">
-                        <span>Paid vacation (At least 3 weeks per year)</span>
-                      </p>
-                    </div>
-                  </div>
-
                 </div>
-
+                </div>  
               </div>
             </div>
         </div>

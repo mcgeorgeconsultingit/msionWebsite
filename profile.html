@@ -10,6 +10,11 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/profile.css" />
   </head>
@@ -81,7 +86,7 @@
         </a>
 
         <div class="profile-col-1 col-12 col-md-7 col-lg-8 bg-base rounded-4 p-4 mb-4 mb-md-0">
-          <div class="details-wrapper d-flex justify-content-between align-items-center p-4 bg-white w-100 rounded-4"
+          <div class="details-wrapper d-flex justify-content-lg-between flex-wrap align-items-center p-4 bg-white w-100 rounded-4 gap-2"
           >
             <div class="details d-flex align-items-center gap-3">
               <img
@@ -96,6 +101,65 @@
                 </h3>
               </div>
             </div>
+            <button class="btn bg-base p-3 rounded-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <img src="./assets/verified-outline.svg" alt="">
+              Verify account
+            </button>
+            <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+
+                  <div class="modal-body bg-base rounded-4 p-3">
+                    <!-- Tab content -->
+                    <div class="tab-content" id="myTabContent">
+                      <!-- Form 1 -->
+                      <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                        <div class="d-flex flex-column justify-content-between align-items-start bg-white w-100 rounded-4 gap-2 p-3">
+                          <h2 class="fw-semibold mb-1">Get the verification badge</h2>
+                          <p class="text-sm m-0 text-greyed">Select any of these methods to start the verification process</p>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between align-items-start bg-white w-100 rounded-4 gap-2 p-3">
+                          National Identification Number (NIN)
+                        </div>
+                        <div class="d-flex flex-column justify-content-between align-items-start bg-white w-100 rounded-4 gap-2 p-3">
+                          Drivers License
+                        </div>
+                        <div class="d-flex flex-column justify-content-between align-items-start bg-white w-100 rounded-4 gap-2 p-3">
+                          Bank Verification Number (BVN)
+                        </div>
+                      </div>
+            
+                      <!-- Form 2 -->
+                      <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                        <form id="form2">
+                          <!-- Placeholder content for Form 2 -->
+                          <div class="mb-3">
+                            <label for="input2" class="form-label">Input for Form 2</label>
+                            <input type="text" class="form-control" id="input2" placeholder="Enter something for Form 2">
+                          </div>
+                          <button type="button" class="btn btn-secondary back-btn">Back</button>
+                          <button type="button" class="btn btn-primary next-btn">Next</button>
+                        </form>
+                      </div>
+            
+                      <!-- Form 3 -->
+                      <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                        <form id="form3">
+                          <!-- Placeholder content for Form 3 -->
+                          <div class="mb-3">
+                            <label for="input3" class="form-label">Input for Form 3</label>
+                            <input type="text" class="form-control" id="input3" placeholder="Enter something for Form 3">
+                          </div>
+                          <button type="button" class="btn btn-secondary back-btn">Back</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
             <a href="settings.html">
               <img
                 src="assets/profile/NotePencil.png"
@@ -103,23 +167,6 @@
                 class="bg-base p-3 rounded-circle edit-btn"
               />
             </a>
-          </div>
-          <div class="d-flex flex-column justify-content-between align-items-center p-4 bg-white w-100 rounded-4 mt-4">
-            <div class="d-flex w-100 justify-content-between align-items-center">
-              <h2>Biography</h2>
-              <a href="onboarding.html">
-                <img
-                  src="assets/profile/NotePencil.png"
-                  alt=""
-                  class="bg-base p-3 rounded-circle edit-btn block d-md-none"
-                />
-              </a>
-             
-            </div>
-            <p>
-              My design philosophy centers around a user-centric approach, where every design decision is informed by a deep understanding of the target audience and their needs. Whether designing a logo, website, app or physical product, I focus on creating experiences that are intuitive, engaging, and memorable.
-With a keen eye for aesthetics and a strong understanding of design principles, I bring a unique perspective to every project. From conceptualization to execution, I am committed to delivering designs that not only look great but also perform well in the real world.
-            </p>
           </div>
           <div class="d-flex flex-column justify-content-between align-items-center p-4 bg-white w-100 rounded-4 mt-4">
             <div class="d-flex w-100 justify-content-between align-items-center">
@@ -334,5 +381,7 @@ With a keen eye for aesthetics and a strong understanding of design principles, 
 
     </footer>
     <script src="js/nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="js/verifyAccount.js"></script>
   </body>
 </html>

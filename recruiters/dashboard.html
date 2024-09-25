@@ -152,7 +152,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><input type="checkbox"> John Doe</td>
+                        <td><input type="checkbox" id="candidateCheckbox"> John Doe</td>
                         <td>2024/09/11</td>
                         <td>10:00 AM</td>
                         <td>Frontend Developer</td>
@@ -203,7 +203,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox"> Jane Smith</td>
+                        <td><input type="checkbox" id="candidateCheckbox"> Jane Smith</td>
                         <td>2024/09/12</td>
                         <td>2:00 PM</td>
                         <td>Backend Developer</td>
@@ -213,7 +213,7 @@
                         <td><img src="./assets/menu-vertical.png" alt=""></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox"> Jane Smith</td>
+                        <td><input type="checkbox" id="candidateCheckbox"> Jane Smith</td>
                         <td>2024/09/12</td>
                         <td>2:00 PM</td>
                         <td>Backend Developer</td>
@@ -223,7 +223,7 @@
                         <td><img src="./assets/menu-vertical.png" alt=""></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox"> Jane Smith</td>
+                        <td><input type="checkbox" id="candidateCheckbox"> Jane Smith</td>
                         <td>2024/09/12</td>
                         <td>2:00 PM</td>
                         <td>Backend Developer</td>
@@ -279,30 +279,33 @@
     <script>
       
         const table = document.querySelector('table')
+        const selectAllCheckbox = document.querySelector('#select-all');
+        const candidateCheckboxes = document.querySelectorAll("#candidateCheckbox");
+
         document.querySelectorAll('.trigger-cell').forEach(cell => {
+          
           const menu = cell.querySelector('.modal-menu');
-
           const updateMenuPosition = () => {
-            const rect = cell.getBoundingClientRect(); // Get the position of the cell
+            const rect = cell.getBoundingClientRect(); // Gets the position of the cell with a menu attatched
 
-            // Position the menu relative to the cell
+            // Positions the menu relative to the cell
             menu.style.left = `${rect.left}px`;
           };
 
           cell.addEventListener('click', () => {
             menu.style.position = 'absolute';
             updateMenuPosition();
-            menu.classList.toggle('active') ; // Show the menu
+            menu.classList.toggle('active') ;
           });
 
-          // Hide the menu when clicking outside
+          // Hides the menu when clicking outside
           document.addEventListener('click', (event) => {
             if (!cell.contains(event.target) && !menu.contains(event.target)) {
               menu.classList.remove('active') ; // Hide the menu if clicked outside
             }
           });
 
-          // Update the menu position on window resize
+          // Updates the menu position on window resize
           window.addEventListener('resize', () => {
             if (menu.style.display === 'block') {
               updateMenuPosition();

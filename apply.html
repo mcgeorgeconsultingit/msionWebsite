@@ -44,25 +44,6 @@
 
     <section class="p-md-5 mt-5 ">
         <div class="wrapper apply__wrapper container ">
-          <div class="row d-flex justify-content-between flex-row-reverse align-items-center mb-5 px-md-5 px-2">
-            <div class="bar d-flex col-8 col-sm-4 align-items-center">
-              <div class="progress p-0 w-100 me-2">
-                <div
-                  class="progress-bar bg-primary"
-                  role="progressbar"
-                  id="progress"
-                  style="width: 25%"
-                  aria-valuenow="25"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
-              <label for="progress">25%</label>
-            </div>
-            <button class="btn bg-base col-3 col-md-1" style="cursor: pointer">
-              Skip
-            </button>
-          </div>
           <form action="" method="POST" enctype="multipart/form-data" class="bg-base p-3 p-md-4 rounded-4">
             <div class="tab w-100">
                 <div class="d-flex flex-column justify-content-between align-items-start bg-white w-100 rounded-4 gap-2 p-3 mb-3">
@@ -167,19 +148,9 @@
 
 
   
-            <div
-              class="navigation-buttons row d-flex justify-content-around gap-3 mt-5 px-2"
-            >
-              <button
-                class="col btn btn-secondary rounded-4 px-2 px-sm-3 py-2 py-sm-3 bg-opacity-75"
-              >
-                Go back
-              </button>
-              <button
-                id="submitBtn"
-                class="col btn btn-primary rounded-4 px-2 px-sm-3 py-2 py-sm-3 bg-opacity-75"
-              >
-                Continue
+            <div class="navigation-buttons row d-flex justify-content-around gap-3 mt-5 px-2">
+              <button class="col btn btn-primary rounded-4 px-2 px-sm-3 py-2 py-sm-3w-100">
+                Submit application
               </button>
             </div>
           </form>
@@ -187,70 +158,5 @@
       </section>
 
     <script src="js/nav.js"></script>
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-  const steps = document.querySelectorAll('.tab');
-  const progress = document.getElementById('progress');
-  const submitBtn = document.getElementById('submitBtn');
-  let currentStep = 0;
-
-  // Ensure the first tab is visible
-  steps[currentStep].style.display = 'block';
-
-  function showStep(step) {
-    steps.forEach((tab, index) => {
-      tab.style.display = index === step ? 'block' : 'none';
-    });
-
-    // Update progress bar
-    const progressPercent = ((step + 1) / steps.length) * 100;
-    progress.style.width = `${progressPercent}%`;
-    progress.setAttribute('aria-valuenow', progressPercent);
-    progress.nextElementSibling.textContent = `${progressPercent}%`;
-
-    // Adjust button text and functionality
-    if (step === steps.length - 1) {
-      submitBtn.textContent = 'Submit';
-    } else {
-      submitBtn.textContent = 'Continue';
-    }
-  }
-
-  function validateStep(step) {
-    const inputs = steps[step].querySelectorAll('input, textarea');
-    for (let input of inputs) {
-      if (!input.checkValidity()) {
-        // Temporarily show the current step for validation
-        steps[step].style.display = 'block';
-        input.reportValidity();
-        steps[step].style.display = 'none';
-        return false;
-      }
-    }
-    return true;
-  }
-
-  function nextStep() {
-    if (validateStep(currentStep)) {
-      if (currentStep < steps.length - 1) {
-        currentStep++;
-        showStep(currentStep);
-      } else {
-        // At the end of the form
-        window.location.href = 'saved-jobs.html';
-      }
-    }
-  }
-
-  submitBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    nextStep();
-  });
-
-  // Initialize form
-  showStep(currentStep);
-});
-
-      </script>
   </body>
 </html>

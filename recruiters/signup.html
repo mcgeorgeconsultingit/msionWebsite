@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="../styles/auth.css" />
   </head>
   <body style="overflow-y: hidden;" style="min-height: 100vh !important;">
-    <section class="d-flex align-items-center flex-row">
+    <section class="d-flex align-items-center flex-row position-relative">
+        <img src="../assets/logo.png" class="logo position-absolute" />
         <img src="../assets/signup/signup.png" alt="" class="img-fluid w-50" style="height: 100vh; object-fit: cover; object-position: top;">
       <div class="form w-50">
         <div class="auth__wrapper container d-flex align-items-center flex-column justify-content-center" style="min-height: 100vh;">
@@ -29,18 +30,18 @@
             <h1 class="fw-bold mx-2 mx-sm-4 text-center text-sm-start">Create an account</h1>
             <div class="email__field container border rounded-4 px-3 py-3">
               <img src="../assets/signup/mail.png" class="col-2" alt="" style="width: 24px; height: 24px;">
-              <input type="email" class="col-11 border-0" placeholder="Email" name="email">
+              <input type="email" class="col-10 border-0" placeholder="Email" name="email">
             </div>
             <div class="email__field container border rounded-4 px-3 py-3 mb-2 mb-sm-4">
               <img src="../assets/signup/LockKey.png" class="col-2" alt="" style="width: 24px; height: 24px;">
-              <input type="password" class="col-11 border-0" placeholder="Password" name="password">
+              <input type="password" class="col-10 border-0" placeholder="Password" name="password">
             </div>
             <div class="mb-2 mb-sm-4">
                 <input type="checkbox" name="notifications-enabled" id="notificationsCheckbox">
                 <label htmlFor="notifications-enabled">Receive notifications via email</label>
             </div>
             <a href="verification.html">
-            <button class="btn btn-primary border-0 rounded-4 w-100 py-3 mb-2 mb-sm-3" type="button">Login</button>
+            <button class="btn btn-primary border-0 rounded-4 w-100 py-3 mb-2 mb-sm-3" type="button">Sign up</button>
 
             </a>
             <p class="text-center m-0">Or</p>

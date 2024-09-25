@@ -14,6 +14,12 @@
     <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.css>
     <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/style.css>
     <script src=https://flatpickr.js.org/javascripts/modernizr.js></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
 
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/recruiters/document-management.css" />
@@ -255,13 +261,25 @@
 
                 <div class="documents-list applicants-documents gap-3">
                     <div class="document-card-container position-relative">
-                        <div class="document-card overflow-hidden border border-neutral-100 rounded-4">
-                            <img src="./assets/document1.png" alt="">
+                        <div class="document-card border border-neutral-100 rounded-4">
+                            <img src="./assets/document1.png" alt="" class="img-preview">
                             <div class="document-details bg-base">
                                 <h5 class="document-name">Data Protection and compliance</h5>
                                 <span class="document-description">Regulatory compliance</span>
                                 <div class="options">
-                                    <span class="date">11/12/2024</span>
+                                    <div class="d-flex flex-column align-items-start">
+                                        <span class="date">11/12/2024</span>
+                                        <button class="notes btn bg-base p-1 rounded-1 text-sm position-relative" data-toggle="modal" data-target="#myModal2">
+                                            Notes
+                                        </button>
+                                        <span class="modal custom fade notes-view rounded-4 p-3 d-flex gap-2 position-absolute bg-primary-100 shadow-sm text-start" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <img src="" alt="" width="32" height="32" class="rounded-circle">
+                                            <span>
+                                                <strong class="text-sm d-block">hr1@nike.com</strong>
+                                                Given the details of his CV, I believe he’s highly qualified for this role
+                                            </span>
+                                        </span>
+                                    </div>
                                     <span class="star" checked>
                                     </span>
                                     <span class="download bg-primary"><img src="./assets/upload-outline.png" style="rotate: 180deg;" alt="" ></span>
@@ -304,7 +322,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="document-expanded applicant">
+                <div class="document-expanded applicant" data-visible>
                     <div class="document-title-block d-flex justify-content-between" >
                         <div class="">
                             <h6 class="mb-1">Hussein Farouk CV</h6>
@@ -458,6 +476,7 @@
     </footer>
 
 
+    
     <script src="../js/nav.js"></script>
     <script src="../js/radio.js"></script>
     <script src="../js/slider.js"></script>

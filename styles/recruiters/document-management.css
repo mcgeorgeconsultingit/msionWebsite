@@ -26,11 +26,15 @@ textarea{
     width: 100%;
     object-fit: cover;
     object-position: top;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 
 }
 
 .document-card .document-details{
     padding: 1rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .document-card .document-name{
@@ -61,6 +65,17 @@ textarea{
 
 .document-details .options {
     margin-top: 1em;
+}
+
+button.notes{
+    z-index: 10000;
+}
+
+button.notes .notes-view{
+    width: 250px;
+    top: -200%;
+    left: 50%;
+
 }
 
 .document-details .options .date{
@@ -111,6 +126,7 @@ textarea{
 .document-details .star{
     margin-left: auto;
 }
+
 
 .quick-actions-menu{
     position: absolute;
@@ -466,3 +482,12 @@ textarea{
         height: 30vh;
     }
 }
+
+.custom-popover {
+    --bs-popover-max-width: 200px;
+    --bs-popover-border-color: var(--bs-primary);
+    --bs-popover-header-bg: var(--bs-primary);
+    --bs-popover-header-color: var(--bs-white);
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+  }

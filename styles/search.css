@@ -9,6 +9,8 @@
     
     .result-container.view-open .all-results{
         flex-direction: column;
+        position: sticky;
+        top: 30vh;
     }
     
     .result-container.view-open .all-results > *{
@@ -17,13 +19,8 @@
     }
 }
 
-
 .result-container.view-open .result-view{
     display: block;
-}
-
-.filters{
-    display: none !important;
 }
 
 .result-img{
@@ -53,6 +50,12 @@
 .result__extras button{
     font-size: 16px;
 }
+
+
+.filters{
+    display: none !important;
+}
+
 
  ul{
     list-style-type: disc !important;

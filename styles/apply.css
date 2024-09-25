@@ -24,19 +24,6 @@ textarea {
 }
 
 
-.tab {
-  display: none;
-  animation: fadeEffect 1s;
-}
-
-.tab.active {
-  display: block;
-}
-
-.progress-bar {
-  transition: width 0.5s ease-in-out; /* Smooth transition for progress bar width */
-}
-
 @media screen and (max-width:536px) {
 
   .apply-section  p{

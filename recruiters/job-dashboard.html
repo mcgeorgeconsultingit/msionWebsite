@@ -46,7 +46,10 @@
         <div class="wrapper dashboard__wrapper container">
 
             <div class="d-flex flex-column align-items-center flex-lg-row justify-content-lg-between mb-4">
-                <h2 class="dashboard-title fw-bold mb-4 ">Dashboard Overview</h2>
+                <div class="dashboard-title fw-bold d-flex gap-2 align-items-center">
+                  <img class="" id="backButton" alt="" src="./assets/ArrowLeft.svg" onclick="location.href = '/dashboard.html'">
+                  <h2 class="moyin-adedeji fw-bold">Job posting - <span>Frontend Engineer</span></h2>
+                </div>
                 <div class="search__fields w-100 d-flex align-items-center bg-white py-2 px-4 rounded-4 flex-row m-0 mb-3" style="box-shadow: 0px 0px 0px 3px rgba(194, 197, 234, 1), 0 4px 6px 5px rgba(0, 0, 0, 0.041); border: 1.5px solid rgba(76, 84, 194, 1); max-width: 440px;">
                     <img src="../styles/home/assets/search.png" alt="">
                     <input type="text" name="query" id="search-query" placeholder="Search" class="border-0 ms-3">
@@ -55,6 +58,14 @@
 
 
             <div class="dashboard-stats border border-neutral-100 rounded-4 p-2 gap-2">
+
+                <div class="border border-neutral-100 p-3 rounded-4 d-flex align-items-center justify-content-between">
+                    <div class="stat_text">
+                        <p class="text-greyed">Employees required</p>
+                        <p class="fw-bold text-dark">3 Individuals</p>
+                    </div>
+                    <img src="./assets/featured-icon.png" alt="">
+                </div>
 
                 <div class="border border-neutral-100 p-3 rounded-4 d-flex align-items-center justify-content-between">
                     <div class="stat_text">
@@ -112,7 +123,7 @@
                                 <div class="job-titles-menu modal-menu position-absolute shadow-lg bg-white rounded-4 px-3 py-2 text-dark" style="visibility: hidden; opacity: 0;">
                                     <span class="p-2 d-flex gap-3 align-items-center border-1 border-bottom">
                                         <input type="checkbox" id="frontend">
-                                        <label for="frontend" class="m-0 text-sm"><a href="./job-dashboard.html">Frontend Engineer</a></label>
+                                        <label for="frontend" class="m-0 text-sm"><a href="./applications.html">Frontend Engineer</a></label>
                                     </span>
                                     <span class="p-2 d-flex gap-3 align-items-center border-1 border-bottom">
                                         <input type="checkbox" id="uiux">
@@ -158,7 +169,7 @@
                         <td>Frontend Developer</td>
                         <td>Interview</td>
                         <td>Hired</td>
-                        <td><span id="rating" class="star-rating" data-rating="4"></span></td>
+                        <td><span id="rating" class="star-rating" data-rating="5"></span></td>
                         <td class="trigger-cell">
                           <img src="./assets/menu-vertical.png" alt="">
                           <div class="document-menu">
@@ -206,7 +217,7 @@
                         <td><input type="checkbox" id="candidateCheckbox"> Jane Smith</td>
                         <td>2024/09/12</td>
                         <td>2:00 PM</td>
-                        <td>Backend Developer</td>
+                        <td>Frontend Developer</td>
                         <td>Questioning</td>
                         <td>Interviewing</td>
                         <td><span id="rating" class="star-rating" data-rating="4"></span></td>
@@ -216,20 +227,20 @@
                         <td><input type="checkbox" id="candidateCheckbox"> Jane Smith</td>
                         <td>2024/09/12</td>
                         <td>2:00 PM</td>
-                        <td>Backend Developer</td>
+                        <td>Frontend Developer</td>
                         <td>Questioning</td>
                         <td>Interviewing</td>
-                        <td><span id="rating" class="star-rating" data-rating="4"></span></td>
+                        <td><span id="rating" class="star-rating" data-rating="2"></span></td>
                         <td><img src="./assets/menu-vertical.png" alt=""></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" id="candidateCheckbox"> Jane Smith</td>
                         <td>2024/09/12</td>
                         <td>2:00 PM</td>
-                        <td>Backend Developer</td>
+                        <td>Frontend Developer</td>
                         <td>Questioning</td>
                         <td>Interviewing</td>
-                        <td><span id="rating" class="star-rating" data-rating="4"></span></td>
+                        <td><span id="rating" class="star-rating" data-rating="3"></span></td>
                         <td><img src="./assets/menu-vertical.png" alt=""></td>
                     </tr>
                     <!-- Additional rows can be added similarly -->
@@ -277,5 +288,7 @@
 
     <script src="../js/nav.js"></script>
     <script src="../js/dashboard.js"></script>
+    <script>
+    </script>
   </body>
 </html>

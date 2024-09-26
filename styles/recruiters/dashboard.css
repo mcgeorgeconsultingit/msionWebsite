@@ -69,3 +69,11 @@ tr:nth-child(even){
   .job-titles-menu >:hover, .modal-menu >:hover {
     background-color: rgba(230, 230, 230, 0.356);
   }
+
+  .star-rating {
+    display: inline-block;
+  }
+  .star {
+    width: 14px; /* Adjust based on your star image size */
+    height: 14px;
+  }

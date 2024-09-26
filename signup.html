@@ -22,7 +22,10 @@
   </head>
   <body style="overflow-y: hidden;" style="min-height: 100vh !important;">
     <section class="d-flex align-items-center flex-row">
-        <img src="assets/signup/signup.png" alt="" class="img-fluid w-50" style="height: 100vh; object-fit: cover; object-position: top;">
+      <div class="img-wrapper w-50">
+        <img src="assets/signup/signup.png" alt="" class="img-fluid w-100"
+          style="height: 100vh; object-fit: cover; object-position: top;">
+      </div>
       <div class="form w-50">
         <div class="auth__wrapper container d-flex align-items-center flex-column justify-content-center" style="min-height: 100vh;">
           <form action="" class="d-flex flex-column gap-2" style="width: max-content;">
@@ -40,19 +43,19 @@
                 <label htmlFor="notifications-enabled">Receive notifications via email</label>
             </div>
             <a href="/verification.html">
-            <button class="btn btn-primary border-0 rounded-4 w-100 py-3 mb-2 mb-sm-3" type="button">Login</button>
+            <button class="btn btn-primary border-0 rounded-4 w-100 py-3 mb-2 mb-sm-3" type="button">Sign Up</button>
 
             </a>
             <p class="text-center m-0">Or</p>
             <a href="#" class="login-provider border rounded-4 w-100 d-flex justify-content-center align-items-center p-3">
               <img class="me-2" src="assets/login/googleclr.png" alt="">
-              <span>Log in with Google</span>
+              <span>Sign Up with Google</span>
             </a>
             <a href="#" class="login-provider border rounded-4 w-100 d-flex justify-content-center align-items-center p-3 mb-2 mb-sm-3">
               <img class="me-2" src="assets/login/linkedinclr.png" alt="">
-              <span>Log in with LinkedIn</span>
+              <span>Sign Up with LinkedIn</span>
             </a>
-            <div>Already have an account? <a href="/login.html" class="text-primary">Login</a></div>
+            <div>Already have an account? <a href="/login.html" class="text-primary fw-bold">Login</a></div>
           </form>
         </div>
       </div>

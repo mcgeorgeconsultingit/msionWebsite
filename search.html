@@ -235,12 +235,12 @@
         </div>
 
         <div class="container skills d-flex flex-wrap gap-2">
-          <span class="skill bg-dropdown rounded-3 px-3 py-2">Creativity</span>
-          <span class="skill bg-dropdown rounded-3 px-3 py-2">Prototyping</span>
-          <span class="skill bg-dropdown rounded-3 px-3 py-2">Js</span>
-          <span class="skill bg-dropdown rounded-3 px-3 py-2">Figma</span>
-          <span class="skill bg-dropdown rounded-3 px-3 py-2">Design</span>
-          <span class="skill bg-dropdown rounded-3 px-3 py-2">HTML</span>
+          <span class="skill bg-dropdown rounded-3 px-3 py- pointer">Creativity</span>
+          <span class="skill bg-dropdown rounded-3 px-3 py-2 pointer">Prototyping</span>
+          <span class="skill bg-dropdown rounded-3 px-3 py-2 pointer">Js</span>
+          <span class="skill bg-dropdown rounded-3 px-3 py-2 pointer">Figma</span>
+          <span class="skill bg-dropdown rounded-3 px-3 py-2 pointer">Design</span>
+          <span class="skill bg-dropdown rounded-3 px-3 py-2 pointer">HTML</span>
         </div>
 
         <!-- Mobile Sidebar -->
@@ -634,33 +634,33 @@
         const mobileTrigger = document.querySelector('.mobile-filters-trigger');
         const mobileFilters = document.querySelector('.filters-mobile');
         
-        // Event listener for button clicks
+        
         buttons.forEach(button => {
           button.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent the click event from propagating to the window
+            event.stopPropagation
             resultContainer.classList.add('view-open');
           });
         });
 
-        // Close the container when clicking outside of it
+
         window.addEventListener('click', (event) => {
           if (!resultView.contains(event.target)) {
             resultContainer.classList.remove('view-open');
           }
         });
 
-        // Prevent closing when clicking inside the result container
+
         resultView.addEventListener('click', (event) => {
           event.stopPropagation();
         });
 
-        // Event listener for button clicks
+
           mobileTrigger.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent the click event from propagating to the window
+            event.stopPropagation
             mobileFilters.classList.add('open');
           });
 
-        // Close the container when clicking outside of it
+
         window.addEventListener('click', (event) => {
           if (!mobileFilters.contains(event.target)) {
             mobileFilters.classList.remove('open');

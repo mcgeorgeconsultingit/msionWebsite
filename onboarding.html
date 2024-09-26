@@ -42,14 +42,14 @@
             Skip
           </button>
         </div>
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="" id="onboardingForm"  method="POST" enctype="multipart/form-data">
           <div class="tab w-100">
             <div class="profile-img mb-5">
               <div id="addImgBtn-wrapper" style="cursor: pointer">
                 <img
                   id="addImgBtn"
                   src="assets/onboarding/addImg.png"
-                  onclick="getFile()"
+                  onclick="getImage()"
                   alt=""
                 />
                 <div style="height: 0px; width: 0px; overflow: hidden">
@@ -68,7 +68,7 @@
               id="addImgBtn-wrapper-2"
               class="w-100 p-5 border rounded-4 d-flex flex-column text-center justify-content-center align-items-center mb-5"
               style="cursor: pointer; border: 2px #cacaca dashed"
-              onclick="getFile2()"
+              onclick="triggerFileInput('upfile2')"
             >
               <img
               id="addImgBtn-2"
@@ -86,8 +86,8 @@
                 <input
                   id="upfile2"
                   type="file"
-                  accept="image/*"
-                  onchange="sub2(this)"
+                  accept="image/*, .pdf, .doc"
+                  onchange="getFile(this, 'filename')"
                 />
               </div>
             </div>
@@ -119,14 +119,14 @@
             <textarea name="biography" id="biography"></textarea>
 
             <h2 class="fw-semibold mt-5">Skills (enter up to 15)</h2>
-            <input
-              type="skills"
-              class="transition"
-              placeholder="Skills"
-              name="skills"
-            />
+            <div class="skill-tags tag-container border border-neutral-200 p-2 py-3 rounded-4 d-flex align-items-center flex-wrap gap-2" id="tagContainer" >
+              <input type="text" class="tag-input bg-transparent border-0 w-50" id="tagInput" placeholder="Enter a Skill and press enter">
+            </div>
 
             <h2 class="fw-semibold mt-5">Stack (Tools used)</h2>
+            <div class="stack-tags tag-container border border-neutral-200 p-2 py-3 rounded-4 d-flex align-items-center flex-wrap gap-2" id="tagContainer" >
+              <input type="text" class="tag-input bg-transparent border-0 w-50" id="tagInput" placeholder="Enter a tool and press enter">
+            </div>
           </div>
 
           <div class="tab w-100">
@@ -308,7 +308,9 @@
     </section>
 
     <script src="/js/addImg.js"></script>
+    <script src="/js/addFile.js"></script>
     <script src="/js/multistepForm.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/skilltags.js"></script>
   </body>
 </html>

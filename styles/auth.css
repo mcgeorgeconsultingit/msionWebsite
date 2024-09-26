@@ -29,13 +29,13 @@ input{
     height: 100vh;
    }
 
-   section > img.w-50{
-    position: absolute;
+   section > .img-wrapper {
+    /* position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
-    width: 100% !important;
-    display: none;
+    width: 100% !important; */
+    display: none !important;
    }
 
    div.auth__wrapper{

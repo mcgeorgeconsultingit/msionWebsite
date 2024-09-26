@@ -39,25 +39,33 @@
           </div>
         </nav>
         <div class="avatar-menu position-relative">
-            <img src="../assets/profile/profile 1 (1).png" alt="" class="menu-trigger rounded-circle " style="width: 60px; cursor: pointer;">
-            <div class="user-menu position-absolute bg-base p-2 rounded-4 shadow-lg" style="width: 300px; right: 0%; bottom: -800%; opacity: 0; visibility: hidden;">
+            <img src="../assets/profile/profile 1 (1).png" alt="" class="menu-trigger rounded-circle pointer" style="width: 60px;">
+            <div class="user-menu position-absolute bg-base p-2 rounded-4 shadow-lg" style="width: max-content; right: 0%; bottom: -1000%; opacity: 0; visibility: hidden;">
                 <div class="bg-white rounded-4 px-3 py-2">
                     <a href="profile.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
                         <img src="../assets/nav/UserCircle.png" alt="">
                         <p class="m-0">Profile</p>
                     </a>
-                    <a href="#" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
-                        <img src="../assets/nav/Bag.png" alt="">
-                        <p class="m-0">My Jobs</p>
+                    <a href="dashboard.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="./assets/CirclesFour.svg" alt="">
+                        <p class="m-0">Dashboard</p>
                     </a>
-                    <a href="applied-jobs.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
-                        <img src="../assets/nav/TextAlignJustify.png" alt="">
-                        <p class="m-0">Applications</p>
+                    <a href="talent-search.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="./assets/Users.svg" alt="">
+                        <p class="m-0">Find Talents</p>
                     </a>
-                    <a href="saved-jobs.html" class="p-3 d-flex gap-3 align-items-center">
-                        <img src="../assets/nav/UserCircle.png" alt="">
-                        <p class="m-0">Saved Jobs</p>
+                    <a href="notifications.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="./assets/BellRinging.svg" alt="">
+                        <p class="m-0">Notifications</p>
                         <p class="bg-base rounded-4 px-3 py-1 m-0" style="font-size: 12px; margin-left: auto !important;">3</p>
+                    </a>
+                    <a href="document-management.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
+                        <img src="./assets/FileDoc.svg" alt="">
+                        <p class="m-0">Document manager</p>
+                    </a>
+                    <a href="#" class="p-3 d-flex gap-3 align-items-center">
+                        <img src="../assets/search/Vector.png" alt="">
+                        <p class="m-0">Saved profiles</p>
                     </a>
                 </div>
                 <div class="bg-white rounded-4 px-3 py-2 mt-2">
@@ -76,6 +84,7 @@
                 </div>
             </div>
         </div>
+    
   
       </header>
 
@@ -269,16 +278,25 @@
                                 <div class="options">
                                     <div class="d-flex flex-column align-items-start">
                                         <span class="date">11/12/2024</span>
-                                        <button class="notes btn bg-base p-1 rounded-1 text-sm position-relative" data-toggle="modal" data-target="#myModal2">
+                                        <button class="notes btn py-1 px-2 rounded-1 text-sm position-relative" data-bs-toggle="modal" data-bs-target="#customModal">
                                             Notes
                                         </button>
-                                        <span class="modal custom fade notes-view rounded-4 p-3 d-flex gap-2 position-absolute bg-primary-100 shadow-sm text-start" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <img src="" alt="" width="32" height="32" class="rounded-circle">
-                                            <span>
-                                                <strong class="text-sm d-block">hr1@nike.com</strong>
-                                                Given the details of his CV, I believe he’s highly qualified for this role
-                                            </span>
-                                        </span>
+                                        <div class="modal notes-modal fade" id="customModal" tabindex="-1" aria-labelledby="customModalLabel" aria-hidden="true" data-bs-backdrop="false">
+                                            <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                <div class="modal-body notes-view rounded-4 p-3 position-absolute bg-primary-100 shadow-lg text-start">
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    <span class="d-flex gap-2 ">
+                                                        <img src="" alt="" width="32" height="32" class="rounded-circle">
+                                                        <span>
+                                                            <strong class="text-sm d-block">hr1@nike.com</strong>
+                                                            Given the details of his CV, I believe he’s highly qualified for this role
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
                                     </div>
                                     <span class="star" checked>
                                     </span>
@@ -322,7 +340,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="document-expanded applicant" data-visible>
+                <div class="document-expanded applicant">
                     <div class="document-title-block d-flex justify-content-between" >
                         <div class="">
                             <h6 class="mb-1">Hussein Farouk CV</h6>
@@ -360,7 +378,7 @@
                         <div class="tab-wrapper">
                             <div class="tab-1 messages-tab">
                                 <div class="messages-wrapper py-3 d-flex gap-1 align-items-start" style="height: max-content;">
-                                    <img src="../assets/profile/profile 1 (1).png" alt="" class="rounded-circle" style="width: 48px; cursor: pointer;">
+                                    <img src="../assets/profile/profile 1 (1).png" alt="" class="rounded-circle pointer" style="width: 48px;">
                                     <div class="messages d-flex flex-column gap-1 align-items-start">
                                         <div class="message">
                                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos, inventore officiis nostrum consequatur cumque.
@@ -389,7 +407,7 @@
                             </div>
                             <div class="tab-2 notes-tab">
                                 <div class="notes-wrapper py-3 d-flex gap-1 align-items-start" style="height: max-content;">
-                                    <img src="../assets/profile/profile 1 (1).png" alt="" class="rounded-circle" style="width: 48px; cursor: pointer;">
+                                    <img src="../assets/profile/profile 1 (1).png" alt="" class="rounded-circle pointer" style="width: 48px;">
                                     <div class="notes d-flex flex-column gap-1 align-items-start">
                                         <div class="note">
                                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos, inventore officiis nostrum consequatur cumque.
@@ -494,44 +512,7 @@
             });
         });
 
-        document.querySelectorAll('.tab-wrapper > div').forEach(tab => tab.style.display = 'none');
-
-        document.querySelectorAll('.switch').forEach((switchBtn, index) => {
-                switchBtn.addEventListener('click', () => {
-                    // Remove 'active' class from all switches
-                    document.querySelectorAll('.switch').forEach(btn => btn.classList.remove('active'));
-
-                    // Add 'active' class to the clicked switch
-                    switchBtn.classList.add('active');
-
-                    // Hide all tab contents
-                    document.querySelectorAll('.tab-wrapper > div').forEach(tab => tab.style.display = 'none');
-
-                    // Show the corresponding tab based on index
-                    document.querySelector(`.tab-wrapper .tab-${index + 1}`).style.display = 'block';
-                });
-            });
-
-            // Initialize the first tab to be visible
-            document.querySelector('.tab-wrapper .tab-1').style.display = 'block';
-
-            
-            const amButton = document.querySelector('.am');
-            const pmButton = document.querySelector('.pm');
-
-            amButton.addEventListener('click', () => {
-                amButton.setAttribute('data-checked', 'true');
-                pmButton.setAttribute('data-checked', 'false');
-            });
-
-            pmButton.addEventListener('click', () => {
-                pmButton.setAttribute('data-checked', 'true');
-                amButton.setAttribute('data-checked', 'false');
-            });
-
-            document.querySelector('.actions-close-btn').addEventListener('click', () => {
-                document.querySelector('.actions-modal').classList.remove('open')
-            })
+    
 
     </script>
   </body>

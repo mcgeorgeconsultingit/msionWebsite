@@ -1,9 +1,7 @@
-function getFile() {
+function getImage() {
     document.getElementById("upfile").click();
   }
-function getFile2() {
-    document.getElementById("upfile2").click();
-  }
+
 
   function sub(input) {
     if (input.files && input.files[0]) {
@@ -24,18 +22,3 @@ function getFile2() {
     }
   }
 
-  function sub2(input) {
-    if (input.files && input.files[0]) {
-      const file = input.files[0];
-
-    
-
-      const reader = new FileReader();
-
-      reader.onload = function (e) {
-        document.getElementById("filename").innerText = "Resume.pdf";
-      };
-
-      reader.readAsDataURL(file);
-    }
-  }

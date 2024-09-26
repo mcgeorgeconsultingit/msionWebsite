@@ -1,6 +1,7 @@
-- application form *
-- recruiter profile
-- about kinks*
-- search mobile and interactivity*
-- applied jobs
-- saved jobsdd
+-onboarding.js, addfile.js, onboarding.css, addImg.js, globals.css
+-login and signup
+-profile.html
+-document-management, html, css and js
+-dashboard.html,  added dashboard.js
+-applications.html,
+-job-dashboard.html

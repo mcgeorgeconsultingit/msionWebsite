@@ -20,7 +20,7 @@ const imgButton = document.querySelector('.menu-trigger');
 
 // Close the container when clicking outside of it
 window.addEventListener('click', (event) => {
-  if (!userMenu.contains(event.target)) {
+  if (!userMenu?.contains(event.target)) {
     userMenu.classList.remove('active');
   }
 });

@@ -19,6 +19,7 @@ textarea{
     border-width: 2px !important;
     border-radius: 20px !important;
     position: relative;
+    cursor: pointer;
 }
 
 .document-card > img{
@@ -69,13 +70,25 @@ textarea{
 
 button.notes{
     z-index: 10000;
+    background-color: rgba(168, 171, 225, 1);
+}
+
+button.notes:hover{
+    background-color: rgb(135, 137, 180);
 }
 
 button.notes .notes-view{
     width: 250px;
-    top: -200%;
-    left: 50%;
 
+}
+.notes-modal {
+    position: absolute;
+    top: 300px; /* Customize top position */
+    left: 40px; /* Customize right position */
+}
+
+.notes-view{
+    z-index: 101111;
 }
 
 .document-details .options .date{
@@ -92,25 +105,25 @@ button.notes .notes-view{
 }
 
 .star[checked]{
-    background: url("../../recruiters/assets/Star.svg"), var(--clr-base-white);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 55%;
+    background: url("../../recruiters/assets/star.png"), var(--clr-base-white) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 55% !important;
 }
 .document-expanded .star{
     background: url("../../recruiters/assets/star-outline-light.png"), rgba(231, 235, 239, 0.2);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 55%;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 55% !important;
     border: 1.3px solid rgba(114, 108, 108, 1);
     margin-right: .4em;
 }
 
 .document-expanded .star[checked]{
     background: url("../../recruiters/assets/star.png"), rgba(231, 235, 239, 0.2);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 55%;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 55% !important;
 }
 
 .star, .download, .chat{

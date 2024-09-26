@@ -38,7 +38,7 @@
         </div>
 
         <div class="avatar-menu position-relative">
-            <img src="assets/profile/profile 1 (1).png" alt="" class="menu-trigger rounded-circle " style="width: 60px; cursor: pointer;">
+            <img src="assets/profile/profile 1 (1).png" alt="" class="menu-trigger rounded-circle pointer" style="width: 60px;">
             <div class="user-menu position-absolute bg-base p-2 rounded-4 shadow-lg" style="width: 300px; right: 0%; bottom: -800%; opacity: 0; visibility: hidden;">
                 <div class="bg-white rounded-4 px-3 py-2">
                     <a href="profile.html" class="p-3 d-flex gap-3 align-items-center border-1 border-bottom">
@@ -101,65 +101,79 @@
                 </h3>
               </div>
             </div>
-            <button class="btn bg-base p-3 rounded-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button class="btn bg-base p-3 rounded-4 ms-lg-auto ms-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <img src="./assets/verified-outline.svg" alt="">
               Verify account
             </button>
             <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
-
+            
                   <div class="modal-body bg-base rounded-4 p-3">
-                    <!-- Tab content -->
                     <div class="tab-content" id="myTabContent">
-                      <!-- Form 1 -->
+            
+                      <!-- Tab 1: Verification Options -->
                       <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
                         <div class="d-flex flex-column justify-content-between align-items-start bg-white w-100 rounded-4 gap-2 p-3">
                           <h2 class="fw-semibold mb-1">Get the verification badge</h2>
                           <p class="text-sm m-0 text-greyed">Select any of these methods to start the verification process</p>
                         </div>
-                        <div class="d-flex flex-column justify-content-between align-items-start bg-white w-100 rounded-4 gap-2 p-3">
+            
+                        <!-- Options -->
+                        <div class="d-flex flex-column justify-content-between align-items-start bg-white w-100 rounded-4 gap-2 p-3 mb-3 pointer" onclick="showForm('nin')">
                           National Identification Number (NIN)
                         </div>
-                        <div class="d-flex flex-column justify-content-between align-items-start bg-white w-100 rounded-4 gap-2 p-3">
+                        <div class="d-flex flex-column justify-content-between align-items-start bg-white w-100 rounded-4 gap-2 p-3 mb-3 pointer" onclick="showForm('drivers')">
                           Drivers License
                         </div>
-                        <div class="d-flex flex-column justify-content-between align-items-start bg-white w-100 rounded-4 gap-2 p-3">
+                        <div class="d-flex flex-column justify-content-between align-items-start bg-white w-100 rounded-4 gap-2 p-3 mb-3 pointer" onclick="showForm('bvn')">
                           Bank Verification Number (BVN)
                         </div>
                       </div>
             
-                      <!-- Form 2 -->
-                      <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-                        <form id="form2">
-                          <!-- Placeholder content for Form 2 -->
+                      <!-- Tab 2: NIN Form -->
+                      <div class="tab-pane fade" id="nin-form" role="tabpanel" aria-labelledby="tab2-tab">
+                        <form id="ninForm">
                           <div class="mb-3">
-                            <label for="input2" class="form-label">Input for Form 2</label>
-                            <input type="text" class="form-control" id="input2" placeholder="Enter something for Form 2">
+                            <label for="ninInput" class="form-label">Enter NIN</label>
+                            <input type="text" class="form-control" id="ninInput" placeholder="Enter your National Identification Number">
                           </div>
-                          <button type="button" class="btn btn-secondary back-btn">Back</button>
-                          <button type="button" class="btn btn-primary next-btn">Next</button>
+                          <button type="button" class="btn bg-base" onclick="goBack()">Back</button>
+                          <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                       </div>
             
-                      <!-- Form 3 -->
-                      <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-                        <form id="form3">
-                          <!-- Placeholder content for Form 3 -->
+                      <!-- Tab 3: Driver's License Form -->
+                      <div class="tab-pane fade" id="drivers-form" role="tabpanel" aria-labelledby="tab3-tab">
+                        <form id="driversForm">
                           <div class="mb-3">
-                            <label for="input3" class="form-label">Input for Form 3</label>
-                            <input type="text" class="form-control" id="input3" placeholder="Enter something for Form 3">
+                            <label for="driversInput" class="form-label">Enter Driver's License Number</label>
+                            <input type="text" class="form-control" id="driversInput" placeholder="Enter your Driver's License Number">
                           </div>
-                          <button type="button" class="btn btn-secondary back-btn">Back</button>
-                          <button type="submit" class="btn btn-success">Submit</button>
+                          <button type="button" class="btn bg-base" onclick="goBack()">Back</button>
+                          <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                       </div>
+            
+                      <!-- Tab 4: BVN Form -->
+                      <div class="tab-pane fade" id="bvn-form" role="tabpanel" aria-labelledby="tab4-tab">
+                        <form id="bvnForm">
+                          <div class="mb-3">
+                            <label for="bvnInput" class="form-label">Enter BVN</label>
+                            <input type="text" class="form-control" id="bvnInput" placeholder="Enter your Bank Verification Number">
+                          </div>
+                          <button type="button" class="btn bg-base" onclick="goBack()">Back</button>
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                      </div>
+            
                     </div>
                   </div>
-
+            
                 </div>
               </div>
-            </div>
+            </div>   
+
             <a href="settings.html">
               <img
                 src="assets/profile/NotePencil.png"
@@ -295,6 +309,14 @@ With a keen eye for aesthetics and a strong understanding of design principles, 
             </div>
           </div>
           <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 gap-2 mt-4">
+            <h2>Certification</h2>
+            <div class="bg-base p-3 d-flex flex-column w-100 rounded-4 ">
+              <h6>UX Designer</h6>
+              <p>Accenture | Issued: Sept 2023</p>
+              <span style="color: rgba(0, 0, 0, 0.564);">Credential ID : 287GHB658BVR</span>
+            </div>
+        </div>
+          <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 gap-2 mt-4">
             <div class="d-flex w-100 justify-content-between align-items-center">
               <h2>Stack</h2>
               <a href="onboarding.html">
@@ -333,14 +355,7 @@ With a keen eye for aesthetics and a strong understanding of design principles, 
               <img src="assets/profile/figma.png" alt="">
             </div>
           </div>
-          <div class="d-flex flex-column justify-content-between align-items-start p-4 bg-white w-100 rounded-4 gap-2 mt-4">
-              <h2>Certification</h2>
-              <div class="bg-base p-3 d-flex flex-column w-100 rounded-4 ">
-                <h6>UX Designer</h6>
-                <p>Accenture | Issued: Sept 2023</p>
-                <span style="color: rgba(0, 0, 0, 0.564);">Credential ID : 287GHB658BVR</span>
-              </div>
-          </div>
+
         </div>
       </div>
     </section>
@@ -383,5 +398,30 @@ With a keen eye for aesthetics and a strong understanding of design principles, 
     <script src="js/nav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
     <script src="js/verifyAccount.js"></script>
+    <script>
+      function showForm(formType) {
+        // Hide tab1 (verification options)
+        document.getElementById('tab1').classList.remove('show', 'active');
+        
+        // Show the correct form based on the option clicked
+        if (formType === 'nin') {
+          document.getElementById('nin-form').classList.add('show', 'active');
+        } else if (formType === 'drivers') {
+          document.getElementById('drivers-form').classList.add('show', 'active');
+        } else if (formType === 'bvn') {
+          document.getElementById('bvn-form').classList.add('show', 'active');
+        }
+      }
+    
+      function goBack() {
+        // Hide all forms
+        document.getElementById('nin-form').classList.remove('show', 'active');
+        document.getElementById('drivers-form').classList.remove('show', 'active');
+        document.getElementById('bvn-form').classList.remove('show', 'active');
+    
+        // Show the options tab
+        document.getElementById('tab1').classList.add('show', 'active');
+      }
+    </script>
   </body>
 </html>
